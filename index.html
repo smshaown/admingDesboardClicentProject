@@ -45,9 +45,10 @@
           <h2 class="text-xl">Dashboard</h2>
         </div>
         <ul>
-          <!-- <li class="cursor-pointer mb-2" onclick="changeContent('Page 1')">
+
+          <li class="cursor-pointer mb-2" onclick="handleFirstClick('Page 1'), changeContent('Page 1')">
             Page 1
-          </li> -->
+          </li>          
 
           <ul>
             <li
@@ -67,7 +68,7 @@
                 class="cursor-pointer mb-2"
                 onclick="changeContent('Subpage 2.1')"
               >
-                Subpage 2.1(ok)
+                Subpage 2.1(ami div niye kaj korbo)
               </li>
               <li
                 class="cursor-pointer mb-2"
@@ -193,138 +194,180 @@
       </div>
 
       
-      <!-- Right Sidebar start -->
-      <div id="right-sidebar" class="md:w-[80%] w-full p-4">        
-        <div id="page-content">
-          <h1 class="text-base font-semibold text-[#00b4aa]">পরিচালকের প্রোফাইল</h1>
+    
 
-
-          <!-- Profile Details start -->
-          <div class="bg-[#FAFAFA] px-4 py-4 flex flex-row gap-4 mt-4 border border-[#f2f2f2]">
-            <!-- profile (Right) ==> left side  -->
-            <div>
-               <div class="w-[160px] h-[#130px]">
-                <img class="rounded-2 bg-[#fff] p-[8px] border-[#f2f2f2] h-full w-full" src="img/user.png" alt="User Profile picture">
-              </div>
-               <div class="border-2 border-[#ddd] text-xs py-[4px] rounded text-center mt-4">
-                 <a class="text-[#005087] hover:underline hover:text-[#11A3A8]" href="#">পরিবর্তন করতে ক্লিক করুন</a>
-               </div>
-            </div>
-            <!-- profile details right side  -->
-            <div class="w-full md:w-[550px]  info">
-              <ul class="-mt-3">
-                <li class="w-full" ><span class="font-semibold text-[#777] ">user name</span></li>
-                <li class="w-full" ><span class="font-semibold text-[#777] ">owner</span></li>
-                <li class="w-full" >পিতা:</li>
-                <li class="w-full" >মোবাইল:</li>
-                <li class="w-full" >ইমেইল:</li>
-                <li class="w-full" >ঠিকানা:</li>
-              </ul>
-            </div>
-            <!-- Right Sidebar end -->
-          </div>          
-          <!-- Profile Details end -->
-
-          
-
-
-          <!-- ইনভয়েস লিস্ট  3==>Tabs start  -->
-          <div class="flex mt-14 overflow-hidden">
-            <div class="mr-2">
-              <button id="tab1" class="tab-button active-tab hover:bg-[#ff9400] ">ইনভয়েস</button>
-            </div>
-            <div class="mr-2">
-              <button id="tab2" class="tab-button hover:bg-[#ff9400]">পাসওয়ার্ড পরিবর্তন</button>
-            </div>
-            <div>
-              <button id="tab3" class="tab-button hover:bg-[#ff9400]">এসএমএস ব্যালেন্স</button>
-            </div>
-          </div>          
-        
-          <!-- Tabs content page start  -->
-          <div class="mt-4" id="tabContent">
-            <!-- ইনভয়েস লিস্ট table start  -->
-            <div id="content1" class="tab-content overflow-x-auto">
-              <table class="min-w-full border border-gray-300 text-center">
-                <thead class="bg-gray-200 text-[12px]">
-                  <tr>
-                    <th class="border border-gray-300 p-2">#</th>
-                    <th class="border border-gray-300 p-2">ইস্যু তারিখ</th>
-                    <th class="border border-gray-300 p-2">শেষ হওয়ার তারিখ</th>
-                    <th class="border border-gray-300 p-2">মোট টাকা</th>
-                    <th class="border border-gray-300 p-2">ডিসকাউন্ট</th>
-                    <th class="border border-gray-300 p-2">জমা</th>
-                    <th class="border border-gray-300 p-2">বাকি</th>
-                    <th class="border border-gray-300 p-2">নিবন্ধন তারিখ</th>
-                    <th class="border border-gray-300 p-2">বিস্তারিত</th>
-                    <th class="border border-gray-300 p-2">লেনদেনের অবস্থা</th>
-                    <th class="border border-gray-300 p-2"></th>
-                  </tr>
-                </thead>
-                <!-- Add your data rows here start -->
-                <tbody class="text-[12px]">                  
-                  <tr>
-                    <td class="border border-gray-300 p-2">1</td>
-                    <td class="border border-gray-300 p-2">2023-10-15</td>
-                    <td class="border border-gray-300 p-2">2023-10-30</td>
-                    <td class="border border-gray-300 p-2">1000</td>
-                    <td class="border border-gray-300 p-2">100</td>
-                    <td class="border border-gray-300 p-2">900</td>
-                    <td class="border border-gray-300 p-2">100</td>
-                    <td class="border border-gray-300 p-2">2023-10-10</td>
-                    <td class="border border-gray-300 p-2">1000 Tk. Service Charge JUL-2023</td>
-                    <td class="border border-gray-300 p-2">Due</td>
-                    <td class="border border-gray-300 p-2"></td>
-                  </tr>                
-                  <tr>
-                    <td class="border border-gray-300 p-2">1</td>
-                    <td class="border border-gray-300 p-2">2023-10-15</td>
-                    <td class="border border-gray-300 p-2">2023-10-30</td>
-                    <td class="border border-gray-300 p-2">1000</td>
-                    <td class="border border-gray-300 p-2">100</td>
-                    <td class="border border-gray-300 p-2">900</td>
-                    <td class="border border-gray-300 p-2">100</td>
-                    <td class="border border-gray-300 p-2">2023-10-10</td>
-                    <td class="border border-gray-300 p-2">1000 Tk. Service Charge JUL-2023</td>
-                    <td class="border border-gray-300 p-2">Due</td>
-                    <td class="border border-gray-300 p-2"></td>
-                  </tr>
-                  <tr>
-                    <td class="border border-gray-300 p-2"></td>
-                    <td class="border border-gray-300 p-2"></td>
-                    <td class="border border-gray-300 p-2"></td>
-                    <td class="border border-gray-300 p-2"></td>
-                    <td class="border border-gray-300 p-2"></td>
-                    <td class="border border-gray-300 p-2">  </td>
-                    <td class="border border-gray-300 p-2 text-black font-"> Total 100 </td>
-                    <td class="border border-gray-300 p-2"></td>
-                    <td class="border border-gray-300 p-2"></td>
-                    <td class="border border-gray-300 p-2"></td>
-                    <td class="border border-gray-300 p-2"></td>
-                  </tr>
-                  <!-- Add more rows as needed -->
-                </tbody>
-                <!-- <tfoot >
-                  <tr>
-                    <td colspan="6" class="text-right border border-gray-300 p-2">Total:</td>
-                    <td class="border border-gray-300 p-2">100</td>
-                    <td colspan="3"></td>
-                  </tr>
-                </tfoot> -->
-              </table>
-            </div>
-              <!--- ইনভয়েস লিস্ট table end  --->
-            <div id="content2" class="tab-content hidden">Content for Faster</div>
-            <div id="content3" class="tab-content hidden">Content for Fastest</div>
+      <div id="right-sidebar-content" class="md:w-[80%] w-full p-4">
+  <!-- Content for Page 1 -->
+  <div id="Page 1" class="content-div">  
+      <h1 class="text-base font-semibold text-[#00b4aa]">পরিচালকের প্রোফাইল</h1>
+      <!-- Profile Details start -->
+      <div class="bg-[#FAFAFA] px-4 py-4 flex flex-row gap-4 mt-4 border border-[#f2f2f2]">
+        <!-- profile (Right) ==> left side  -->
+        <div>
+           <div class="w-[160px] h-[#130px]">
+            <img class="rounded-2 bg-[#fff] p-[8px] border-[#f2f2f2] h-full w-full" src="img/user.png" alt="User Profile picture">
           </div>
-           <!-- Tabs content page end  -->
+           <div class="border-2 border-[#ddd] text-xs py-[4px] rounded text-center mt-4">
+             <a class="text-[#005087] hover:underline hover:text-[#11A3A8]" href="#">পরিবর্তন করতে ক্লিক করুন</a>
+           </div>
         </div>
+        <!-- profile details right side  -->
+        <div class="w-full md:w-[550px]  info">
+          <ul class="-mt-3">
+            <li class="w-full" ><span class="font-semibold text-[#777] ">user name</span></li>
+            <li class="w-full" ><span class="font-semibold text-[#777] ">owner</span></li>
+            <li class="w-full" >পিতা:</li>
+            <li class="w-full" >মোবাইল:</li>
+            <li class="w-full" >ইমেইল:</li>
+            <li class="w-full" >ঠিকানা:</li>
+          </ul>
+        </div>
+        <!-- Right Sidebar end -->
+      </div>          
+      <!-- Profile Details end -->       
+
+
+      <!-- ইনভয়েস লিস্ট  3==>Tabs start  -->
+      <div class="flex mt-14 overflow-hidden">
+        <div class="mr-2">
+          <button id="tab1" class="tab-button active-tab hover:bg-[#ff9400] ">ইনভয়েস</button>
+        </div>
+        <div class="mr-2">
+          <button id="tab2" class="tab-button hover:bg-[#ff9400]">পাসওয়ার্ড পরিবর্তন</button>
+        </div>
+        <div>
+          <button id="tab3" class="tab-button hover:bg-[#ff9400]">এসএমএস ব্যালেন্স</button>
+        </div>
+      </div>          
+    
+      <!-- Tabs content page start  -->
+      <div class="mt-4" id="tabContent">
+        <!-- ইনভয়েস লিস্ট table start  -->
+        <div id="content1" class="tab-content overflow-x-auto">
+          <table class="min-w-full border border-gray-300 text-center">
+            <thead class="bg-gray-200 text-[12px]">
+              <tr>
+                <th class="border border-gray-300 p-2">#</th>
+                <th class="border border-gray-300 p-2">ইস্যু তারিখ</th>
+                <th class="border border-gray-300 p-2">শেষ হওয়ার তারিখ</th>
+                <th class="border border-gray-300 p-2">মোট টাকা</th>
+                <th class="border border-gray-300 p-2">ডিসকাউন্ট</th>
+                <th class="border border-gray-300 p-2">জমা</th>
+                <th class="border border-gray-300 p-2">বাকি</th>
+                <th class="border border-gray-300 p-2">নিবন্ধন তারিখ</th>
+                <th class="border border-gray-300 p-2">বিস্তারিত</th>
+                <th class="border border-gray-300 p-2">লেনদেনের অবস্থা</th>
+                <th class="border border-gray-300 p-2"></th>
+              </tr>
+            </thead>
+            <!-- Add your data rows here start -->
+            <tbody class="text-[12px]">                  
+              <tr>
+                <td class="border border-gray-300 p-2">
+                  <span  onclick="toggleBackgroundColor(this)"><i class="fa-regular fa-hand-pointer"></i></span>
+                </td>
+                <td class="border border-gray-300 p-2">2023-10-15</td>
+                <td class="border border-gray-300 p-2">2023-10-30</td>
+                <td class="border border-gray-300 p-2">1000</td>
+                <td class="border border-gray-300 p-2">100</td>
+                <td class="border border-gray-300 p-2">900</td>
+                <td class="border border-gray-300 p-2">100</td>
+                <td class="border border-gray-300 p-2">2023-10-10</td>
+                <td class="border border-gray-300 p-2">1000 Tk. Service Charge JUL-2023</td>
+                <td class="border border-gray-300 p-2">Due</td>
+                <td onclick="changeContent('print1')" class="border border-gray-300 p-2">
+                  <a href="#"><i class="fa-solid fa-print"></i></a>
+                </td>
+              </tr>                
+              <tr>
+                <td class="border border-gray-300 p-2">
+                  <span  onclick="toggleBackgroundColor(this)"><i class="fa-regular fa-hand-pointer"></i></span>
+                </td>
+                <td class="border border-gray-300 p-2">2023-10-15</td>
+                <td class="border border-gray-300 p-2">2023-10-30</td>
+                <td class="border border-gray-300 p-2">1000</td>
+                <td class="border border-gray-300 p-2">100</td>
+                <td class="border border-gray-300 p-2">900</td>
+                <td class="border border-gray-300 p-2">100</td>
+                <td class="border border-gray-300 p-2">2023-10-10</td>
+                <td class="border border-gray-300 p-2">1000 Tk. Service Charge JUL-2023</td>
+                <td class="border border-gray-300 p-2">Due</td>
+                <td class="border border-gray-300 p-2">
+                  <a onclick="changeContent('print2')" href="#"><i class="fa-solid fa-print"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-2"></td>
+                <td class="border border-gray-300 p-2"></td>
+                <td class="border border-gray-300 p-2"></td>
+                <td class="border border-gray-300 p-2"></td>
+                <td class="border border-gray-300 p-2"></td>
+                <td class="border border-gray-300 p-2">  </td>
+                <td class="border border-gray-300 p-2 text-black font-"> Total 100 </td>
+                <td class="border border-gray-300 p-2"></td>
+                <td class="border border-gray-300 p-2"></td>
+                <td class="border border-gray-300 p-2"></td>
+                <td class="border border-gray-300 p-2"></td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+            <!-- <tfoot >
+              <tr>
+                <td colspan="6" class="text-right border border-gray-300 p-2">Total:</td>
+                <td class="border border-gray-300 p-2">100</td>
+                <td colspan="3"></td>
+              </tr>
+            </tfoot> -->
+          </table>
+        </div>
+          <!--- ইনভয়েস লিস্ট table end  --->
+        <div id="content2" class="tab-content hidden">Email</div>
+        <div id="content3" class="tab-content hidden">proflie Name</div>
       </div>
+       <!-- Tabs content page end  -->
+  </div>
+
+  <!-- Content for Page 2 -->
+  <!-- <div id="Page 2" class="content-div" style="display: none;">
+    Content for Page 2
+  </div> -->
+
+  <!-- Content for Subpage 2.1 -->
+  <div id="Subpage 2.1" class="content-div" style="display: none;">
+    Content for Subpage 2.11111
+  </div>
+
+  <div id="Subpage 2.2" class="content-div" style="display: none;">
+    Content for Subpage 2.222222
+  </div>
+
+
+  <div id="Subpage 3.1" class="content-div" style="display: none;">
+    Content for Subpage 3.11111111
+  </div>
+
+  <div id="Subpage 3.2" class="content-div" style="display: none;">
+    oke brother Subpage 3.222222
+  </div>
+
+  <div id="print1" class="content-div" style="display: none;">
+   Print 1
+  </div>
+
+  <div id="print2" class="content-div" style="display: none;">
+   Print 2
+  </div>
+
+  <!-- Add more content divs for other pages and subpages as needed -->
+</div>
+
       
-
-
-
+      
     </div>
+
+
+
+    
 
 
 

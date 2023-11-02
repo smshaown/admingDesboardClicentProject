@@ -1,3 +1,4 @@
+
 function toggleSubMenu(submenuId, iconId) {
     const submenu = document.getElementById(submenuId + '-submenu');
     const angleRightIcon = document.getElementById(iconId);
@@ -11,20 +12,35 @@ function toggleSubMenu(submenuId, iconId) {
     }
   }
 
+    
   
-  
-  function changeContent(page) {
-    const pageContent = document.getElementById('page-content');  
-    pageContent.innerText = `Content for ${page}`;
+
+  function changeContent(content) {
+    var rightSidebarContent = document.getElementById("right-sidebar-content");
+    var contentDiv = document.getElementById(content);
+
+    if (rightSidebarContent && contentDiv) {
+      var allContentDivs = rightSidebarContent.getElementsByClassName("content-div");
+      for (var i = 0; i < allContentDivs.length; i++) {
+        allContentDivs[i].style.display = "none";
+      }
+
+      contentDiv.style.display = "block";
+    }
   }
-  
-  function changeSubpageContent(subpage) {    
-    const pageContent = document.getElementById('page-content');  
-    pageContent.innerText = `Content for ${subpage}`;
+
+  var firstClicked = false; // Flag to track if a link has been clicked
+
+  function handleFirstClick(content) {
+    if (!firstClicked) {
+      changeContent(content);
+      firstClicked = true;
+    }
   }
 
 
-  // <!-- ইনভয়েস লিস্ট Tabs code start  -->
+  
+ 
 
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -44,6 +60,36 @@ function toggleSubMenu(submenuId, iconId) {
       });
     });
   });
+
+
+  // - ইনভয়েস লিস্ট Right-sidebare => left side icon-selected toggle Background color chenge code function   
+  function toggleBackgroundColor(element) {
+    var rows = document.querySelectorAll('tr');
+    rows.forEach(function(row) {
+      row.classList.remove('selected');
+    });
+    element.parentElement.parentElement.classList.add('selected');
+  } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // kaje dibe vobishe 
+  function openNewPage() {
+    var newPage = window.open('about:blank', '_blank');
+    newPage.document.write('<html><head><title>New Page</title></head><body>Content goes here</body></html>');
+    newPage.document.close();
+  }
   
 
     // <!-- ইনভয়েস লিস্ট javascript code end  -->

@@ -27,18 +27,6 @@ body {
 }
 
 /* Tab active color  */
-/* .active-tab {
-  background-color: red; /* Change this to the desired color */
-
-/* tab button  */
-/* .buttonStyle {
- 
-} */
-
-/* .tab-button:hover {
-  background-color: #ff9400;
-} */
-
 .tab-button {
   color: white;
   background-color: #00aba1;
@@ -51,4 +39,18 @@ body {
 
 .tab-button.active-tab {
   background-color: #ff9400;
+}
+
+/* Right side seleceted color  */
+
+.selected {
+  background-color: black;
+  color: white;
+}
+
+.new-page {
+  width: 50%; /* Adjust the width as needed */
+  height: 100%;
+  float: right;
+  border: none;
 }
