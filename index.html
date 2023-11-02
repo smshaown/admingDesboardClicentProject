@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Sidebar</title>
+    <!-- Google Fonts Roboto  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind css link  -->
+    <script src="https://cdn.tailwindcss.com"></script>  
+
+    <!-- link adminStyle css  -->
+    <link rel="stylesheet" href="adiminStyle.css" />
+  </head>
+  <body>
+
+    <!-- Top Header section Start -->
+    <header class="">
+        <div class="py-5 px-4 text-white flex flex-col md:flex-row justify-between items-center" style="background-color: #00b4aa">
+            <!-- Left side  -->
+           <div class="flex flex-col md:flex-row justify-center items-center">
+            <!-- logo img  -->
+             <img class="h-16 w-16 object-cover rounded-mb mr-3" src="img/companyLogo.jpg" alt="">
+              <h2 class="text-3xl font-bold">User Name</h2>
+            </div>
+            <!-- Right side  -->
+           <div class="text-[18px] font-medium text-white">
+             <p class="">Welcome | <span>User Name</span></p>
+              <ul class="flex flex-row justify-center items-center">
+                <li><a href="#">Profile <span class="mr-1">|</span> </a></li>
+                <li class="hover:underline"><a href="#"> Logout</a></li>
+              </ul>
+           </div>
+        </div>
+    </header>
+    <!-- Left Sidebar -->
+    <div class="flex flex-col md:flex-row ">
+      <div id="left-sidebar" class="bg-gray-800 text-white md:w-[20%] w-full p-4">
+        <div class="flex items-center mb-4">
+          <i class="bi bi-gear-fill text-2xl mr-2"></i>
+          <h2 class="text-xl">Dashboard</h2>
+        </div>
+        <ul>
+          <!-- <li class="cursor-pointer mb-2" onclick="changeContent('Page 1')">
+            Page 1
+          </li> -->
+
+          <ul>
+            <li
+              class="cursor-pointer mb-2"
+              onclick="toggleSubMenu('page-2', 'angle-right-icon-2')"
+            >
+              Page 2
+              <span class="bg-blue-500 rounded-full">
+                <i
+                  id="angle-right-icon-2"
+                  class="fas fa-angle-right p-1 text-white ml-2"
+                ></i>
+              </span>
+            </li>
+            <ul id="page-2-submenu" class="hidden pl-4">
+              <li
+                class="cursor-pointer mb-2"
+                onclick="changeContent('Subpage 2.1')"
+              >
+                Subpage 2.1(ok)
+              </li>
+              <li
+                class="cursor-pointer mb-2"
+                onclick="changeContent('Subpage 2.2')"
+              >
+                Subpage 2.2(ok)
+              </li>
+            </ul>
+
+            <li
+              class="cursor-pointer mb-2"
+              onclick="toggleSubMenu('page-3', 'angle-right-icon-3')"
+            >
+              Page 3
+              <span class="bg-blue-500 rounded-full">
+                <i
+                  id="angle-right-icon-3"
+                  class="fas fa-angle-right p-1 text-white ml-2"
+                ></i>
+              </span>
+            </li>
+            <ul id="page-3-submenu" class="hidden pl-4">
+              <li
+                class="cursor-pointer mb-2"
+                onclick="changeContent('Subpage 3.1')"
+              >
+                Subpage 3.1(ok)
+              </li>
+              <li
+                class="cursor-pointer mb-2"
+                onclick="changeContent('Subpage 3.2')"
+              >
+                Subpage 3.2(ok)
+              </li>
+            </ul>
+
+            <li
+              class="cursor-pointer mb-2"
+              onclick="toggleSubMenu('page-4', 'angle-right-icon-4')"
+            >
+              Page 4
+              <span class="bg-blue-500 rounded-full">
+                <i
+                  id="angle-right-icon-4"
+                  class="fas fa-angle-right p-1 text-white ml-2"
+                ></i>
+              </span>
+            </li>
+            <ul id="page-4-submenu" class="hidden pl-4">
+              <li
+                class="cursor-pointer mb-2"
+                onclick="changeContent('Subpage 4.1')"
+              >
+                Subpage 4.1(ok)
+              </li>
+              <li
+                class="cursor-pointer mb-2"
+                onclick="changeContent('Subpage 4.2')"
+              >
+                Subpage 4.2(ok)
+              </li>
+            </ul>
+
+
+            
+
+            <li class="cursor-pointer mb-2"  onclick="toggleSubMenu('page-5', 'angle-right-icon-5')">
+              page 5
+              <span class="bg-blue-500 rounded-full">
+                <i
+                  id="angle-right-icon-5"
+                  class="fas fa-angle-right p-1 text-white ml-2"
+                ></i>
+              </span>
+            </li>
+            <ul id="page-5-submenu" class="hidden pl-4">
+                <li
+                  class="cursor-pointer mb-2"
+                  onclick="toggleSubMenu('page-5.1', 'angle-right-icon-5.1')"                 
+                >
+                  page 5.1
+                  <span class="bg-blue-500 rounded-full">
+                    <i
+                      id="angle-right-icon-5.1"
+                      class="fas fa-angle-right p-1 text-white ml-2"
+                    ></i>
+                  </span>
+                </li>
+
+                <ul id="page-5.1-submenu" class="hidden pl-4">
+                    <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 5.1')">Subpage 5.1 (ok ok ok)</li>
+                </ul>
+
+
+
+                <li
+                  class="cursor-pointer mb-2"
+                  onclick="toggleSubMenu('page-5.2', 'angle-right-icon-5.2')"                 
+                >
+                  page 5.2
+                  <span class="bg-blue-500 rounded-full">
+                    <i
+                      id="angle-right-icon-5.2"
+                      class="fas fa-angle-right p-1 text-white ml-2"
+                    ></i>
+                  </span>
+                </li>
+
+                <ul id="page-5.2-submenu" class="hidden pl-4">
+                    <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 5.2')">Subpage 5.1 (ok ok ok)</li>
+                </ul>
+
+          <!-- <li class="cursor-pointer mb-2" onclick="changeContent('Page 3')">
+            Page 3
+          </li> -->
+          <!-- <li
+            class="cursor-pointer mb-2"
+            onclick="toggleSubMenu('page-4', 'angle-right-icon-4')"
+          >
+            Page 4
+          </li> -->
+        </ul>
+      </div>
+
+      
+      <!-- Right Sidebar start -->
+      <div id="right-sidebar" class="md:w-[80%] w-full p-4">        
+        <div id="page-content">
+          <h1 class="text-base font-semibold text-[#00b4aa]">পরিচালকের প্রোফাইল</h1>
+
+
+          <!-- Profile Details start -->
+          <div class="bg-[#FAFAFA] px-4 py-4 flex flex-row gap-4 mt-4 border border-[#f2f2f2]">
+            <!-- profile (Right) ==> left side  -->
+            <div>
+               <div class="w-[160px] h-[#130px]">
+                <img class="rounded-2 bg-[#fff] p-[8px] border-[#f2f2f2] h-full w-full" src="img/user.png" alt="User Profile picture">
+              </div>
+               <div class="border-2 border-[#ddd] text-xs py-[4px] rounded text-center mt-4">
+                 <a class="text-[#005087] hover:underline hover:text-[#11A3A8]" href="#">পরিবর্তন করতে ক্লিক করুন</a>
+               </div>
+            </div>
+            <!-- profile details right side  -->
+            <div class="w-full md:w-[550px]  info">
+              <ul class="-mt-3">
+                <li class="w-full" ><span class="font-semibold text-[#777] ">user name</span></li>
+                <li class="w-full" ><span class="font-semibold text-[#777] ">owner</span></li>
+                <li class="w-full" >পিতা:</li>
+                <li class="w-full" >মোবাইল:</li>
+                <li class="w-full" >ইমেইল:</li>
+                <li class="w-full" >ঠিকানা:</li>
+              </ul>
+            </div>
+            <!-- Right Sidebar end -->
+          </div>          
+          <!-- Profile Details end -->
+
+          
+
+
+          <!-- ইনভয়েস লিস্ট  3==>Tabs start  -->
+          <div class="flex mt-14 overflow-hidden">
+            <div class="mr-2">
+              <button id="tab1" class="tab-button active-tab hover:bg-[#ff9400] ">ইনভয়েস</button>
+            </div>
+            <div class="mr-2">
+              <button id="tab2" class="tab-button hover:bg-[#ff9400]">পাসওয়ার্ড পরিবর্তন</button>
+            </div>
+            <div>
+              <button id="tab3" class="tab-button hover:bg-[#ff9400]">এসএমএস ব্যালেন্স</button>
+            </div>
+          </div>          
+        
+          <!-- Tabs content page start  -->
+          <div class="mt-4" id="tabContent">
+            <!-- ইনভয়েস লিস্ট table start  -->
+            <div id="content1" class="tab-content overflow-x-auto">
+              <table class="min-w-full border border-gray-300 text-center">
+                <thead class="bg-gray-200 text-[12px]">
+                  <tr>
+                    <th class="border border-gray-300 p-2">#</th>
+                    <th class="border border-gray-300 p-2">ইস্যু তারিখ</th>
+                    <th class="border border-gray-300 p-2">শেষ হওয়ার তারিখ</th>
+                    <th class="border border-gray-300 p-2">মোট টাকা</th>
+                    <th class="border border-gray-300 p-2">ডিসকাউন্ট</th>
+                    <th class="border border-gray-300 p-2">জমা</th>
+                    <th class="border border-gray-300 p-2">বাকি</th>
+                    <th class="border border-gray-300 p-2">নিবন্ধন তারিখ</th>
+                    <th class="border border-gray-300 p-2">বিস্তারিত</th>
+                    <th class="border border-gray-300 p-2">লেনদেনের অবস্থা</th>
+                    <th class="border border-gray-300 p-2"></th>
+                  </tr>
+                </thead>
+                <!-- Add your data rows here start -->
+                <tbody class="text-[12px]">                  
+                  <tr>
+                    <td class="border border-gray-300 p-2">1</td>
+                    <td class="border border-gray-300 p-2">2023-10-15</td>
+                    <td class="border border-gray-300 p-2">2023-10-30</td>
+                    <td class="border border-gray-300 p-2">1000</td>
+                    <td class="border border-gray-300 p-2">100</td>
+                    <td class="border border-gray-300 p-2">900</td>
+                    <td class="border border-gray-300 p-2">100</td>
+                    <td class="border border-gray-300 p-2">2023-10-10</td>
+                    <td class="border border-gray-300 p-2">1000 Tk. Service Charge JUL-2023</td>
+                    <td class="border border-gray-300 p-2">Due</td>
+                    <td class="border border-gray-300 p-2"></td>
+                  </tr>                
+                  <tr>
+                    <td class="border border-gray-300 p-2">1</td>
+                    <td class="border border-gray-300 p-2">2023-10-15</td>
+                    <td class="border border-gray-300 p-2">2023-10-30</td>
+                    <td class="border border-gray-300 p-2">1000</td>
+                    <td class="border border-gray-300 p-2">100</td>
+                    <td class="border border-gray-300 p-2">900</td>
+                    <td class="border border-gray-300 p-2">100</td>
+                    <td class="border border-gray-300 p-2">2023-10-10</td>
+                    <td class="border border-gray-300 p-2">1000 Tk. Service Charge JUL-2023</td>
+                    <td class="border border-gray-300 p-2">Due</td>
+                    <td class="border border-gray-300 p-2"></td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-2"></td>
+                    <td class="border border-gray-300 p-2"></td>
+                    <td class="border border-gray-300 p-2"></td>
+                    <td class="border border-gray-300 p-2"></td>
+                    <td class="border border-gray-300 p-2"></td>
+                    <td class="border border-gray-300 p-2">  </td>
+                    <td class="border border-gray-300 p-2 text-black font-"> Total 100 </td>
+                    <td class="border border-gray-300 p-2"></td>
+                    <td class="border border-gray-300 p-2"></td>
+                    <td class="border border-gray-300 p-2"></td>
+                    <td class="border border-gray-300 p-2"></td>
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+                <!-- <tfoot >
+                  <tr>
+                    <td colspan="6" class="text-right border border-gray-300 p-2">Total:</td>
+                    <td class="border border-gray-300 p-2">100</td>
+                    <td colspan="3"></td>
+                  </tr>
+                </tfoot> -->
+              </table>
+            </div>
+              <!--- ইনভয়েস লিস্ট table end  --->
+            <div id="content2" class="tab-content hidden">Content for Faster</div>
+            <div id="content3" class="tab-content hidden">Content for Fastest</div>
+          </div>
+           <!-- Tabs content page end  -->
+        </div>
+      </div>
+      
+
+
+
+    </div>
+
+
+
+    <footer class="bg-[#00b4aa] flex flex-row justify-center items-center py-6 mt-24 md:mt-0 overflow-hidden flex-grow">
+      <h2 class=" text-white font-semibold text-lg">Copyright © 2015-2023 <span class="uppercase">company Name</span> All rights reserved</h2>
+    </footer>
+
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/53025ffb8e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

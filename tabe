@@ -1,0 +1,100 @@
+
+
+          <!-- ইনভয়েস লিস্ট start  -->
+          <div class="flex mt-14 overflow-hidden">
+            <div class="mr-2">
+              <button id="tab1" class="tab-button active-tab hover:bg-[#ff9400] ">ইনভয়েস</button>
+            </div>
+            <div class="mr-2">
+              <button id="tab2" class="tab-button hover:bg-[#ff9400]">পাসওয়ার্ড পরিবর্তন</button>
+            </div>
+            <div>
+              <button id="tab3" class="tab-button hover:bg-[#ff9400]">এসএমএস ব্যালেন্স</button>
+            </div>
+          </div>          
+        
+          <div class="mt-4" id="tabContent">
+
+            <!-- ইনভয়েস লিস্ট table start  -->
+            <div id="content1" class="tab-content overflow-x-auto">
+              <table class="min-w-full border border-gray-300">
+                <thead class="bg-gray-200">
+                  <tr>
+                    <th class="border border-gray-300 p-2">#</th>
+                    <th class="border border-gray-300 p-2">ইস্যু তারিখ</th>
+                    <th class="border border-gray-300 p-2">শেষ হওয়ার তারিখ</th>
+                    <th class="border border-gray-300 p-2">মোট টাকা</th>
+                    <th class="border border-gray-300 p-2">ডিসকাউন্ট</th>
+                    <th class="border border-gray-300 p-2">জমা</th>
+                    <th class="border border-gray-300 p-2">বাকি</th>
+                    <th class="border border-gray-300 p-2">নিবন্ধন তারিখ</th>
+                    <th class="border border-gray-300 p-2">বিস্তারিত</th>
+                    <th class="border border-gray-300 p-2">লেনদেনের অবস্থা</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Add your data rows here -->
+                  <tr>
+                    <td class="border border-gray-300 p-2">1</td>
+                    <td class="border border-gray-300 p-2">2023-10-15</td>
+                    <td class="border border-gray-300 p-2">2023-10-30</td>
+                    <td class="border border-gray-300 p-2">1000</td>
+                    <td class="border border-gray-300 p-2">100</td>
+                    <td class="border border-gray-300 p-2">900</td>
+                    <td class="border border-gray-300 p-2">100</td>
+                    <td class="border border-gray-300 p-2">2023-10-10</td>
+                    <td class="border border-gray-300 p-2">Details</td>
+                    <td class="border border-gray-300 p-2">Paid</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-2">1</td>
+                    <td class="border border-gray-300 p-2">2023-10-15</td>
+                    <td class="border border-gray-300 p-2">2023-10-30</td>
+                    <td class="border border-gray-300 p-2">1000</td>
+                    <td class="border border-gray-300 p-2">100</td>
+                    <td class="border border-gray-300 p-2">900</td>
+                    <td class="border border-gray-300 p-2">100</td>
+                    <td class="border border-gray-300 p-2">2023-10-10</td>
+                    <td class="border border-gray-300 p-2">Details</td>
+                    <td class="border border-gray-300 p-2">Paid</td>
+                  </tr>
+                  <!-- Add more rows as needed -->
+                </tbody>
+                <tfoot >
+                  <tr>
+                    <td colspan="6" class="text-right border border-gray-300 p-2">Total:</td>
+                    <td class="border border-gray-300 p-2">100</td>
+                    <td colspan="3"></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+              <!-- ইনভয়েস লিস্ট table end  -->
+            <div id="content2" class="tab-content hidden">Content for Faster</div>
+            <div id="content3" class="tab-content hidden">Content for Fastest</div>
+          </div>
+           <!-- ইনভয়েস লিস্ট end  -->
+
+            // <!-- ইনভয়েস লিস্ট Tabs code start  -->
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+  
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('active-tab');
+        });
+  
+        tab.classList.add('active-tab');
+  
+        tabContents.forEach(content => content.classList.add('hidden'));
+        document.getElementById(`content${tab.id.slice(-1)}`).classList.remove('hidden');
+      });
+    });
+  });
+  
+
+    // <!-- ইনভয়েস লিস্ট javascript code end  -->

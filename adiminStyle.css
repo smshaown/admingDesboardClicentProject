@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+  transition: transform 0.3s; /* Add a transition for smooth animation */
+}
+
+/* profile info li  */
+
+.info ul li {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #f2f2f2;
+  font-size: 15px;
+  line-height: 33px;
+  list-style: outside none none;
+  margin: 9px 0 0;
+  padding-left: 15px;
+  color: #777;
+}
+
+/* Tab active color  */
+/* .active-tab {
+  background-color: red; /* Change this to the desired color */
+
+/* tab button  */
+/* .buttonStyle {
+ 
+} */
+
+/* .tab-button:hover {
+  background-color: #ff9400;
+} */
+
+.tab-button {
+  color: white;
+  background-color: #00aba1;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.tab-button.active-tab {
+  background-color: #ff9400;
+}
