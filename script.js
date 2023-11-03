@@ -1,4 +1,7 @@
 
+
+// Left side bar ul li toggle and subMenu
+
 function toggleSubMenu(submenuId, iconId) {
     const submenu = document.getElementById(submenuId + '-submenu');
     const angleRightIcon = document.getElementById(iconId);
@@ -11,10 +14,10 @@ function toggleSubMenu(submenuId, iconId) {
       angleRightIcon.classList.toggle('rotate-90');
     }
   }
-
     
   
 
+  // Right Side Bar Creact the page start 
   function changeContent(content) {
     var rightSidebarContent = document.getElementById("right-sidebar-content");
     var contentDiv = document.getElementById(content);
@@ -38,6 +41,7 @@ function toggleSubMenu(submenuId, iconId) {
     }
   }
 
+   // Right Side Bar Creact the page end 
 
   
  

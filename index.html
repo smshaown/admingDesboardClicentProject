@@ -39,7 +39,7 @@
     </header>
     <!-- Left Sidebar -->
     <div class="flex flex-col md:flex-row ">
-      <div id="left-sidebar" class="bg-gray-800 text-white md:w-[20%] w-full p-4">
+      <div id="left-sidebar" class="md:w-[19%] w-full p-4 border border-gray-300 border-r-gray-300">
         <div class="flex items-center mb-4">
           <i class="bi bi-gear-fill text-2xl mr-2"></i>
           <h2 class="text-xl">Dashboard</h2>
@@ -49,64 +49,54 @@
           <li class="cursor-pointer mb-2" onclick="handleFirstClick('Page 1'), changeContent('Page 1')">
             Page 1
           </li>          
-
-          <ul>
-            <li
-              class="cursor-pointer mb-2"
-              onclick="toggleSubMenu('page-2', 'angle-right-icon-2')"
-            >
-              Page 2
-              <span class="bg-blue-500 rounded-full">
-                <i
-                  id="angle-right-icon-2"
-                  class="fas fa-angle-right p-1 text-white ml-2"
-                ></i>
+          <!-- বেসিক সেটিংস Left side Nav Bar Item start  -->
+          <ul class="break-all">
+            <li class="cursor-pointer mb-2 text-black font-bold " onclick="toggleSubMenu('page-2', 'angle-right-icon-2')">
+            <a href="#">
+              <span class="rounded-full icon px-[1.5px] py-[1.6px] items-center mr-3">
+                <i id="angle-right-icon-2" class="fas fa-angle-right text-white ml-1"></i>
               </span>
+              বেসিক সেটিংস 
+            </a>             
             </li>
-            <ul id="page-2-submenu" class="hidden pl-4">
-              <li
-                class="cursor-pointer mb-2"
-                onclick="changeContent('Subpage 2.1')"
-              >
-                Subpage 2.1(ami div niye kaj korbo)
+            <ul id="page-2-submenu" class="hidden pl-[2.5em] text-[15px]">
+              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.1')">
+                <a href="#" class="hover:underline">প্রতিস্ঠানের বিবরণ</a>
               </li>
-              <li
-                class="cursor-pointer mb-2"
-                onclick="changeContent('Subpage 2.2')"
-              >
-                Subpage 2.2(ok)
+              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.2')">
+                 <a href="#" class="hover:underline">পোষাক ও মাপ যুক্ত করুন</a>
+              </li>
+              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.2')">
+                 <a href="#" class="hover:underline">সাব-অ্যাডমিন তৈরি করুন</a>
+              </li>
+              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.2')">
+                 <a href="#" class="hover:underline">সাব-অ্যাডমিন প্রবেশাধিকার  নিয়ন্ত্রণ</a>
+              </li>
+              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.2')">
+                 <a href="#" class="hover:underline">অ্যাকাউন্ট </a>
+              </li>
+              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.2')">
+                 <a href="#" class="hover:underline">মাপ প্রিন্ট সেটিং </a>
               </li>
             </ul>
+             <!-- বেসিক সেটিংস End  -->
 
-            <li
-              class="cursor-pointer mb-2"
-              onclick="toggleSubMenu('page-3', 'angle-right-icon-3')"
-            >
+            <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-3', 'angle-right-icon-3')">
               Page 3
               <span class="bg-blue-500 rounded-full">
-                <i
-                  id="angle-right-icon-3"
-                  class="fas fa-angle-right p-1 text-white ml-2"
-                ></i>
+                <i id="angle-right-icon-3" class="fas fa-angle-right p-1 text-white ml-2"></i>
               </span>
             </li>
             <ul id="page-3-submenu" class="hidden pl-4">
-              <li
-                class="cursor-pointer mb-2"
-                onclick="changeContent('Subpage 3.1')"
-              >
+              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 3.1')">
                 Subpage 3.1(ok)
               </li>
-              <li
-                class="cursor-pointer mb-2"
-                onclick="changeContent('Subpage 3.2')"
-              >
+              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 3.2')">
                 Subpage 3.2(ok)
               </li>
             </ul>
 
-            <li
-              class="cursor-pointer mb-2"
+            <li class="cursor-pointer mb-2"
               onclick="toggleSubMenu('page-4', 'angle-right-icon-4')"
             >
               Page 4
@@ -118,43 +108,26 @@
               </span>
             </li>
             <ul id="page-4-submenu" class="hidden pl-4">
-              <li
-                class="cursor-pointer mb-2"
-                onclick="changeContent('Subpage 4.1')"
-              >
+              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 4.1')">
                 Subpage 4.1(ok)
               </li>
-              <li
-                class="cursor-pointer mb-2"
-                onclick="changeContent('Subpage 4.2')"
-              >
+              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 4.2')">
                 Subpage 4.2(ok)
               </li>
             </ul>
 
 
-            
-
             <li class="cursor-pointer mb-2"  onclick="toggleSubMenu('page-5', 'angle-right-icon-5')">
               page 5
               <span class="bg-blue-500 rounded-full">
-                <i
-                  id="angle-right-icon-5"
-                  class="fas fa-angle-right p-1 text-white ml-2"
-                ></i>
+                <i id="angle-right-icon-5" class="fas fa-angle-right p-1 text-white ml-2"></i>
               </span>
             </li>
             <ul id="page-5-submenu" class="hidden pl-4">
-                <li
-                  class="cursor-pointer mb-2"
-                  onclick="toggleSubMenu('page-5.1', 'angle-right-icon-5.1')"                 
-                >
+                <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-5.1', 'angle-right-icon-5.1')">
                   page 5.1
                   <span class="bg-blue-500 rounded-full">
-                    <i
-                      id="angle-right-icon-5.1"
-                      class="fas fa-angle-right p-1 text-white ml-2"
-                    ></i>
+                    <i id="angle-right-icon-5.1" class="fas fa-angle-right p-1 text-white ml-2"></i>
                   </span>
                 </li>
 
@@ -164,39 +137,25 @@
 
 
 
-                <li
-                  class="cursor-pointer mb-2"
-                  onclick="toggleSubMenu('page-5.2', 'angle-right-icon-5.2')"                 
-                >
+                <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-5.2', 'angle-right-icon-5.2')" >
                   page 5.2
                   <span class="bg-blue-500 rounded-full">
-                    <i
-                      id="angle-right-icon-5.2"
-                      class="fas fa-angle-right p-1 text-white ml-2"
+                    <i id="angle-right-icon-5.2" class="fas fa-angle-right p-1 text-white ml-2"
                     ></i>
                   </span>
                 </li>
 
                 <ul id="page-5.2-submenu" class="hidden pl-4">
                     <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 5.2')">Subpage 5.1 (ok ok ok)</li>
-                </ul>
-
-          <!-- <li class="cursor-pointer mb-2" onclick="changeContent('Page 3')">
-            Page 3
-          </li> -->
-          <!-- <li
-            class="cursor-pointer mb-2"
-            onclick="toggleSubMenu('page-4', 'angle-right-icon-4')"
-          >
-            Page 4
-          </li> -->
+                </ul>          
         </ul>
+        
       </div>
 
       
     
 
-      <div id="right-sidebar-content" class="md:w-[80%] w-full p-4">
+  <div id="right-sidebar-content" class="md:w-[81%] w-full p-4">
   <!-- Content for Page 1 -->
   <div id="Page 1" class="content-div">  
       <h1 class="text-base font-semibold text-[#00b4aa]">পরিচালকের প্রোফাইল</h1>
@@ -240,7 +199,7 @@
         </div>
       </div>          
     
-      <!-- Tabs content page start  -->
+      <!-- Tabs content Home page profile start  -->
       <div class="mt-4" id="tabContent">
         <!-- ইনভয়েস লিস্ট table start  -->
         <div id="content1" class="tab-content overflow-x-auto">
@@ -324,18 +283,16 @@
         <div id="content2" class="tab-content hidden">Email</div>
         <div id="content3" class="tab-content hidden">proflie Name</div>
       </div>
-       <!-- Tabs content page end  -->
+       <!-- Tabs content Home page profile end  -->
   </div>
 
-  <!-- Content for Page 2 -->
-  <!-- <div id="Page 2" class="content-div" style="display: none;">
-    Content for Page 2
-  </div> -->
+ 
 
   <!-- Content for Subpage 2.1 -->
   <div id="Subpage 2.1" class="content-div" style="display: none;">
     Content for Subpage 2.11111
   </div>
+  
 
   <div id="Subpage 2.2" class="content-div" style="display: none;">
     Content for Subpage 2.222222
