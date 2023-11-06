@@ -76,7 +76,7 @@
               <li class="cursor-pointer mb-2" onclick="changeContent('account')">
                  <a href="#" class="hover:underline">অ্যাকাউন্ট </a>
               </li>
-              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage-2.2')">
+              <li class="cursor-pointer mb-2" onclick="changeContent('মাপ-প্রিন্ট')">
                  <a href="#" class="hover:underline">মাপ প্রিন্ট সেটিং </a>
               </li>
             </ul>
@@ -636,9 +636,86 @@
   </div>
    <!-- বেসিক সেটিংস for item => অ্যাকাউন্ট end -->
 
-  <div id="Subpage-2.2" class="content-div" style="display: none;">
-    oke brother Subpage 3.222222
+   <!-- বেসিক সেটিংস for item => 		মাপ প্রিন্ট সেটিং end -->
+  <div id="মাপ-প্রিন্ট" class="content-div" style="display: none;">
+    <h2 class="text-base font-semibold text-[#7367f0]">প্রিন্ট কপি সেটিং (প্রিন্ট এর জন্য নির্বাচন করুন)</h2>
+    <hr class="mt-3 mb-3" />
+
+
+  <div class="w-[250px] mt-4">
+    <div class="flex flex-row items-center justify-between">
+      <h2>দোকানের নাম</h2>
+      <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    </div>
+    <div class="flex flex-row items-center justify-between mt-1">
+      <h2>অতিরিক্ত(......)কপি</h2>
+      <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    </div>
+    <div class="flex flex-row items-center justify-between mt-1">
+      <h2>কারিগর কপি</h2>
+      <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    </div>
+    <div class="flex flex-row items-center justify-between mt-1">
+      <h2>দোকান কপি</h2>
+      <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    </div>
+    <div class="flex flex-row items-center justify-between mt-1">
+      <h2>কাস্টমারের নাম </h2>
+      <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    </div>
+    <div class="flex flex-row items-center justify-between mt-1">
+      <h2>নাম সহ মাপ 	</h2>
+      <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    </div>
+    
+    <div class="flex flex-row items-center justify-between mt-1">
+      <h2>ক্যাটাগরির নাম সহ স্টাইল 	</h2>
+      <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    </div>
+    <div class="flex flex-row items-center justify-between mt-1">
+      <h2>উপরের স্পেস </h2>
+      <input text="text" placeholder="16" class="border border-gray-800 w-[50px] h-[30px] ml-[100px]" >
+      <span class="ml-2 ml-[-38px]">px</span>
+    </div>
+    <div class="flex flex-row items-center justify-between mt-1">
+      <h2>মাপের ফন্ট সাইজ </h2>
+      <div class="relative">
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-2 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 ml-4" id="grid-state">
+          <option>16px</option>
+          <option>12px</option>
+          <option>13px</option>
+          <option>14px</option>
+          <option>15px</option>
+          <option>16px</option>
+          <option>17px</option>
+          <option>18px</option>
+          <option>19px</option>
+          <option>20px</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+        </div>
+      </div>
+
+
+
+    </div>
+    <!-- <div class="flex flex-row items-center justify-between mt-1">
+      <h2>ডিসকাউন্ট লিমিট</h2>
+      <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+    </div> -->
+
+    <div class="flex items-end justify-end mt-5 cursor-pointer">
+      <span>
+        <i class="fa-solid fa-print text-[30px]"></i>
+      </span>
+    </div>
+
+
+   </div>
+  <div class="mt-10 "> <a href="#" class="cursor-pointer font-bold text-[18px] hover:underline text-[#005087]">নতুন অর্ডার দিন</a></div>
   </div>
+
 
   <div id="print1" class="content-div" style="display: none;">
    Print 1
