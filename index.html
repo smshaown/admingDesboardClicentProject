@@ -48,7 +48,7 @@
           <li class="cursor-pointer mb-2 sidebar-link" onclick="handleFirstClick('Page 1'), changeContent('Page 1')">
             Page 1
           </li>          
-          <!-- বেসিক সেটিংস ==> প্রতিস্ঠানের বিবরণ == Left side Nav Bar Item start  -->
+          <!-- বেসিক সেটিংস Item start  -->
           <ul class="break-all">
             <li class="cursor-pointer mb-2 text-black font-bold " onclick="toggleSubMenu('page-2', 'angle-right-icon-2')">          
               <span class="rounded-full icon px-[1px] py-[0.9px] items-center mr-3">
@@ -56,24 +56,27 @@
               </span>
               বেসিক সেটিংস 
                          
-            </li>
+            </li>           
             <ul id="page-2-submenu" class="hidden pl-[2.5em] text-[15px]">
-              <li class="cursor-pointer mb-2" onclick="changeContent('প্রতিস্ঠানের বিবরণ')">
+               <!--  প্রতিস্ঠানের বিবরণ == Left side Nav Bar  -->
+              <li class="cursor-pointer mb-2" onclick="changeContent('প্রতিস্ঠানের-বিবরণ')">
                 <a href="#" class="hover:underline">প্রতিস্ঠানের বিবরণ</a>
               </li>
-              <li class="cursor-pointer mb-2" onclick="changeContent('পোষাক ও মাপ')">
+               <!--  পোষাক ও মাপ যুক্ত করুন == Left side Nav Bar  -->
+              <li class="cursor-pointer mb-2" onclick="changeContent('পোষাক-ও-মাপ')">
                  <a href="#" class="hover:underline">পোষাক ও মাপ যুক্ত করুন</a>
               </li>
-              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.2')">
+               <!--  সাব-অ্যাডমিন তৈরি করুন == Left side Nav Bar  -->
+              <li class="cursor-pointer mb-2" onclick="changeContent('সাব-অ্যাডমিন')">
                  <a href="#" class="hover:underline">সাব-অ্যাডমিন তৈরি করুন</a>
               </li>
-              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.2')">
-                 <a href="#" class="hover:underline">সাব-অ্যাডমিন প্রবেশাধিকার  নিয়ন্ত্রণ</a>
-              </li>
-              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.2')">
+              <li class="cursor-pointer mb-2" onclick="changeContent('subAccess')">
+                 <a href="#" class="hover:underline">সাব-অ্যাডমিন প্রবেশাধিকার নিয়ন্ত্রণ</a>
+              </li>             
+              <li class="cursor-pointer mb-2" onclick="changeContent('account')">
                  <a href="#" class="hover:underline">অ্যাকাউন্ট </a>
               </li>
-              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.2')">
+              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage-2.2')">
                  <a href="#" class="hover:underline">মাপ প্রিন্ট সেটিং </a>
               </li>
             </ul>
@@ -118,7 +121,6 @@
               </li>
             </ul>
 
-
             <li class="cursor-pointer mb-2"  onclick="toggleSubMenu('page-5', 'angle-right-icon-5')">
               page 5
               <span class="bg-blue-500 rounded-full">
@@ -150,7 +152,7 @@
                 <ul id="page-5.2-submenu" class="hidden pl-4">
                     <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 5.2')">Subpage 5.1 (ok ok ok)</li>
                 </ul>          
-        </ul>
+           </ul>
         
       </div>
 
@@ -287,11 +289,10 @@
       </div>
        <!-- Tabs content Home page profile end  -->
   </div>
-
  
 
-  <!-- Content for প্রতিস্ঠানের বিবরণ  page start-->
-  <div id="প্রতিস্ঠানের বিবরণ" class="content-div" style="display: none;">
+  <!-- বেসিক সেটিংস for item => প্রতিস্ঠানের বিবরণ  page start-->
+  <div id="প্রতিস্ঠানের-বিবরণ" class="content-div" style="display: none;">
     <h2 class="text-base font-semibold text-[#7367f0]">আপনার প্রতিষ্ঠানের তথ্য</h2>
     <hr class="mt-3 mb-3" />
       <div>      
@@ -360,23 +361,16 @@
                 <button class="text-[#076db3] text-[12px] cursor-pointer" id="cancel" style="display:none;" onclick="cancelEdit()">Cancel</button></div>   
             </td>
         </tr>
-
-
-
-
-        
-          
-          </tbody>
-
+      </tbody>
       </table>
       </div>
     
 
   </div>
-  <!-- Content for প্রতিস্ঠানের বিবরণ  page end-->
+  <!-- বেসিক সেটিংস for  item =>  প্রতিস্ঠানের বিবরণ  page end-->
   
-   <!-- বেসিক সেটিংস item => পোষাক ও মাপ যুক্ত করুন start -->
-  <div id="পোষাক ও মাপ" class="content-div" style="display: none;">
+   <!-- বেসিক সেটিংস for item => পোষাক ও মাপ যুক্ত করুন start -->
+  <div id="পোষাক-ও-মাপ" class="content-div" style="display: none;">
     <h2 class="text-base font-semibold text-[#7367f0]">পোষাক এর মাপ ও পোষাক এর নির্দিষ্ট চার্জ যুক্ত করুন</h2>
     <hr class="mt-3 mb-3" />
     <a class="text-[13px] text-base hover:underline" style="color:#414366;">নতুন পোষাক যুক্ত করুন</a>
@@ -462,14 +456,187 @@
 
     </div>
   </div>
-   <!-- বেসিক সেটিংস item => পোষাক ও মাপ যুক্ত করুন end --
+   <!-- বেসিক সেটিংস item => পোষাক ও মাপ যুক্ত করুন end -->
 
+  <!-- বেসিক সেটিংস for item => সাব-অ্যাডমিন তৈরি করুন start -->
+  <div id="সাব-অ্যাডমিন" class="content-div" style="display: none;">
+    <h2 class="text-base font-semibold text-[#7367f0]">নতুন সাব-অ্যাডমিন এর জন্য রেজিস্ট্রেশন</h2>
+    <hr class="mt-3 mb-3" />
+    <div>
+      <div class="flex flex-col md:flex-row ">
+        <div  class="mr-2 w-none md:w-[200px] text-none md:text-right"> 
+          <label for="">  সাব-অ্যাডমিন এর নাম </label>
+        </div>
+        <div>
+          <input type="text" class="shadow appearance-none border border-gray-500 rounded md:w-[230px] w-full py-1 px-3 text-gray-700 mb-3 leading-tight focus:ring-blue-500 focus:border-blue-500" placeholder="Input First Name">
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row mt-">
+        <div  class="mr-2 w-none md:w-[200px] text-none md:text-right"> 
+          <label for=""> পদবী </label>
+        </div>
+        <div>
+          <input type="text" class="shadow appearance-none border border-gray-500 rounded md:w-[230px] w-full py-1 px-3 text-gray-700 mb-3 leading-tight focus:ring-blue-500 focus:border-blue-500" placeholder="Input Designation">
+        </div>
+      </div>
 
-  <div id="Subpage 3.1" class="content-div" style="display: none;">
-    Content for Subpage 3.11111111
+      <div class="flex flex-col md:flex-row mt-">
+        <div  class="mr-2 w-none md:w-[200px] text-none md:text-right"> 
+          <label for=""> লগইন ইউজার নাম </label>
+        </div>
+        <div>
+          <input type="password" class="shadow appearance-none border border-gray-500 rounded md:w-[230px] w-full py-1 px-3 text-gray-700 mb-3 leading-tight focus:ring-blue-500 focus:border-blue-500" placeholder="Input User Name">
+        </div>
+      </div>
+
+    
+      <div class="flex flex-col md:flex-row mt-">
+        <div  class="mr-2 w-none md:w-[200px] text-none md:text-right"> 
+          <label for=""> লগইন পাসওয়ার্ড </label>
+        </div>
+        <div>
+          <input type="password" class="shadow appearance-none border border-gray-500 rounded md:w-[230px] w-full py-1 px-3 text-gray-700 mb-3 leading-tight focus:ring-blue-500 focus:border-blue-500" placeholder="Input First Name">
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row mt-">
+        <div  class="mr-2 w-none md:w-[200px] text-none md:text-right"> 
+          <label for=""> পাসওয়ার্ড নিশ্চিত করুন </label>
+        </div>
+        <div>
+          <input type="password" class="shadow appearance-none border border-gray-500 rounded md:w-[230px] w-full py-1 px-3 text-gray-700 mb-3 leading-tight focus:ring-blue-500 focus:border-blue-500" placeholder="Input Password Again">
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row mt-">
+        <div  class="mr-2 w-none md:w-[200px] text-none md:text-right"> 
+          <label for=""> ই-মেইল</label>
+        </div>
+        <div>
+          <input type="email" class="shadow appearance-none border border-gray-500 rounded md:w-[230px] w-full py-1 px-3 text-gray-700 mb-3 leading-tight focus:ring-blue-500 focus:border-blue-500" placeholder="Input Email">
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row mt-">
+        <div  class="mr-2 w-none md:w-[200px] text-none md:text-right"> 
+          <label for="">নিরাপত্তা প্রশ্</label>
+        </div>
+        <div>
+          <input type="text" class="shadow appearance-none border border-gray-500 rounded md:w-[230px] w-full py-1 px-3 text-gray-700 mb-3 leading-tight focus:ring-blue-500 focus:border-blue-500" placeholder="Input First Name">
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row mt-">
+        <div  class="mr-2 w-none md:w-[200px] text-none md:text-right"> 
+          <label for="">নিরাপত্তা উত্তর</label>
+        </div>
+        <div>
+          <input type="text" class="shadow appearance-none border border-gray-500 rounded md:w-[230px] w-full py-1 px-3 text-gray-700 mb-3 leading-tight focus:ring-blue-500 focus:border-blue-500" placeholder="Answer the question">
+        </div>
+      </div>
+
+      <button class="tab-button">save & continue</button>
+    </div>
   </div>
+  <!-- বেসিক সেটিংস for item => সাব-অ্যাডমিন তৈরি করুন start -->
 
-  <div id="Subpage 3.2" class="content-div" style="display: none;">
+  <div id="subAccess" class="content-div" style="display: none;">
+    সাব-প্রবেশাধিকার
+  </div>
+ 
+
+   <!-- বেসিক সেটিংস for item => অ্যাকাউন্ট start -->
+  <div id="account" class="content-div" style="display: none;">
+    <h2 class="text-base font-semibold text-[#7367f0]"> Account With Deposit/Withdraw</h2>
+    <hr class="mt-3 mb-3" />
+    <div>
+      <h2>Account Name</h2>
+       <div class="mt-4 mb-4">
+        <input class="shadow appearance-none border border-gray-500 rounded md:w-[230px] w-full py-1 px-3 text-gray-700 mb-3 leading-tight focus:ring-blue-500 focus:border-blue-500" type="number">
+       <button class="tab-button">Add</button>
+       </div>
+       <div id="content1" class="tab-content overflow-x-auto">
+        <table class="min-w-full border border-gray-300 text-center">
+          <thead class="bg-[#9087E4] text-white text-[12px]">
+            <tr>
+              <th class="border border-gray-300 p-2">Account</th>
+              <th class="border border-gray-300 p-2">Deposit</th>
+              <th class="border border-gray-300 p-2">Withdraw</th>
+              <th class="border border-gray-300 p-2">Income</th>
+              <th class="border border-gray-300 p-2">Expense</th>
+              <th class="border border-gray-300 p-2">Deleted Income</th>
+              <th class="border border-gray-300 p-2">Deleted Expense</th>
+              <th class="border border-gray-300 p-2">Default</th>
+              <th class="border border-gray-300 p-2"></th>
+              <th class="border border-gray-300 p-2"></th>
+            </tr>            							
+          </thead>
+          <!-- Add your data rows here start -->
+          <tbody class="text-[12px]">                  
+            <tr>
+              <td class="border border-gray-300 p-2">
+                <span class="text-[#076db3]">Cash</span>
+                (0000.78548765485)
+              </td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2">100.00000</td>
+              <td class="border border-gray-300 p-2">36730422		</td>
+              <td class="border border-gray-300 p-2">167121</td>
+              <td class="border border-gray-300 p-2">965375</td>
+              <td class="border border-gray-300 p-2">
+                <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              </td>
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">	Edit	</td>
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">Delete</td>              
+            </tr>                
+            <tr>
+              <td class="border border-gray-300 p-2">
+                <span class="text-[#076db3]">Bkash</span>
+                (0000.78548765485)
+              </td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2">100.00000</td>
+              <td class="border border-gray-300 p-2">36730422		</td>
+              <td class="border border-gray-300 p-2">167121</td>
+              <td class="border border-gray-300 p-2">965375</td>
+              <td class="border border-gray-300 p-2">
+                <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              </td>
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">	Edit	</td>
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">Delete</td>              
+            </tr> 
+            <tr>
+              <td class="border border-gray-300 p-2">
+                <span class="text-[#076db3]">Card</span>
+                (0000)
+              </td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2">
+                <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              </td>
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">	Edit	</td>
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">Delete</td>              
+            </tr> 
+           
+            <!-- Add more rows as needed -->
+          </tbody>
+          <!-- <tfoot >
+            <tr>
+              <td colspan="6" class="text-right border border-gray-300 p-2">Total:</td>
+              <td class="border border-gray-300 p-2">100</td>
+              <td colspan="3"></td>
+            </tr>
+          </tfoot> -->
+        </table>
+      </div>
+    </div>   
+  </div>
+   <!-- বেসিক সেটিংস for item => অ্যাকাউন্ট end -->
+
+  <div id="Subpage-2.2" class="content-div" style="display: none;">
     oke brother Subpage 3.222222
   </div>
 
@@ -483,11 +650,8 @@
 
   <!-- Add more content divs for other pages and subpages as needed -->
 
-</div>
-
-      
-      
-    </div>
+  </div>
+ </div>
 
 
 
