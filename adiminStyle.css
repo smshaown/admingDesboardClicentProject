@@ -8,8 +8,16 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.clicked-link {
-  color: red; /* Change this to the desired color */
+.backgroudColor {
+  backgroud-color: #7367f0;
+}
+
+.Textcolor {
+  color: #7367f0;
+}
+
+li a:hover {
+  background-color: #e0e0e0; /* Change this to your desired hover color */
 }
 
 /* left Side Navbar  */
@@ -52,7 +60,7 @@ body {
 /* Tab active color  */
 .tab-button {
   color: white;
-  background-color: #00aba1;
+  background-color: #9087e4;
   padding: 8px 10px;
   font-size: 14px;
   font-weight: normal;
@@ -61,7 +69,7 @@ body {
 }
 
 .tab-button.active-tab {
-  background-color: #ff9400;
+  background-color: #414366;
 }
 
 /* Right side seleceted color  */
@@ -71,9 +79,10 @@ body {
   color: white;
 }
 
-/* .new-page {
-  width: 50%; 
-  height: 100%;
-  float: right;
-  border: none;
-} */
+#updatedInputText {
+  border: 1px solid #ccc;
+}
+
+#updatedInputText[contentEditable="true"] {
+  border: 2px solid gray; /* This will give the input a border when it is in edit mode */
+}

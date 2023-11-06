@@ -29,7 +29,9 @@ function toggleSubMenu(submenuId, iconId) {
       }
 
       contentDiv.style.display = "block";
-    }
+    }   
+
+
   }
 
   var firstClicked = false; // Flag to track if a link has been clicked
@@ -78,8 +80,53 @@ function toggleSubMenu(submenuId, iconId) {
 
 
 
+  function enableEdit() {
+    var inputFields = document.querySelectorAll('#updatedInputText');
+    var updateButton = document.getElementById('updateButton');
+    var cancelButton = document.getElementById('cancel');
+    var editButton = document.getElementById('পরিবর্তন');
 
+    inputFields.forEach(function(field) {
+        field.contentEditable = true;
+        field.classList.add('bg-[#fcfcfc]'); // Add background color for visual indication of edit mode
+    });
 
+    updateButton.style.display = 'block';
+    cancelButton.style.display = 'block';
+    editButton.style.display = 'none';
+}
+
+function updateInfo() {
+    var inputFields = document.querySelectorAll('#updatedInputText');
+    var updateButton = document.getElementById('updateButton');
+    var cancelButton = document.getElementById('cancel');
+    var editButton = document.getElementById('পরিবর্তন');
+
+    inputFields.forEach(function(field) {
+        field.contentEditable = false;
+        field.classList.remove('bg-[#fcfcfc]'); // Remove background color
+    });
+
+    updateButton.style.display = 'none';
+    cancelButton.style.display = 'none';
+    editButton.style.display = 'block';
+}
+
+function cancelEdit() {
+    var inputFields = document.querySelectorAll('#updatedInputText');
+    var updateButton = document.getElementById('updateButton');
+    var cancelButton = document.getElementById('cancel');
+    var editButton = document.getElementById('পরিবর্তন');
+
+    inputFields.forEach(function(field) {
+        field.contentEditable = false;
+        field.classList.remove('bg-[#fcfcfc]'); // Remove background color
+    });
+
+    updateButton.style.display = 'none';
+    cancelButton.style.display = 'none';
+    editButton.style.display = 'block';
+}
 
 
 

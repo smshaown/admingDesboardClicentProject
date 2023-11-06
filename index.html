@@ -20,11 +20,11 @@
 
     <!-- Top Header section Start -->
     <header class="">
-        <div class="py-5 px-4 text-white flex flex-col md:flex-row justify-between items-center" style="background-color: #00b4aa">
+        <div class="py-5 px-4 text-white flex flex-col md:flex-row justify-between items-center" style="background-color: #7367f0">
             <!-- Left side  -->
            <div class="flex flex-col md:flex-row justify-center items-center">
             <!-- logo img  -->
-             <img class="h-16 w-16 object-cover rounded-mb mr-3" src="img/companyLogo.jpg" alt="">
+             <img class="h-16 w-16 object-cover rounded-mb mr-3" src="img/adminLogo.png" alt="">
               <h2 class="text-3xl font-bold">User Name</h2>
             </div>
             <!-- Right side  -->
@@ -45,25 +45,23 @@
           <h2 class="text-xl">Dashboard</h2>
         </div>
         <ul>
-
-          <li class="cursor-pointer mb-2" onclick="handleFirstClick('Page 1'), changeContent('Page 1')">
+          <li class="cursor-pointer mb-2 sidebar-link" onclick="handleFirstClick('Page 1'), changeContent('Page 1')">
             Page 1
           </li>          
-          <!-- বেসিক সেটিংস Left side Nav Bar Item start  -->
+          <!-- বেসিক সেটিংস ==> প্রতিস্ঠানের বিবরণ == Left side Nav Bar Item start  -->
           <ul class="break-all">
-            <li class="cursor-pointer mb-2 text-black font-bold " onclick="toggleSubMenu('page-2', 'angle-right-icon-2')">
-            <a href="#">
-              <span class="rounded-full icon px-[1.5px] py-[1.6px] items-center mr-3">
-                <i id="angle-right-icon-2" class="fas fa-angle-right text-white ml-1"></i>
+            <li class="cursor-pointer mb-2 text-black font-bold " onclick="toggleSubMenu('page-2', 'angle-right-icon-2')">          
+              <span class="rounded-full icon px-[1px] py-[0.9px] items-center mr-3">
+                <i id="angle-right-icon-2" class="fas fa-angle-right text-white ml-1 text-[12px] font-bold"></i>
               </span>
               বেসিক সেটিংস 
-            </a>             
+                         
             </li>
             <ul id="page-2-submenu" class="hidden pl-[2.5em] text-[15px]">
-              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.1')">
+              <li class="cursor-pointer mb-2" onclick="changeContent('প্রতিস্ঠানের বিবরণ')">
                 <a href="#" class="hover:underline">প্রতিস্ঠানের বিবরণ</a>
               </li>
-              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.2')">
+              <li class="cursor-pointer mb-2" onclick="changeContent('পোষাক ও মাপ')">
                  <a href="#" class="hover:underline">পোষাক ও মাপ যুক্ত করুন</a>
               </li>
               <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 2.2')">
@@ -79,14 +77,18 @@
                  <a href="#" class="hover:underline">মাপ প্রিন্ট সেটিং </a>
               </li>
             </ul>
-             <!-- বেসিক সেটিংস End  -->
+             <!-- বেসিক সেটিংস End  -->           
 
-            <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-3', 'angle-right-icon-3')">
+            
+
+
+             <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-3', 'angle-right-icon-3')">
               Page 3
               <span class="bg-blue-500 rounded-full">
                 <i id="angle-right-icon-3" class="fas fa-angle-right p-1 text-white ml-2"></i>
               </span>
             </li>
+            
             <ul id="page-3-submenu" class="hidden pl-4">
               <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 3.1')">
                 Subpage 3.1(ok)
@@ -158,7 +160,7 @@
   <div id="right-sidebar-content" class="md:w-[81%] w-full p-4">
   <!-- Content for Page 1 -->
   <div id="Page 1" class="content-div">  
-      <h1 class="text-base font-semibold text-[#00b4aa]">পরিচালকের প্রোফাইল</h1>
+      <h1 class="text-base font-semibold text-[#7367f0]">পরিচালকের প্রোফাইল</h1>
       <!-- Profile Details start -->
       <div class="bg-[#FAFAFA] px-4 py-4 flex flex-row gap-4 mt-4 border border-[#f2f2f2]">
         <!-- profile (Right) ==> left side  -->
@@ -189,13 +191,13 @@
       <!-- ইনভয়েস লিস্ট  3==>Tabs start  -->
       <div class="flex mt-14 overflow-hidden">
         <div class="mr-2">
-          <button id="tab1" class="tab-button active-tab hover:bg-[#ff9400] ">ইনভয়েস</button>
+          <button id="tab1" class="tab-button active-tab hover:bg-[#414366] ">ইনভয়েস</button>
         </div>
         <div class="mr-2">
-          <button id="tab2" class="tab-button hover:bg-[#ff9400]">পাসওয়ার্ড পরিবর্তন</button>
+          <button id="tab2" class="tab-button hover:bg-[#414366]">পাসওয়ার্ড পরিবর্তন</button>
         </div>
         <div>
-          <button id="tab3" class="tab-button hover:bg-[#ff9400]">এসএমএস ব্যালেন্স</button>
+          <button id="tab3" class="tab-button hover:bg-[#414366]">এসএমএস ব্যালেন্স</button>
         </div>
       </div>          
     
@@ -288,15 +290,179 @@
 
  
 
-  <!-- Content for Subpage 2.1 -->
-  <div id="Subpage 2.1" class="content-div" style="display: none;">
-    Content for Subpage 2.11111
-  </div>
-  
+  <!-- Content for প্রতিস্ঠানের বিবরণ  page start-->
+  <div id="প্রতিস্ঠানের বিবরণ" class="content-div" style="display: none;">
+    <h2 class="text-base font-semibold text-[#7367f0]">আপনার প্রতিষ্ঠানের তথ্য</h2>
+    <hr class="mt-3 mb-3" />
+      <div>      
+       <img class="h-16 w-16 object-cover rounded-mb mr-3" src="img/adminLogo.png" alt="">       
+      </div>
+      <div class="mt-4">
+        <table class="border-collapse border border-slate-400 w-full">
+          <tbody>
+            <tr class="">
+             <td class="border border-[#eaeaea] px-2 py-2 text-[14px] w-[150px] md:w-[230px]">প্রতিষ্ঠানের নাম</td>
+             <td id="updatedInputText" class="border border-[#eaeaea] px-2 py-2  text-[14px]">Lorem ipsum dolor</td>  
+           </tr>
+           <tr class="bg-[#fcfcfc]">
+            <td class="border border-[#eaeaea]  px-2 py-2 text-[14px] w-[150px] md:w-[230px]">ডায়লগ</td>
+            <td id="updatedInputText" class="border border-[#eaeaea] bg-[#fcfcfc] px-2 py-2 text-[14px]">Lorem ipsum dolor</td>
+          </tr>
+           <tr class="">
+            <td class="border border-[#eaeaea] px-2 py-2 text-[14px] w-[150px] md:w-[230px]">স্থাপিত</td>
+            <td id="updatedInputText" class="border border-[#eaeaea] px-2 py-2 text-[14px]">1972</td>
+          </tr>
+          <tr class="bg-[#fcfcfc]">
+            <td class="border border-[#eaeaea] px-2 py-2 text-[14px] w-[150px] md:w-[230px]">স্টাফ</td>
+            <td id="updatedInputText" class="border border-[#eaeaea] px-2 py-2 text-[14px]">4</td>
+          </tr>
+          <tr class="bg-[#fcfcfc]">
+            <td class="border border-[#eaeaea] px-2 py-2 text-[14px] w-[150px] md:w-[230px]">ঠিকানা</td>
+            <td id="updatedInputText" class="border border-[#eaeaea] px-2 py-2 text-[14px]">114 SURJOMOHOL MARKET, PAGLA BAZAR,NARAYANGONJ</td>
+          </tr>
+          <tr class="alt">
+            <td class="border border-[#eaeaea] px-2 py-2 text-[14px] w-[150px] md:w-[230px]">সিটি</td>
+            <td id="updatedInputText" class="border border-[#eaeaea] px-2 py-2 text-[14px]">Lorem ipsum dolor</td>
+          </tr>
+          <tr class="bg-[#fcfcfc]">
+            <td class="border border-[#eaeaea] px-2 py-2 text-[14px] w-[150px] md:w-[230px]">স্ট্যাট</td>
+            <td id="updatedInputText" class="border border-[#eaeaea] px-2 py-2 text-[14px]">Lorem ipsum dolor</td>
+          </tr>
+          <tr class="alt">
+            <td class="border border-[#eaeaea] px-2 py-2 text-[14px] w-[150px] md:w-[230px]">লোকাল এরিয়া</td>
+            <td id="updatedInputText" class="border border-[#eaeaea] px-2 py-2 text-[14px]">Lorem ipsum dolor</td>
+          </tr>
+          <tr class="bg-[#fcfcfc]">
+            <td class="border border-[#eaeaea] px-2 py-2 text-[14px] w-[150px] md:w-[230px]">পোস্টকোড</td>
+            <td id="updatedInputText" class="border border-[#eaeaea] px-2 py-2 text-[14px]">Lorem ipsum dolor</td>
+          </tr>
+          <tr class="alt">
+            <td class="border border-[#eaeaea] px-2 py-2 text-[14px] w-[150px] md:w-[230px]">ফোন</td>
+            <td id="updatedInputText" class="border border-[#eaeaea] px-2 py-2 text-[14px]">01913002264</td>
+          </tr>
 
-  <div id="Subpage 2.2" class="content-div" style="display: none;">
-    Content for Subpage 2.222222
+          <tr class="bg-[#fcfcfc]">
+            <td class="border border-[#eaeaea] px-2 py-2 text-[14px] w-[150px] md:w-[230px]">ই-মেইল</td>
+            <td id="updatedInputText" class="border border-[#eaeaea] px-2 py-2 text-[14px]">Lorem ipsum dolor</td>
+          </tr>
+          <tr>
+            <td class="border border-[#eaeaea] px-2 py-2 text-[14px] w-[150px] md:w-[230px]">ওয়েব সাইট</td>
+            <td id="updatedInputText" class="border border-[#eaeaea] px-2 py-2 text-[14px]">Lorem ipsum dolor</td>
+          </tr>  
+
+
+          <tr>
+            <td  class="border border-[#eaeaea] px-2 py-2 text-[14px]" colspan="2">
+
+                <button id="পরিবর্তন"   class="text-[#076db3] text-[12px] cursor-pointer" onclick="enableEdit()">পরিবর্তন করতে ক্লিক করুন</button>                     
+               <div class="flex flex-row gap-4"> 
+                <button class="text-[#076db3] text-[12px] cursor-pointer" id="updateButton" style="display:none;" onclick="updateInfo()">Update</button>
+                <button class="text-[#076db3] text-[12px] cursor-pointer" id="cancel" style="display:none;" onclick="cancelEdit()">Cancel</button></div>   
+            </td>
+        </tr>
+
+
+
+
+        
+          
+          </tbody>
+
+      </table>
+      </div>
+    
+
   </div>
+  <!-- Content for প্রতিস্ঠানের বিবরণ  page end-->
+  
+   <!-- বেসিক সেটিংস item => পোষাক ও মাপ যুক্ত করুন start -->
+  <div id="পোষাক ও মাপ" class="content-div" style="display: none;">
+    <h2 class="text-base font-semibold text-[#7367f0]">পোষাক এর মাপ ও পোষাক এর নির্দিষ্ট চার্জ যুক্ত করুন</h2>
+    <hr class="mt-3 mb-3" />
+    <a class="text-[13px] text-base hover:underline" style="color:#414366;">নতুন পোষাক যুক্ত করুন</a>
+    <div id="content1" class="tab-content overflow-x-auto mt-4">
+      <table class="min-w-full border border-gray-300 text-center">
+        <thead class="bg-[#7367F0] text-white text-[12px]">
+          <tr>
+            <th class="border border-gray-300 p-2">ইডিট করুন</th>
+            <th class="border border-gray-300 p-2">পোষাকের নাম</th>
+            <th class="border border-gray-300 p-2">ছবি</th>
+            <th class="border border-gray-300 p-2">মাপ যুক্ত করুন</th>
+            <th class="border border-gray-300 p-2">স্টাইল যুক্ত করুন</th>
+            <th class="border border-gray-300 p-2">সিরিয়াল</th>
+            <th class="border border-gray-300 p-2">ডিলিট করুন</th>
+             					
+          </tr>
+        </thead>
+        <!-- Add your data rows here start -->
+        <tbody class="text-[12px]">                  
+          <tr>
+            <td class="border border-gray-300 p-2">
+              <a href="#" class="bg-[#00C869] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-regular fa-pen-to-square"></i></a>
+            </td>
+            <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">সার্ট</td>
+            <td class="border border-gray-300 p-2">
+              <div class="w-[100px] h-[100px] rounded-mb flex justify-center items-center "><img class="w-[100%] h-[100%]" src="img/cloths/clothing3.jpeg" alt=""></div>
+            </td>
+            <td class="border border-gray-300 p-2">
+              <a href="#" class="bg-[#CC0061] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
+            </td>
+            <td class="border border-gray-300 p-2"><a href="#" class="bg-[#00C4C8] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-vest-patches"></i></a></td>
+            <td class="border border-gray-300 py-1 px-2 w-full md:w-[80px]">
+              <input class="border border-[#000] py-2" type="text" placeholder="1">
+            </td>
+            <td class="border border-gray-300 p-2">         
+              <a href="#" class="bg-[#EC1C23] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-trash-can"></i></a>
+            </td>
+          </tr>                 
+          <tr>
+            <td class="border border-gray-300 p-2">
+              <a href="#" class="bg-[#00C869] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-regular fa-pen-to-square"></i></a>
+            </td>
+            <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">প্যান্ট</td>
+            <td class="border border-gray-300 p-2">
+              <div class="w-[100px] h-[100px] rounded-mb flex justify-center items-center "><img class="w-[100%] h-[100%]" src="img/cloths/clothing2.jpeg" alt=""></div>
+            </td>
+            <td class="border border-gray-300 p-2">
+              <a href="#" class="bg-[#CC0061] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
+            </td>
+            <td class="border border-gray-300 p-2"><a href="#" class="bg-[#00C4C8] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-vest-patches"></i></a></td>
+            <td class="border border-gray-300 py-1 px-2 w-full md:w-[80px]">
+              <input class="border border-[#000] py-2 " type="text" placeholder="1">
+            </td>
+            <td class="border border-gray-300 p-2">         
+              <a href="#" class="bg-[#EC1C23] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-trash-can"></i></a>
+            </td>
+          </tr>   
+          <tr>
+            <td class="border border-gray-300 p-2">
+              <a href="#" class="bg-[#00C869] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-regular fa-pen-to-square"></i></a>
+            </td>
+            <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">একছাটা পাঞ্জাবি</td>
+            <td class="border border-gray-300 p-2">
+              <div class="w-[100px] h-[100px] rounded-mb flex justify-center items-center "><img class="w-[100%] h-[100%]" src="img/cloths/clothing1.jpeg" alt=""></div>
+            </td>
+            <td class="border border-gray-300 p-2">
+              <a href="#" class="bg-[#CC0061] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
+            </td>
+            <td class="border border-gray-300 p-2"><a href="#" class="bg-[#00C4C8] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-vest-patches"></i></a></td>
+            <td class="border border-gray-300 py-1 px-2 w-full md:w-[80px]">
+              <input class="border border-[#000] py-2" type="text" placeholder="1">
+            </td>
+            <td class="border border-gray-300 p-2">         
+              <a href="#" class="bg-[#EC1C23] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-trash-can"></i></a>
+            </td>
+          </tr>   
+          
+          <!-- Add more rows as needed -->
+        </tbody>     
+         
+      </table>
+      <button class="tab-button hover:bg-[#414366] mt-4">সিরিয়ালগুলো আপডেট করুন</button>  
+
+    </div>
+  </div>
+   <!-- বেসিক সেটিংস item => পোষাক ও মাপ যুক্ত করুন end --
 
 
   <div id="Subpage 3.1" class="content-div" style="display: none;">
@@ -316,6 +482,7 @@
   </div>
 
   <!-- Add more content divs for other pages and subpages as needed -->
+
 </div>
 
       
@@ -328,7 +495,7 @@
 
 
 
-    <footer class="bg-[#00b4aa] flex flex-row justify-center items-center py-6 mt-24 md:mt-0 overflow-hidden flex-grow">
+    <footer class="bg-[#7367f0] flex flex-row justify-center items-center py-6 mt-24 md:mt-0 overflow-hidden flex-grow">
       <h2 class=" text-white font-semibold text-lg">Copyright © 2015-2023 <span class="uppercase">company Name</span> All rights reserved</h2>
     </footer>
 
