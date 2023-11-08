@@ -12,6 +12,10 @@ body {
   backgroud-color: #7367f0;
 }
 
+/* .tableHeaderBackgroundColor {
+  backgroud-color: #9087e4;
+} */
+
 .Textcolor {
   color: #7367f0;
 }
@@ -68,8 +72,25 @@ li a:hover {
   transition: background-color 0.3s;
 }
 
-.tab-button.active-tab {
+.tab-button.active {
   background-color: #414366;
+  color: #fff;
+}
+
+.tab-content.hidden {
+  display: none;
+}
+
+////
+
+.allButton {
+  color: white;
+  background-color: #9087e4;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 /* Right side seleceted color  */

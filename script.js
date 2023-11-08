@@ -49,26 +49,54 @@ function toggleSubMenu(submenuId, iconId) {
  
 
 
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   const tabs = document.querySelectorAll('.tab-button');
+  //   const tabContents = document.querySelectorAll('.tab-content');
+  
+  //   tabs.forEach(tab => {
+  //     tab.addEventListener('click', () => {
+  //       tabs.forEach(t => {
+  //         t.classList.remove('active-tab');
+  //       });
+  
+  //       tab.classList.add('active-tab');
+  
+  //       tabContents.forEach(content => content.classList.add('hidden'));
+  //       document.getElementById(`content${tab.id.slice(-1)}`).classList.remove('hidden');
+  //     });
+  //   });
+  // });
+
+
+
   document.addEventListener('DOMContentLoaded', function() {
-    const tabs = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
-  
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => {
-          t.classList.remove('active-tab');
+    function initializeTabs(containerId) {
+      const container = document.getElementById(containerId);
+      const tabs = container.querySelectorAll('.tab-button');
+      const tabContents = container.querySelectorAll('.tab-content');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.classList.remove('active');
+          });
+
+          tab.classList.add('active');
+
+          tabContents.forEach(content => content.classList.add('hidden'));
+          container.querySelector(`#content${tab.id.slice(-1)}`).classList.remove('hidden');
         });
-  
-        tab.classList.add('active-tab');
-  
-        tabContents.forEach(content => content.classList.add('hidden'));
-        document.getElementById(`content${tab.id.slice(-1)}`).classList.remove('hidden');
       });
-    });
-  });
+    }
+
+   initializeTabs('প্রোফাইলTab');  // Initialize the tabs for another set of tabs
+   initializeTabs('অর্ডার-দিনTab'); // Initialize the tabs for another set of tabs
+});
 
 
-  // - ইনভয়েস লিস্ট Right-sidebare => left side icon-selected toggle Background color chenge code function   
+
+
+ 
   function toggleBackgroundColor(element) {
     var rows = document.querySelectorAll('tr');
     rows.forEach(function(row) {
