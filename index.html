@@ -94,13 +94,13 @@
             </li>            
             <ul id="page-3-submenu" class="hidden pl-[2.5em] text-[15px]">
               <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডার-দিন')">
-                 <a href="#" class="hover:underline">অর্ডার দিন</a>               
+                 <a href="#অর্ডারলিস্ট" class="hover:underline">অর্ডার দিন</a>               
               </li>
-              <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডারলিস্ট')">
-                 <a href="#" class="hover:underline">অর্ডারলিস্ট</a>               
+              <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডার-লিস্ট')">
+                 <a href="#অর্ডারলিস্ট" class="hover:underline">অর্ডারলিস্ট</a>               
               </li>
-              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 3.2')">
-                <a href="#" class="hover:underline">অর্ডারের কাজ সম্পূন্ন করুন</a>                
+              <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডারের-কাজ')">
+                <a href="#অর্ডারের-কাজ" class="hover:underline">অর্ডারের কাজ সম্পূন্ন করুন</a>                
               </li>
               <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 3.2')">
                 <a href="#" class="hover:underline">অর্ডার স্থায়ীভাবে ডিলেট করুন</a>                  
@@ -113,16 +113,6 @@
              <!-- অর্ডার  item end  -->	
 		
 		
-	
-		
-
-
-
-
-
-
-
-
 
             <li class="cursor-pointer mb-2"
               onclick="toggleSubMenu('page-4', 'angle-right-icon-4')"
@@ -780,17 +770,16 @@
 
 
     <!-- অর্ডার start -->
-
-    <!-- 		অর্ডার দিন start -->
+    <!-- 		অর্ডার দিন Right Side page start -->
   <div id="অর্ডার-দিন" class="content-div" style="display: none;">        
    <!-- Second Tab -->   
    <div id="অর্ডার-দিনTab" class="tab-container">
-  <button class="tab-button active hover:bg-[#414366]" id="tab4">নতুন কাস্টমার</button>
-  <button class="tab-button hover:bg-[#414366]" id="tab5">পুরাতন কাস্টমার</button>
+  <button class="tab-button active hover:bg-[#414366]" id="tab1">নতুন কাস্টমার</button>
+  <button class="tab-button hover:bg-[#414366]" id="tab2">পুরাতন কাস্টমার</button>
 
 
  <div class="mt-4">
-  <div id="content4" class="tab-content overflow-x-auto">
+  <div id="content1" class="tab-content overflow-x-auto">
     <div class="md:w-[250px] w-full">
       <h2>জেন্ডার নির্ধরণ করুন</h2>
       <div>
@@ -827,20 +816,20 @@
       </div>        
     </div>
   </div>
-  <div id="content5" class="tab-content overflow-x-auto hidden">
+  <div id="content2" class="tab-content overflow-x-auto hidden">
     <div>
       <form class="md:w-[600px] flex flex-col md:flex-row w-full gap-4 ">
         <div class="mt-1">
           <h2 class="text-[14px]">কাস্টমার নং</h2>
-          <input type="text" class=" w-full md:w-[80px] appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500">
+          <input type="text" class=" w-full md:w-[85px] appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="কাস্টমার নং">
         </div>
         <div class="mt-1">
           <h2 class="text-[14px]">কাস্টমারের নাম</h2>
-          <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500">
+          <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="কাস্টমারের নাম">
         </div>
         <div class="mt-1">
-          <h2 class="text-[14px]">মোবাইল নাম্বার </h2>
-          <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500">
+          <h2 class="text-[14px]">মোবাইল নাম্বার</h2>
+          <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="মোবাইল নাম্বার">
         </div>
         
         <div>
@@ -898,6 +887,7 @@
           <!-- Add more rows as needed -->
         </tbody>             
       </table>
+      <!-- pagination  -->
       <nav class="bg-[#9087e4]">
         <ul class="flex flex-row gap-2">                
           <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
@@ -918,9 +908,363 @@
     </div>
   </div>
 
-  <div id="অর্ডারলিস্ট" class="content-div" style="display: none;">
-    অর্ডার-লিস্ট
-  </div>
+  <!-- 		অর্ডার লিস্ট Right Side page start -->
+  <div id="অর্ডার-লিস্ট" class="content-div" style="display: none;">
+    <h2 class="text-base font-semibold text-[#7367f0]">নতুন সাব-অ্যাডমিন এর জন্য রেজিস্ট্রেশন</h2>
+    <hr class="mt-3 mb-6" />
+
+    <div id="অর্ডারলিস্টTab" class="tab-container">
+        <button class="tab-button active hover:bg-[#414366]" id="tab1">Order No. And Mobile No.</button>
+        <button class="tab-button hover:bg-[#414366]" id="tab2">Order Date</button>    
+    
+       <div class="mt-4">  
+        <div id="content1" class="tab-content">
+          <div class="ml-2 mb-4 md:w-[500px] w-full">
+            <div class="flex flex-col md:flex-row gpa-4">
+               <div class="mr-0 md:mr-3">
+                <label for="মোবাইল নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">মোবাইল নাম্বার</label>
+                <input type="text" id="মোবাইল নাম্বার" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="মোবাইল নাম্বার" required>
+              </div>
+               <div>
+                <label for="অর্ডার_নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">অর্ডার নাম্বার</label>
+                <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="অর্ডার নাম্বার" required>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row gpa-4 mt-0 md:mt-4">
+              <div class="mr-0 md:mr-3">
+                <label for="কাস্টমারের_নাম" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কাস্টমারের নাম</label>
+                <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কাস্টমারের নাম" required>
+              </div>
+              <div>
+                <label for="ঠিকানা" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ঠিকানা</label>
+                <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ঠিকানা" required>
+              </div>
+              <div class="ml-2 md:mt-0 mt-4">
+                <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+              </div>              
+            </div>
+          </div>
+        </div>
+        <div id="content2" class="tab-content">
+          <div class="ml-2 mb-4 md:w-[500px] w-full">
+            <div class="flex flex-col md:flex-row gpa-4 mt-0 md:mt-4">
+              <div class="mr-0 md:mr-3">
+                <label for="তারিখ_থেকে" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ থেকে</label>
+                <input type="text" id="তারিখ_থেকে" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ থেকে" required>
+              </div>
+              <div>
+                <label for="তারিখ-পর্যন্ত" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ পর্যন্ত</label>
+                <input type="text" id="তারিখ-পর্যন্ত" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ পর্যন্ত" required>
+              </div>
+              <div class="ml-2 md:mt-0 mt-4">
+                <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+              </div>              
+            </div>
+          </div>
+         
+        </div>
+          <!-- অর্ডারলিস্ট table start -->
+          <div class="overflow-x-auto">
+            <div class="flex flex-row justify-between items-center mb-4 md:gap-0 gap-2">
+              <h2 class="font-bold text-[18px]">সর্বমোট অর্ডার: 63 টি</h2>
+              <button class="bg-[#95A73F] px-2 py-2">Today's Order(s)</button>
+            </div>
+            <table class="min-w-full border border-gray-300 text-center">
+              <thead class="bg-[#7367F0] text-white text-[12px]">
+                <tr>
+                  <th class="border border-gray-300 p-2"></th>
+                  <th class="border border-gray-300 p-2">অর্ডার নং</th>
+                  <th class="border border-gray-300 p-2">নাম</th>
+                  <th class="border border-gray-300 p-2">মোবাইল</th>
+                  <th class="border border-gray-300 p-2">ঠিকানা</th>
+                  <th class="border border-gray-300 p-2">পোষাকের বিবরণ</th>
+                  <th class="border border-gray-300 p-2">অর্ডার</th>
+                  <th class="border border-gray-300 p-2">ডেলিভারী</th>     
+                  <th class="border border-gray-300 p-2">পোষাক যুক্ত করুন</th>
+                  <th class="border border-gray-300 p-2">মাপ</th>
+                  <th class="border border-gray-300 p-2">মানি রিসিট</th>
+                  <th class="border border-gray-300 p-2">Update</th>
+                                             
+                </tr>
+              </thead>
+              <!-- Add your data rows here start -->
+              <tbody class="text-[12px]">                  
+                <tr>
+                  <td class="border border-gray-300 p-2 flex flex-row items-center">
+                    <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer mr-2"><i class="fa-solid fa-print"></i></a>
+                    <span>0</span>
+                  </td>
+                  <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">13493</td>
+                  <td class="border border-gray-300 p-2">
+                    (4886) নজরুল ইসলাম 
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    01915611548
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    netrokuna
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    একছাটা পাঞ্জাবি 1 Piece ; প্যান্ট কাটিং পায়জামা 1 Piece
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    10 Nov 2023
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    20 Nov 2023
+                  </td>
+                  <td class="border border-gray-300 p-2">     
+                    <a href="#" class="bg-[#FF7E00] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-file-circle-plus"></i></a> 
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    <a href="#" class="bg-[#0077E1] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    <a href="#" class="bg-[#CC0061] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-bangladeshi-taka-sign"></i></a>
+                  </td>
+                  <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">
+                    Update
+                  </td>
+                </tr>    			  		
+                <tr>
+                  <td class="border border-gray-300 p-2 flex flex-row items-center">
+                    <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer mr-2"><i class="fa-solid fa-print"></i></a>
+                    <span>1</span>
+                  </td>
+                  <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">14000</td>
+                  <td class="border border-gray-300 p-2">
+                    (5000) শাওন 
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    01709198065
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    netrokuna
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    একছাটা পাঞ্জাবি 1 Piece ; প্যান্ট কাটিং পায়জামা 1 Piece
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    10 Nov 2023
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    20 Nov 2023
+                  </td>
+                  <td class="border border-gray-300 p-2">     
+                    <a href="#" class="bg-[#FF7E00] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-file-circle-plus"></i></a> 
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    <a href="#" class="bg-[#0077E1] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
+                  </td>
+                  <td class="border border-gray-300 p-2">
+                    <a href="#" class="bg-[#CC0061] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-bangladeshi-taka-sign"></i></a>
+                  </td>
+                  <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">
+                    Update
+                  </td>
+                </tr> 	
+                 <!-- Add more rows as needed -->
+              </tbody>             
+            </table>
+             <!-- pagination  -->
+             <nav class="bg-[#9087e4]">
+              <ul class="flex flex-row gap-2">                
+                <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
+                <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
+                <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>   
+              </ul>
+            </nav>
+          </div>
+       </div>  
+    </div>
+   </div>
+
+     <!-- অর্ডারের কাজ সম্পূন্ন করুন Right Side page start -->
+   <div id="অর্ডারের-কাজ" class="content-div" style="display: none;">
+    <h2 class="text-base font-semibold text-[#7367f0]">যে সকল অর্ডারের কাজ শেষ হয়েছে টিক দিয়ে সম্পূন্ন করুন (অবশিষ্ট এসএমএস: 1)</h2>
+    <hr class="mt-3 mb-6" />
+
+    <div id="অর্ডারেরকাজ-Tab" class="tab-container">
+        <button class="tab-button active hover:bg-[#414366]" id="tab1">Order No. And Mobile No.</button>
+        <button class="tab-button hover:bg-[#414366]" id="tab2">Order Date</button>    
+    
+       <div class="mt-4">  
+        <div id="content1" class="tab-content">
+          <div class="ml-2 mb-4 md:w-[500px] w-full">
+            <div class="flex flex-col md:flex-row gpa-4">
+               <div class="mr-0 md:mr-3">
+                <label for="মোবাইল নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">মোবাইল নাম্বার</label>
+                <input type="text" id="মোবাইল নাম্বার" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="মোবাইল নাম্বার" required>
+              </div>
+               <div>
+                <label for="কাস্টমারের_নাম" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কাস্টমারের নাম</label>
+                <input type="text" id="কাস্টমারের_নাম" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কাস্টমারের নাম" required>
+              </div>
+            </div>
+            <div class="mt-2">
+              <label for="মোবাইল নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">অর্ডার নাম্বার (এক বা একাধিক) 	ঠিকানা</label>             
+               <div class="flex md:flex-row flex-col gap-2">
+                <textarea id="message" name="message" rows="2" class="w-full p-2 text-gray-700 border border-gray-400 rounded focus:outline-none focus:shadow focus:border-gray-500 w-full md:w-[200px] h-full md:h-[72px]" placeholder="উদাহরণস্বরূপ: অর্ডার নাম্বার 10,20,30" ></textarea>
+
+
+                <textarea id="message" name="message" rows="2" class="w-full p-2 text-gray-700 border border-gray-400 rounded focus:outline-none focus:shadow focus:border-gray-500  w-full md:w-[200px] h-full md:h-[72px]" placeholder="ঠিকানা" ></textarea>
+                <div class="ml-2 md:mt-0 mt-4">
+                <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+              </div>
+              </div>
+                
+            </div>
+          
+          </div>
+        </div>
+
+         
+
+
+        <div id="content2" class="tab-content">
+          <div class="ml-2 mb-4 md:w-[550px] w-full">
+            <div class="flex flex-col md:flex-row gpa-4 mt-0 md:mt-4">
+              <div class="mr-0 md:mr-3">
+                <label for="তারিখ_থেকে" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ থেকে</label>
+                <input type="text" id="তারিখ_থেকে" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ থেকে" required>
+              </div>
+              <div>
+                <label for="তারিখ-পর্যন্ত" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ পর্যন্ত</label>
+                <input type="text" id="তারিখ-পর্যন্ত" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ পর্যন্ত" required>
+              </div>
+              <div class="ml-2 md:mt-0 mt-4">
+                <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+              </div>              
+            </div>
+          </div>         
+        </div>
+
+
+         <!-- অর্ডারের কাজ table start -->
+         <div class="overflow-x-auto">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4 md:gap-0 gap-2">
+            <h2 class="font-bold text-[18px]">সর্বমোট: 62 টি অর্ডারের কাজ অসম্পুন্ন অবস্থায় আছে</h2>
+            <div >
+             <h2 ><span class=" px-2 py-2 bg-[#95A73F] -mr-1">Today's Date Delivery</span>
+              <span class="px-2 py-2 bg-[#A8C093]"> Date Over Delivery</span></h2>                
+            </div>
+          </div>
+          <table class="min-w-full border border-gray-300 text-center">
+            <thead class="bg-[#7367F0] text-white text-[12px]">
+              <tr>
+                <th class="border border-gray-300 p-2">
+                  <div class="w-6 h-6 bg-[#fff] border border-gary-500"></div>
+                </th>
+                <th class="border border-gray-300 p-2">অর্ডার নং</th>
+                <th class="border border-gray-300 p-2">নাম</th>
+                <th class="border border-gray-300 p-2">মোবাইল</th>
+                <th class="border border-gray-300 p-2">ঠিকানা</th>
+                <th class="border border-gray-300 p-2">অর্ডার লিস্ট নং - পোষাক - পরিমান</th>
+                <th class="border border-gray-300 p-2">অর্ডারের তারিখ</th>
+                <th class="border border-gray-300 p-2">ডেলিভারী তারিখ</th>     
+                <th class="border border-gray-300 p-2">কোথায় রাখবেন</th>
+                <th class="border border-gray-300 p-2">বিস্তারিত</th>
+                <th class="border border-gray-300 p-2">মানি রিসিট</th>
+                <th class="border border-gray-300 p-2">SMS</th>
+                <th class="border border-gray-300 p-2"></th>							 
+                                           
+              </tr>
+            </thead>
+            <!-- Add your data rows here start -->
+            <tbody class="text-[12px]">                  
+              <tr>
+                <td class="border border-gray-300 p-2 flex flex-row items-center">
+                  <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer mr-2"><i class="fa-solid fa-print"></i></a>
+                  <span>0</span>
+                </td>
+                <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">13493</td>
+                <td class="border border-gray-300 p-2">
+                  (4886) নজরুল ইসলাম 
+                </td>
+                <td class="border border-gray-300 p-2">
+                  01915611548
+                </td>
+                <td class="border border-gray-300 p-2">
+                  netrokuna
+                </td>
+                <td class="border border-gray-300 p-2">
+                  একছাটা পাঞ্জাবি 1 Piece ; প্যান্ট কাটিং পায়জামা 1 Piece
+                </td>
+                <td class="border border-gray-300 p-2">
+                  10 Nov 2023
+                </td>
+                <td class="border border-gray-300 p-2">
+                  20 Nov 2023
+                </td>
+                <td class="border border-gray-300 p-2">     
+                  <a href="#" class="bg-[#FF7E00] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-file-circle-plus"></i></a> 
+                </td>
+                <td class="border border-gray-300 p-2">
+                  <a href="#" class="bg-[#0077E1] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
+                </td>
+                <td class="border border-gray-300 p-2">
+                  <a href="#" class="bg-[#CC0061] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-bangladeshi-taka-sign"></i></a>
+                </td>
+                <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">
+                  Update
+                </td>
+              </tr>    			  		
+              <tr>
+                <td class="border border-gray-300 p-2 flex flex-row items-center">
+                  <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer mr-2"><i class="fa-solid fa-print"></i></a>
+                  <span>1</span>
+                </td>
+                <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">14000</td>
+                <td class="border border-gray-300 p-2">
+                  (5000) শাওন 
+                </td>
+                <td class="border border-gray-300 p-2">
+                  01709198065
+                </td>
+                <td class="border border-gray-300 p-2">
+                  netrokuna
+                </td>
+                <td class="border border-gray-300 p-2">
+                  একছাটা পাঞ্জাবি 1 Piece ; প্যান্ট কাটিং পায়জামা 1 Piece
+                </td>
+                <td class="border border-gray-300 p-2">
+                  10 Nov 2023
+                </td>
+                <td class="border border-gray-300 p-2">
+                  20 Nov 2023
+                </td>
+                <td class="border border-gray-300 p-2">     
+                  <a href="#" class="bg-[#FF7E00] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-file-circle-plus"></i></a> 
+                </td>
+                <td class="border border-gray-300 p-2">
+                  <a href="#" class="bg-[#0077E1] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
+                </td>
+                <td class="border border-gray-300 p-2">
+                  <a href="#" class="bg-[#CC0061] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-bangladeshi-taka-sign"></i></a>
+                </td>
+                <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">
+                  Update
+                </td>
+              </tr> 	
+               <!-- Add more rows as needed -->
+            </tbody>             
+          </table>
+           <!-- pagination  -->
+           <nav class="bg-[#9087e4]">
+            <ul class="flex flex-row gap-2">                
+              <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
+              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
+              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>   
+            </ul>
+          </nav>
+        </div>
+        
+       </div>   
+       
+    </div>
+
+    
+   </div>
 
     <!-- অর্ডার end -->
 

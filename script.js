@@ -88,9 +88,11 @@ function toggleSubMenu(submenuId, iconId) {
         });
       });
     }
-
-   initializeTabs('প্রোফাইলTab');  // Initialize the tabs for another set of tabs
-   initializeTabs('অর্ডার-দিনTab'); // Initialize the tabs for another set of tabs
+// Initialize the tabs for another set of tabs
+   initializeTabs('প্রোফাইলTab');  
+   initializeTabs('অর্ডার-দিনTab'); 
+   initializeTabs('অর্ডারলিস্টTab'); 
+   initializeTabs('অর্ডারেরকাজ-Tab'); 
 });
 
 
