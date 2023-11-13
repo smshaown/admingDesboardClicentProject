@@ -905,7 +905,12 @@
     </div>
   </div>
  </div>
+
+
     </div>
+
+
+
   </div>
 
   <!-- 		অর্ডার লিস্ট Right Side page start -->
@@ -1084,13 +1089,18 @@
     <h2 class="text-base font-semibold text-[#7367f0]">যে সকল অর্ডারের কাজ শেষ হয়েছে টিক দিয়ে সম্পূন্ন করুন (অবশিষ্ট এসএমএস: 1)</h2>
     <hr class="mt-3 mb-6" />
 
-    <div id="অর্ডারেরকাজ-Tab" class="tab-container">
-        <button class="tab-button active hover:bg-[#414366]" id="tab1">Order No. And Mobile No.</button>
-        <button class="tab-button hover:bg-[#414366]" id="tab2">Order Date</button>    
-    
-       <div class="mt-4">  
-        <div id="content1" class="tab-content">
-          <div class="ml-2 mb-4 md:w-[500px] w-full">
+     <div id="অর্ডারেরকাজTab" class="tab-container">
+      <button class="tab-button active hover:bg-[#414366]" id="tab1">নতুন কাস্টমার</button>
+      <button class="tab-button hover:bg-[#414366]" id="tab2">পুরাতন কাস্টমার</button>
+
+
+      <div class="mt-4">
+  <div id="content1" class="tab-content overflow-x-auto">
+    <div class="ml-2 mb-4 md:w-[500px] w-full">
+      <div>    
+
+        <form class="mb-4 md:w-[500px] w-full">
+         
             <div class="flex flex-col md:flex-row gpa-4">
                <div class="mr-0 md:mr-3">
                 <label for="মোবাইল নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">মোবাইল নাম্বার</label>
@@ -1115,33 +1125,36 @@
                 
             </div>
           
-          </div>
-        </div>
-
          
-
-
-        <div id="content2" class="tab-content">
-          <div class="ml-2 mb-4 md:w-[550px] w-full">
-            <div class="flex flex-col md:flex-row gpa-4 mt-0 md:mt-4">
-              <div class="mr-0 md:mr-3">
-                <label for="তারিখ_থেকে" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ থেকে</label>
-                <input type="text" id="তারিখ_থেকে" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ থেকে" required>
-              </div>
-              <div>
-                <label for="তারিখ-পর্যন্ত" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ পর্যন্ত</label>
-                <input type="text" id="তারিখ-পর্যন্ত" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ পর্যন্ত" required>
-              </div>
-              <div class="ml-2 md:mt-0 mt-4">
-                <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
-              </div>              
-            </div>
-          </div>         
+        </form>
+      </div>        
+    </div>
+  </div>
+  <div id="content2" class="tab-content overflow-x-auto hidden">
+    <div>
+      <form class="md:w-[600px] flex flex-col md:flex-row w-full gap-4 ">
+        <div class="mt-1">
+          <h2 class="text-[14px]">কোন তারিখ থেকে</h2>
+          <input type="text" class=" appearance-none block text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="কোন তারিখ থেকে">
         </div>
+        <div class="mt-1">
+          <h2 class="text-[14px]">কোন তারিখ পর্যন্ত</h2>
+          <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="কোন তারিখ পর্যন্ত 	">
+        </div>        
+        
+        <div>
+          <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+        </div>
+      </form>
+    </div>
+    
+  </div>
+      </div>
+       </div>
 
 
-         <!-- অর্ডারের কাজ table start -->
-         <div class="overflow-x-auto">
+    <!-- অর্ডারের কাজ table start -->
+     <div class="overflow-x-autol mt-6">
           <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4 md:gap-0 gap-2">
             <h2 class="font-bold text-[18px]">সর্বমোট: 62 টি অর্ডারের কাজ অসম্পুন্ন অবস্থায় আছে</h2>
             <div >
@@ -1295,7 +1308,6 @@
                <!-- Add more rows as needed -->
             </tbody>             
           </table>
-          
            <!-- pagination  -->
            <nav class="bg-[#9087e4]">
             <ul class="flex flex-row gap-2">                
@@ -1304,15 +1316,10 @@
               <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>   
             </ul>
           </nav>
-        </div>
-        
-       </div>   
-       
-    </div>
 
-    
+          <button class="tab-button hover:bg-[#414366] mt-4 mb-4">কাজ সম্পূর্ণ করুন</button>
+     </div>   
    </div>
-
     <!-- অর্ডার end -->
 
   <div id="print1" class="content-div" style="display: none;">

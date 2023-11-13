@@ -92,7 +92,7 @@ function toggleSubMenu(submenuId, iconId) {
    initializeTabs('প্রোফাইলTab');  
    initializeTabs('অর্ডার-দিনTab'); 
    initializeTabs('অর্ডারলিস্টTab'); 
-   initializeTabs('অর্ডারেরকাজ-Tab'); 
+   initializeTabs('অর্ডারেরকাজTab'); 
 });
 
 
@@ -158,6 +158,48 @@ function cancelEdit() {
     editButton.style.display = 'block';
 }
 
+
+
+// script.js
+
+document.addEventListener("DOMContentLoaded", function () {
+  const selectAllCheckbox = document.getElementById("selectAll");
+  const tbody = document.querySelector("tbody");
+
+  selectAllCheckbox.addEventListener("change", function () {
+      const checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
+      checkboxes.forEach((checkbox) => {
+          checkbox.checked = selectAllCheckbox.checked;
+          toggleBackgroundColor(checkbox);
+      });
+  });
+
+  // Change background color when individual checkboxes are clicked
+  const checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
+  checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", function () {
+          toggleBackgroundColor(checkbox);
+          // Check if it's the first checkbox in the row
+          if (checkbox.closest("tr").querySelector("input[type='checkbox']") === checkbox) {
+              const rowCheckboxes = checkbox.closest("tr").querySelectorAll("input[type='checkbox']");
+              rowCheckboxes.forEach((rowCheckbox) => {
+                  rowCheckbox.checked = checkbox.checked;
+                  toggleBackgroundColor(rowCheckbox);
+              });
+          }
+      });
+  });
+
+  // Function to toggle background color based on checkbox state
+  function toggleBackgroundColor(checkbox) {
+      const tr = checkbox.closest("tr");
+      if (checkbox.checked) {
+          tr.classList.add("selected-bg");
+      } else {
+          tr.classList.remove("selected-bg");
+      }
+  }
+});
 
 
 

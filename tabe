@@ -98,3 +98,63 @@
   
 
     // <!-- ইনভয়েস লিস্ট javascript code end  -->
+
+
+
+
+
+
+
+     <div class="mt-4">  
+        <div id="content1" class="tab-content">
+          <div class="ml-2 mb-4 md:w-[500px] w-full">
+            <div class="flex flex-col md:flex-row gpa-4">
+               <div class="mr-0 md:mr-3">
+                <label for="মোবাইল নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">মোবাইল নাম্বার</label>
+                <input type="text" id="মোবাইল নাম্বার" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="মোবাইল নাম্বার" required>
+              </div>
+               <div>
+                <label for="কাস্টমারের_নাম" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কাস্টমারের নাম</label>
+                <input type="text" id="কাস্টমারের_নাম" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কাস্টমারের নাম" required>
+              </div>
+            </div>
+            <div class="mt-2">
+              <label for="মোবাইল নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">অর্ডার নাম্বার (এক বা একাধিক) 	ঠিকানা</label>             
+               <div class="flex md:flex-row flex-col gap-2">
+                <textarea id="message" name="message" rows="2" class="w-full p-2 text-gray-700 border border-gray-400 rounded focus:outline-none focus:shadow focus:border-gray-500 w-full md:w-[200px] h-full md:h-[72px]" placeholder="উদাহরণস্বরূপ: অর্ডার নাম্বার 10,20,30" ></textarea>
+
+
+                <textarea id="message" name="message" rows="2" class="w-full p-2 text-gray-700 border border-gray-400 rounded focus:outline-none focus:shadow focus:border-gray-500  w-full md:w-[200px] h-full md:h-[72px]" placeholder="ঠিকানা" ></textarea>
+                <div class="ml-2 md:mt-0 mt-4">
+                <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+              </div>
+              </div>
+                
+            </div>
+          
+          </div>
+        </div>
+
+         
+
+
+        <div id="content2" class="tab-content">
+          <div class="ml-2 mb-4 md:w-[550px] w-full">
+            <div class="flex flex-col md:flex-row gpa-4 mt-0 md:mt-4">
+              <div class="mr-0 md:mr-3">
+                <label for="তারিখ_থেকে" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ থেকে</label>
+                <input type="text" id="তারিখ_থেকে" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ থেকে" required>
+              </div>
+              <div>
+                <label for="তারিখ-পর্যন্ত" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ পর্যন্ত</label>
+                <input type="text" id="তারিখ-পর্যন্ত" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ পর্যন্ত" required>
+              </div>
+              <div class="ml-2 md:mt-0 mt-4">
+                <img src="img/Search.png" class="mt-0 md:mt-[36px] cursor-pointer" alt="">
+              </div>              
+            </div>
+          </div>         
+        </div>
+
+
+  </div>
