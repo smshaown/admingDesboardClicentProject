@@ -2267,9 +2267,123 @@
         </div>
     </div>
 
-
+    <!-- কাস্টমার-লিস্ট start -->
     <div id="কাস্টমার-লিস্ট" class="content-div" style="display: none;">
-      কাস্টমার-লিস্ট
+      <h2 class="text-base font-semibold text-[#7367f0]">সকল গ্রাহকদের তালিকা</h2>
+      <hr class="mt-3 mb-6" />
+      <div>
+        <form class="md:w-[600px] flex flex-col md:flex-row w-full gap-4 ">
+          <div class="mt-1">
+            <h2 class="text-[14px]">কাস্টমার নং</h2>
+            <input type="text" class=" w-full md:w-[85px] appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="কাস্টমার নং">
+          </div>
+          <div class="mt-1">
+            <h2 class="text-[14px]">কাস্টমারের নাম</h2>
+            <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="কাস্টমারের নাম">
+          </div>
+          <div class="mt-1">
+            <h2 class="text-[14px]">মোবাইল নাম্বার</h2>
+            <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="মোবাইল নাম্বার">
+          </div>
+          
+          <div>
+            <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+          </div>
+        </form>
+      </div>
+      <div>
+        <div>
+          <h2 class="text-[#090] mt-3 mb-2">সর্বমোট : 6652 জন কাস্টমার</h2>
+          <h2 class="mb-2">মোট বাকি: ৳915,283.60</h2>
+        </div>
+        <table class="min-w-full border border-gray-300 text-center">
+          <thead class="bg-[#9087E4] text-white text-[12px]">
+            <tr>
+              <th class="border border-gray-300 p-2">বিস্তারিত</th>
+              <th class="border border-gray-300 p-2">অর্ডার দিন</th>
+              <th class="border border-gray-300 p-2">কাস্টমার নং</th>
+              <th class="border border-gray-300 p-2">নাম</th>
+              <th class="border border-gray-300 p-2">মোবাইল</th>
+              <th class="border border-gray-300 p-2">ঠিকানা</th>
+              <th class="border border-gray-300 p-2">বিবরণ</th>
+              <th class="border border-gray-300 p-2">বাকি টাকা</th>
+              <th class="border border-gray-300 p-2">নিবন্ধনের তারিখ</th>    
+              <th class="border border-gray-300 p-2">ইডিট করুন</th>    
+              <th class="border border-gray-300 p-2"></th>  
+            </tr>            							
+          </thead>
+          <!-- Add your data rows here start -->
+          <tbody class="text-[12px]">                  
+            <tr>
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[6px] cursor-pointer mr-2"><i class="fa-solid fa-list"></i></a>
+              </td>              					
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#FF7E00] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[4px] cursor-pointer mr-2"><i class="fa-solid fa-file-circle-plus"></i> </a>
+              </td> 
+              <td class="border border-gray-300 p-2">6699</td>
+              <td class="border border-gray-300 p-2">রাফসি টেলিকম পাগলা</td>
+              <td class="border border-gray-300 p-2">01611212220</td>
+              <td class="border border-gray-300 p-2">কামাল স্টোর</td>
+              <td class="border border-gray-300 p-2"></td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2"> 12 Nov 2023 </td> 
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#00C869] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[6px] cursor-pointer mr-2"><i class="fa-regular fa-pen-to-square"></i></a>
+              </td> 
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#EC1C23] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[6px] cursor-pointer mr-2"><i class="fa-solid fa-trash-can"></i></a>
+              </td> 
+            </tr>                
+            <tr>
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[6px] cursor-pointer mr-2"><i class="fa-solid fa-list"></i></a>
+              </td>              					
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#FF7E00] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[4px] cursor-pointer mr-2"><i class="fa-solid fa-file-circle-plus"></i> </a>
+              </td> 
+              <td class="border border-gray-300 p-2">6699</td>
+              <td class="border border-gray-300 p-2">রাফসি টেলিকম পাগলা</td>
+              <td class="border border-gray-300 p-2">01611212220</td>
+              <td class="border border-gray-300 p-2">কামাল স্টোর</td>
+              <td class="border border-gray-300 p-2"></td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2"> 12 Nov 2023 </td> 
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#00C869] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[6px] cursor-pointer mr-2"><i class="fa-regular fa-pen-to-square"></i></a>
+              </td> 
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#EC1C23] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[6px] cursor-pointer mr-2"><i class="fa-solid fa-trash-can"></i></a>
+              </td> 
+            </tr> 
+            <tr>
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[6px] cursor-pointer mr-2"><i class="fa-solid fa-list"></i></a>
+              </td>              					
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#FF7E00] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[4px] cursor-pointer mr-2"><i class="fa-solid fa-file-circle-plus"></i> </a>
+              </td> 
+              <td class="border border-gray-300 p-2">6699</td>
+              <td class="border border-gray-300 p-2">রাফসি টেলিকম পাগলা</td>
+              <td class="border border-gray-300 p-2">01611212220</td>
+              <td class="border border-gray-300 p-2">কামাল স্টোর</td>
+              <td class="border border-gray-300 p-2"></td>
+              <td class="border border-gray-300 p-2">0</td>
+              <td class="border border-gray-300 p-2"> 12 Nov 2023 </td> 
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#00C869] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[6px] cursor-pointer mr-2"><i class="fa-regular fa-pen-to-square"></i></a>
+              </td> 
+              <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#EC1C23] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[6px] cursor-pointer mr-2"><i class="fa-solid fa-trash-can"></i></a>
+              </td> 
+            </tr>          
+            <!-- Add more rows as needed -->
+          </tbody>             
+        </table>
+        <!-- pagination  -->
+        <nav class="bg-[#9087e4]">
+          <ul class="flex flex-row gap-2">                
+            <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
+            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
+            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>                 
+            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">4</a></li>                 
+            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">5</a></li>                 
+            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">6</a></li>                 
+            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">7</a></li>                 
+            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">8</a></li>                 
+            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">9</a></li>                 
+            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">10</a></li>                 
+          </ul>
+        </nav>  
+      </div>
     </div>
    </section>
 <!-- কাস্টমার end  -->

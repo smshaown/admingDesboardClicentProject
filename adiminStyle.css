@@ -112,3 +112,7 @@ li a:hover {
 #updatedInputText[contentEditable="true"] {
   border: 2px solid gray; /* This will give the input a border when it is in edit mode */
 }
+
+.Details {
+  background: url("img/Cmd_Ico.png") no-repeat scroll -167px 0;
+}
