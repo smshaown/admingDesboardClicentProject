@@ -51,35 +51,44 @@
           <!-- বেসিক সেটিংস Item start  -->
           <ul class="break-all">
             <li class="cursor-pointer mb-2 text-black font-bold " onclick="toggleSubMenu('page-2', 'angle-right-icon-2')">          
-              <span class="rounded-full icon px-[1px] py-[0.9px] items-center mr-3">
-                <i id="angle-right-icon-2" class="fas fa-angle-right text-white ml-1 text-[12px] font-bold"></i>
+              <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                <i id="angle-right-icon-2" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
               </span>
               বেসিক সেটিংস 
                          
-            </li>           
+            </li>  
+            <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" />         
             <ul id="page-2-submenu" class="hidden pl-[2.5em] text-[15px]">
                <!--  প্রতিস্ঠানের বিবরণ == Left side Nav Bar  -->
               <li class="cursor-pointer mb-2" onclick="changeContent('প্রতিস্ঠানের-বিবরণ')">
                 <a href="#" class="hover:underline">প্রতিস্ঠানের বিবরণ</a>
               </li>
+              <hr class="pb-2" /> 
                <!--  পোষাক ও মাপ যুক্ত করুন == Left side Nav Bar  -->
               <li class="cursor-pointer mb-2" onclick="changeContent('পোষাক-ও-মাপ')">
                  <a href="#" class="hover:underline">পোষাক ও মাপ যুক্ত করুন</a>
               </li>
+              <hr class="pb-2" />
                <!--  সাব-অ্যাডমিন তৈরি করুন == Left side Nav Bar  -->
               <li class="cursor-pointer mb-2" onclick="changeContent('সাব-অ্যাডমিন')">
                  <a href="#" class="hover:underline">সাব-অ্যাডমিন তৈরি করুন</a>
               </li>
+              <hr class="pb-2" />
               <li class="cursor-pointer mb-2" onclick="changeContent('subAccess')">
                  <a href="#" class="hover:underline">সাব-অ্যাডমিন প্রবেশাধিকার নিয়ন্ত্রণ</a>
-              </li>             
+              </li> 
+              <hr class="pb-2" />            
               <li class="cursor-pointer mb-2" onclick="changeContent('account')">
                  <a href="#" class="hover:underline">অ্যাকাউন্ট </a>
               </li>
+              <hr class="pb-2" />
               <li class="cursor-pointer mb-2" onclick="changeContent('মাপ-প্রিন্ট')">
                  <a href="#" class="hover:underline">মাপ প্রিন্ট সেটিং </a>
               </li>
+              <hr class="pb-2" />
             </ul>
+            
+
              <!-- বেসিক সেটিংস End  -->           
 
             
@@ -87,74 +96,191 @@
              <!-- অর্ডার  item start  -->
 
              <li class="cursor-pointer mb-2 text-black font-bold" onclick="toggleSubMenu('page-3', 'angle-right-icon-3')">
-              <span class="rounded-full icon px-[1px] py-[0.9px] items-center mr-3">
-                <i id="angle-right-icon-3" class="fas fa-angle-right text-white ml-1 text-[12px] font-bold"></i>
+              <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                <i id="angle-right-icon-3" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
               </span>
               অর্ডার              
-            </li>            
+            </li>
+            <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" />             
             <ul id="page-3-submenu" class="hidden pl-[2.5em] text-[15px]">
               <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডার-দিন')">
                  <a href="#অর্ডারলিস্ট" class="hover:underline">অর্ডার দিন</a>               
               </li>
+               <hr class="pb-2" />
               <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডার-লিস্ট')">
                  <a href="#অর্ডারলিস্ট" class="hover:underline">অর্ডারলিস্ট</a>               
               </li>
+               <hr class="pb-2" />
               <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডারের-কাজ')">
                 <a href="#অর্ডারের-কাজ" class="hover:underline">অর্ডারের কাজ সম্পূন্ন করুন</a>                
               </li>
+               <hr class="pb-2" />
               <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডার-স্থায়ীভাবে-ডিলেট')">
                 <a href="#" class="hover:underline">অর্ডার স্থায়ীভাবে ডিলেট করুন</a>                  
               </li>
+               <hr class="pb-2" />
               <li class="cursor-pointer mb-2" onclick="changeContent('ডেলিভারি-তারিখ-পরিবর্তন')">
                 <a href="#" class="hover:underline">ডেলিভারি তারিখ পরিবর্তন করুন</a>                  
               </li>
+               <hr class="pb-2" />
             </ul>
 
              <!-- অর্ডার  item end  -->	
 		
 		
 
-            <li class="cursor-pointer mb-2"
+            <li class="cursor-pointer mb-2 text-black font-bold"
               onclick="toggleSubMenu('page-4', 'angle-right-icon-4')"
             >
-              Page 4
-              <span class="bg-blue-500 rounded-full">
+            <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
                 <i
                   id="angle-right-icon-4"
-                  class="fas fa-angle-right p-1 text-white ml-2"
+                  class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"
                 ></i>
               </span>
+
+              ডেলিভারী
+              
             </li>
+            <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
             <ul id="page-4-submenu" class="hidden pl-4">
-              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 4.1')">
-                Subpage 4.1(ok)
+              <li class="cursor-pointer mb-2" onclick="changeContent('ডেলিভারী-দিন')">
+                ডেলিভারী দিন
               </li>
-              <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 4.2')">
-                Subpage 4.2(ok)
+               <hr class="pb-2" />
+              <li class="cursor-pointer mb-2" onclick="changeContent('ডেলিভারী-কৃত-পোশাক')">              
+		            ডেলিভারী কৃত পোশাক
               </li>
+               <hr class="pb-2" />
             </ul>
 
-            <li class="cursor-pointer mb-2"  onclick="toggleSubMenu('page-5', 'angle-right-icon-5')">
-              page 5
-              <span class="bg-blue-500 rounded-full">
-                <i id="angle-right-icon-5" class="fas fa-angle-right p-1 text-white ml-2"></i>
+
+            <li class="cursor-pointer mb-2 text-black font-bold"
+              onclick="toggleSubMenu('page-5', 'angle-right-icon-5')"
+            >
+            <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                <i
+                  id="angle-right-icon-5"
+                  class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"
+                ></i>
               </span>
+
+             কাস্টমার
+              
             </li>
+            <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
             <ul id="page-5-submenu" class="hidden pl-4">
-                <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-5.1', 'angle-right-icon-5.1')">
+              <li class="cursor-pointer mb-2" onclick="changeContent('কাস্টমার-যুক্ত-করুন')">
+                কাস্টমার যুক্ত করুন
+              </li>
+               <hr class="pb-2" />
+              <li class="cursor-pointer mb-2" onclick="changeContent('কাস্টমার-লিস্ট')">              
+		           	কাস্টমার লিস্ট
+              </li>
+               <hr class="pb-2" />
+            </ul>
+
+
+            <li class="cursor-pointer mb-2 text-black font-bold"
+              onclick="toggleSubMenu('page-6', 'angle-right-icon-6')"
+            >
+            <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                <i
+                  id="angle-right-icon-6"
+                  class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"
+                ></i>
+              </span>
+
+             হিসাব-নিকাশ
+              
+            </li>
+            <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
+            <ul id="page-6-submenu" class="hidden pl-4">
+              <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-6.1', 'angle-right-icon-6.1')">
+                <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                  <i id="angle-right-icon-6.1" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
+                </span>
+
+                রিপোর্ট
+                
+              </li>
+              <hr class="pb-2" />
+
+              <ul id="page-6.1-submenu" class="hidden pl-4">
+                  <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 6.1')"> আয় ও ব্যয়ের রিপোর্ট</li>
+                   <hr class="pb-2" />
+                  <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 6.2')"> একাউন্ট লগ</li>
+                   <hr class="pb-2" />
+                  <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 6.3')"> অর্ডার ও ডেলিভারি রিপোর্ট</li>
+                   <hr class="pb-2" />
+                  <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 6.4')">  জমা , বাকি ও খরচ দেখুন</li>
+                   <hr class="pb-2" />
+                  <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 6.5')"> লেনদেন লগ</li>
+                   <hr class="pb-2" />
+              </ul>
+
+
+              <li class="cursor-pointer mb-2" onclick="changeContent('খরচ-যুক্ত-করুন')">
+                খরচ যুক্ত করুন   
+              </li>
+               <hr class="pb-2" />
+              <li class="cursor-pointer mb-2" onclick="changeContent('অন্যান্য-আয়-যুক্ত-করুন')">              
+		            অন্যান্য আয় যুক্ত করুন
+              </li>
+               <hr class="pb-2" />
+            </ul>
+
+
+
+            <li class="cursor-pointer mb-2 text-black font-bold"
+            onclick="toggleSubMenu('page-7', 'angle-right-icon-7')"
+          >
+          <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+              <i
+                id="angle-right-icon-7"
+                class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"
+              ></i>
+            </span>
+
+            কর্মচারী
+            
+          </li>
+          <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
+          <ul id="page-7-submenu" class="hidden pl-4">
+            <li class="cursor-pointer mb-2" onclick="changeContent('কর্মচারীর-তালিকা')">
+              কর্মচারীর তালিকা
+            </li>
+            <hr class="pb-2" />
+          </ul>
+
+
+
+
+          <!-- ফেব্রিক্স  -->
+            <li class="cursor-pointer mb-2 text-black font-bold"  onclick="toggleSubMenu('page-8', 'angle-right-icon-8')">              
+              <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                <i id="angle-right-icon-8" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
+              </span>
+              ফেব্রিক্স
+            </li>
+            <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
+            <ul id="page-8-submenu" class="hidden pl-4">
+                <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-10.1', 'angle-right-icon-10.1')">
                   page 5.1
                   <span class="bg-blue-500 rounded-full">
                     <i id="angle-right-icon-5.1" class="fas fa-angle-right p-1 text-white ml-2"></i>
                   </span>
                 </li>
+                <hr class="pb-2" />
 
-                <ul id="page-5.1-submenu" class="hidden pl-4">
-                    <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 5.1')">Subpage 5.1 (ok ok ok)</li>
+                <ul id="page-10.1-submenu" class="hidden pl-4">
+                    <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 10.1')">Subpage 5.1 (ok ok ok)</li>
+                    <hr class="pb-2" />
                 </ul>
 
 
 
-                <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-5.2', 'angle-right-icon-5.2')" >
+                <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-10.2', 'angle-right-icon-10.2')" >
                   page 5.2
                   <span class="bg-blue-500 rounded-full">
                     <i id="angle-right-icon-5.2" class="fas fa-angle-right p-1 text-white ml-2"
@@ -162,10 +288,41 @@
                   </span>
                 </li>
 
-                <ul id="page-5.2-submenu" class="hidden pl-4">
-                    <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 5.2')">Subpage 5.1 (ok ok ok)</li>
+                <ul id="page-10.2-submenu" class="hidden pl-4">
+                    <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 10.2')">Subpage 5.1 (ok ok ok)</li>
                 </ul>          
            </ul>
+
+
+           <!-- এসএমএস -->
+           <li class="cursor-pointer mb-2 text-black font-bold"
+           onclick="toggleSubMenu('page-9', 'angle-right-icon-9')"
+         >
+         <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+             <i
+               id="angle-right-icon-9"
+               class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"
+             ></i>
+           </span>
+
+           এসএমএস
+           
+         </li>
+         <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
+         <ul id="page-9-submenu" class="hidden pl-4">
+           <li class="cursor-pointer mb-2" onclick="changeContent('এসএমএস-পাঠান')">
+            এসএমএস পাঠান
+           </li>
+            <hr class="pb-2" />
+           <li class="cursor-pointer mb-2" onclick="changeContent('ফোন-কন্টাক্ট-লিস্ট')">
+            ফোন কন্টাক্ট লিস্ট
+           </li>
+            <hr class="pb-2" />
+           <li class="cursor-pointer mb-2" onclick="changeContent('পাঠানো-এসএমএস-রেকর্ড')">
+            পাঠানো এসএমএস রেকর্ড
+           </li>
+            <hr class="pb-2" />
+         </ul>
         
       </div>
 
@@ -214,7 +371,7 @@
           <div class="mt-4">
             <div id="content1" class="tab-content">
               <table class="min-w-full border border-gray-300 text-center">
-                <thead class="bg-gray-200 text-[12px]">
+                <thead class="bg-gray-200 text-[14px]">
                   <tr>
                     <th class="border border-gray-300 p-2">#</th>
                     <th class="border border-gray-300 p-2">ইস্যু তারিখ</th>
@@ -230,7 +387,7 @@
                   </tr>
                 </thead>
                 <!-- Add your data rows here start -->
-                <tbody class="text-[12px]">                  
+                <tbody class="text-[14px]">                  
                   <tr>
                     <td class="border border-gray-300 p-2">
                       <span  onclick="toggleBackgroundColor(this)"><i class="fa-regular fa-hand-pointer"></i></span>
@@ -312,14 +469,14 @@
             </div>
             <div id="content3" class="tab-content hidden">
               <table class="min-w-full border border-gray-300 text-center">
-                <thead class="bg-[#7367F0] text-white text-[12px]">
+                <thead class="bg-[#7367F0] text-white text-[14px]">
                   <tr>
                     <th class="border border-gray-300 p-2">আপনার SMS ব্যালেন্স</th>
                     <th class="border border-gray-300 p-2">মাস্কিং (যে নাম থেকে SMS যাবে)</th>
                   </tr>
                 </thead>
                 <!-- Add your data rows here start -->
-                <tbody class="text-[12px]">                  
+                <tbody class="text-[14px]">                  
                   <tr>
                     <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">1</td>
                     <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">sm  shaown</td>
@@ -405,10 +562,10 @@
           <tr>
             <td  class="border border-[#eaeaea] px-2 py-2 text-[14px]" colspan="2">
 
-                <button id="পরিবর্তন"   class="text-[#076db3] text-[12px] cursor-pointer" onclick="enableEdit()">পরিবর্তন করতে ক্লিক করুন</button>                     
+                <button id="পরিবর্তন"   class="text-[#076db3] text-[14px] cursor-pointer" onclick="enableEdit()">পরিবর্তন করতে ক্লিক করুন</button>                     
                <div class="flex flex-row gap-4"> 
-                <button class="text-[#076db3] text-[12px] cursor-pointer" id="updateButton" style="display:none;" onclick="updateInfo()">Update</button>
-                <button class="text-[#076db3] text-[12px] cursor-pointer" id="cancel" style="display:none;" onclick="cancelEdit()">Cancel</button></div>   
+                <button class="text-[#076db3] text-[14px] cursor-pointer" id="updateButton" style="display:none;" onclick="updateInfo()">Update</button>
+                <button class="text-[#076db3] text-[14px] cursor-pointer" id="cancel" style="display:none;" onclick="cancelEdit()">Cancel</button></div>   
             </td>
         </tr>
       </tbody>
@@ -426,7 +583,7 @@
     <a class="text-[13px] text-base hover:underline" style="color:#414366;">নতুন পোষাক যুক্ত করুন</a>
     <div id="content1" class="tab-content overflow-x-auto mt-4">
       <table class="min-w-full border border-gray-300 text-center">
-        <thead class="bg-[#7367F0] text-white text-[12px]">
+        <thead class="bg-[#7367F0] text-white text-[14px]">
           <tr>
             <th class="border border-gray-300 p-2">ইডিট করুন</th>
             <th class="border border-gray-300 p-2">পোষাকের নাম</th>
@@ -439,7 +596,7 @@
           </tr>
         </thead>
         <!-- Add your data rows here start -->
-        <tbody class="text-[12px]">                  
+        <tbody class="text-[14px]">                  
           <tr>
             <td class="border border-gray-300 p-2">
               <a href="#" class="bg-[#00C869] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-regular fa-pen-to-square"></i></a>
@@ -603,7 +760,7 @@
        </div>
        <div id="content1" class="tab-content overflow-x-auto">
         <table class="min-w-full border border-gray-300 text-center">
-          <thead class="bg-[#9087E4] text-white text-[12px]">
+          <thead class="bg-[#9087E4] text-white text-[14px]">
             <tr>
               <th class="border border-gray-300 p-2">Account</th>
               <th class="border border-gray-300 p-2">Deposit</th>
@@ -618,7 +775,7 @@
             </tr>            							
           </thead>
           <!-- Add your data rows here start -->
-          <tbody class="text-[12px]">                  
+          <tbody class="text-[14px]">                  
             <tr>
               <td class="border border-gray-300 p-2">
                 <span class="text-[#076db3]">Cash</span>
@@ -777,140 +934,134 @@
   <button class="tab-button active hover:bg-[#414366]" id="tab1">নতুন কাস্টমার</button>
   <button class="tab-button hover:bg-[#414366]" id="tab2">পুরাতন কাস্টমার</button>
 
+    <div class="mt-4">
+      <div id="content1" class="tab-content overflow-x-auto">
+        <div class="md:w-[250px] w-full">
+          <h2>জেন্ডার নির্ধরণ করুন</h2>
+          <div>
+            <div class="relative">
+              <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                <option>পুরুষ</option>
+                <option>মহিলা</option>
+                <option>বাচ্চা</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+              </div>
+            </div>
 
- <div class="mt-4">
-  <div id="content1" class="tab-content overflow-x-auto">
-    <div class="md:w-[250px] w-full">
-      <h2>জেন্ডার নির্ধরণ করুন</h2>
-      <div>
-        <div class="relative">
-          <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-            <option>পুরুষ</option>
-            <option>মহিলা</option>
-            <option>বাচ্চা</option>
-          </select>
-          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-          </div>
+            <form>
+              <div class="mt-1">
+                <h2>কাস্টমারের নাম</h2>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500">
+              </div>
+              <div class="mt-1">
+                <h2>মোবাইল নাম্বার </h2>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500">
+              </div>
+              <div class="mt-1">
+                <h2>ঠিকানা</h2>
+                <textarea id="message" name="message" rows="2" class="w-full p-2 text-gray-700 border border-gray-400 rounded focus:outline-none focus:shadow focus:border-gray-500"></textarea>
+              </div>
+              <div class="mt-1">
+                <h2>ছবি নির্বাচন করুন</h2>
+                <input type="file" id="photo" name="photo" accept="image/*" class="w-full ">
+              </div>
+              <button class="tab-button mt-4">পরবর্তী ধাপ</button>
+            </form>
+          </div>        
         </div>
-
-        <form>
-          <div class="mt-1">
-            <h2>কাস্টমারের নাম</h2>
-            <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500">
-          </div>
-          <div class="mt-1">
-            <h2>মোবাইল নাম্বার </h2>
-            <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500">
-          </div>
-          <div class="mt-1">
-            <h2>ঠিকানা</h2>
-            <textarea id="message" name="message" rows="2" class="w-full p-2 text-gray-700 border border-gray-400 rounded focus:outline-none focus:shadow focus:border-gray-500"></textarea>
-          </div>
-          <div class="mt-1">
-            <h2>ছবি নির্বাচন করুন</h2>
-            <input type="file" id="photo" name="photo" accept="image/*" class="w-full ">
-          </div>
-          <button class="tab-button mt-4">পরবর্তী ধাপ</button>
-        </form>
-      </div>        
-    </div>
-  </div>
-  <div id="content2" class="tab-content overflow-x-auto hidden">
-    <div>
-      <form class="md:w-[600px] flex flex-col md:flex-row w-full gap-4 ">
-        <div class="mt-1">
-          <h2 class="text-[14px]">কাস্টমার নং</h2>
-          <input type="text" class=" w-full md:w-[85px] appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="কাস্টমার নং">
-        </div>
-        <div class="mt-1">
-          <h2 class="text-[14px]">কাস্টমারের নাম</h2>
-          <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="কাস্টমারের নাম">
-        </div>
-        <div class="mt-1">
-          <h2 class="text-[14px]">মোবাইল নাম্বার</h2>
-          <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="মোবাইল নাম্বার">
-        </div>
-        
+      </div>
+      <div id="content2" class="tab-content overflow-x-auto hidden">
         <div>
-          <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+          <form class="md:w-[600px] flex flex-col md:flex-row w-full gap-4 ">
+            <div class="mt-1">
+              <h2 class="text-[14px]">কাস্টমার নং</h2>
+              <input type="text" class=" w-full md:w-[85px] appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="কাস্টমার নং">
+            </div>
+            <div class="mt-1">
+              <h2 class="text-[14px]">কাস্টমারের নাম</h2>
+              <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="কাস্টমারের নাম">
+            </div>
+            <div class="mt-1">
+              <h2 class="text-[14px]">মোবাইল নাম্বার</h2>
+              <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="মোবাইল নাম্বার">
+            </div>
+            
+            <div>
+              <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+            </div>
+          </form>
         </div>
-      </form>
+        <div>
+          <table class="min-w-full border border-gray-300 text-center">
+            <thead class="bg-[#9087E4] text-white text-[14px]">
+              <tr>
+                <th class="border border-gray-300 p-2">অর্ডার দিন</th>
+                <th class="border border-gray-300 p-2">কাস্টমার নং</th>
+                <th class="border border-gray-300 p-2">নাম</th>
+                <th class="border border-gray-300 p-2">মোবাইল</th>
+                <th class="border border-gray-300 p-2">ঠিকানা</th>
+                <th class="border border-gray-300 p-2">মোট অর্ডার	</th>
+                <th class="border border-gray-300 p-2">সর্বশেষ অর্ডার</th>
+                <th class="border border-gray-300 p-2">নিবন্ধনের তারিখ</th>           
+                          
+              </tr>            							
+            </thead>
+            <!-- Add your data rows here start -->
+            <tbody class="text-[14px]">                  
+              <tr>
+                <td class="border border-gray-300 p-2">icon </td>              					
+                <td class="border border-gray-300 p-2"> 4</td>
+                <td class="border border-gray-300 p-2">	ফিরোজ ভাই</td>
+                <td class="border border-gray-300 p-2">01611212220</td>
+                <td class="border border-gray-300 p-2">রাফসি টেলিকম পাগলা</td>
+                <td class="border border-gray-300 p-2">38</td>
+                <td class="border border-gray-300 p-2">19 Sep 2023</td>
+                <td class="border border-gray-300 p-2"> 2 Oct 2020</td>                           
+              </tr>                
+              <tr>
+                <td class="border border-gray-300 p-2">icon </td>              					
+                <td class="border border-gray-300 p-2"> 4</td>
+                <td class="border border-gray-300 p-2">	ফিরোজ ভাই</td>
+                <td class="border border-gray-300 p-2">01611212220</td>
+                <td class="border border-gray-300 p-2">রাফসি টেলিকম পাগলা</td>
+                <td class="border border-gray-300 p-2">38</td>
+                <td class="border border-gray-300 p-2">19 Sep 2023</td>
+                <td class="border border-gray-300 p-2"> 2 Oct 2020</td>                           
+              </tr>  
+              <tr>
+                <td class="border border-gray-300 p-2">icon </td>              					
+                <td class="border border-gray-300 p-2"> 4</td>
+                <td class="border border-gray-300 p-2">	ফিরোজ ভাই</td>
+                <td class="border border-gray-300 p-2">01611212220</td>
+                <td class="border border-gray-300 p-2">রাফসি টেলিকম পাগলা</td>
+                <td class="border border-gray-300 p-2">38</td>
+                <td class="border border-gray-300 p-2">19 Sep 2023</td>
+                <td class="border border-gray-300 p-2"> 2 Oct 2020</td>                           
+              </tr>          
+              <!-- Add more rows as needed -->
+            </tbody>             
+          </table>
+          <!-- pagination  -->
+          <nav class="bg-[#9087e4]">
+            <ul class="flex flex-row gap-2">                
+              <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
+              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
+              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>                 
+              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">4</a></li>                 
+              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">5</a></li>                 
+              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">6</a></li>                 
+              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">7</a></li>                 
+              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">8</a></li>                 
+              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">9</a></li>                 
+              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">10</a></li>                 
+            </ul>
+          </nav>  
+        </div>
+      </div>
     </div>
-    <div>
-      <table class="min-w-full border border-gray-300 text-center">
-        <thead class="bg-[#9087E4] text-white text-[12px]">
-          <tr>
-            <th class="border border-gray-300 p-2">অর্ডার দিন</th>
-            <th class="border border-gray-300 p-2">কাস্টমার নং</th>
-            <th class="border border-gray-300 p-2">নাম</th>
-            <th class="border border-gray-300 p-2">মোবাইল</th>
-            <th class="border border-gray-300 p-2">ঠিকানা</th>
-            <th class="border border-gray-300 p-2">মোট অর্ডার	</th>
-            <th class="border border-gray-300 p-2">সর্বশেষ অর্ডার</th>
-            <th class="border border-gray-300 p-2">নিবন্ধনের তারিখ</th>           
-                      
-          </tr>            							
-        </thead>
-        <!-- Add your data rows here start -->
-        <tbody class="text-[12px]">                  
-          <tr>
-            <td class="border border-gray-300 p-2">icon </td>              					
-            <td class="border border-gray-300 p-2"> 4</td>
-            <td class="border border-gray-300 p-2">	ফিরোজ ভাই</td>
-            <td class="border border-gray-300 p-2">01611212220</td>
-            <td class="border border-gray-300 p-2">রাফসি টেলিকম পাগলা</td>
-            <td class="border border-gray-300 p-2">38</td>
-            <td class="border border-gray-300 p-2">19 Sep 2023</td>
-            <td class="border border-gray-300 p-2"> 2 Oct 2020</td>                           
-          </tr>                
-          <tr>
-            <td class="border border-gray-300 p-2">icon </td>              					
-            <td class="border border-gray-300 p-2"> 4</td>
-            <td class="border border-gray-300 p-2">	ফিরোজ ভাই</td>
-            <td class="border border-gray-300 p-2">01611212220</td>
-            <td class="border border-gray-300 p-2">রাফসি টেলিকম পাগলা</td>
-            <td class="border border-gray-300 p-2">38</td>
-            <td class="border border-gray-300 p-2">19 Sep 2023</td>
-            <td class="border border-gray-300 p-2"> 2 Oct 2020</td>                           
-          </tr>  
-          <tr>
-            <td class="border border-gray-300 p-2">icon </td>              					
-            <td class="border border-gray-300 p-2"> 4</td>
-            <td class="border border-gray-300 p-2">	ফিরোজ ভাই</td>
-            <td class="border border-gray-300 p-2">01611212220</td>
-            <td class="border border-gray-300 p-2">রাফসি টেলিকম পাগলা</td>
-            <td class="border border-gray-300 p-2">38</td>
-            <td class="border border-gray-300 p-2">19 Sep 2023</td>
-            <td class="border border-gray-300 p-2"> 2 Oct 2020</td>                           
-          </tr>          
-          <!-- Add more rows as needed -->
-        </tbody>             
-      </table>
-      <!-- pagination  -->
-      <nav class="bg-[#9087e4]">
-        <ul class="flex flex-row gap-2">                
-          <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
-          <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
-          <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>                 
-          <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">4</a></li>                 
-          <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">5</a></li>                 
-          <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">6</a></li>                 
-          <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">7</a></li>                 
-          <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">8</a></li>                 
-          <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">9</a></li>                 
-          <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">10</a></li>                 
-        </ul>
-      </nav>  
     </div>
-  </div>
- </div>
-
-
-    </div>
-
-
-
   </div>
 
   <!-- 		অর্ডার লিস্ট Right Side page start -->
@@ -975,7 +1126,7 @@
               <button class="bg-[#95A73F] px-2 py-2">Today's Order(s)</button>
             </div>
             <table class="min-w-full border border-gray-300 text-center">
-              <thead class="bg-[#7367F0] text-white text-[12px]">
+              <thead class="bg-[#7367F0] text-white text-[14px]">
                 <tr>
                   <th class="border border-gray-300 p-2"></th>
                   <th class="border border-gray-300 p-2">অর্ডার নং</th>
@@ -993,7 +1144,7 @@
                 </tr>
               </thead>
               <!-- Add your data rows here start -->
-              <tbody class="text-[12px]">                  
+              <tbody class="text-[14px]">                  
                 <tr>
                   <td class="border border-gray-300 p-2 flex flex-row items-center">
                     <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer mr-2"><i class="fa-solid fa-print"></i></a>
@@ -1163,7 +1314,7 @@
             </div>
           </div>
           <table class="min-w-full border border-gray-300 text-center">
-            <thead class="bg-[#7367F0] text-white text-[12px]">
+            <thead class="bg-[#7367F0] text-white text-[14px]">
               <tr>
                 <th class="border border-gray-300 p-2">
                   <input id="selectAll"  type="checkbox" name="">
@@ -1183,7 +1334,7 @@
               </tr>
             </thead>
             <!-- Add your data rows here start -->
-            <tbody class="text-[12px]">                  
+            <tbody class="text-[14px]">                  
               <tr>
                 <td class="border border-gray-300 p-2">
                   <input   type="checkbox" name="">
@@ -1356,7 +1507,7 @@
 
       <div class="overflow-x-auto">       
         <table class="min-w-full border border-gray-300 text-center">
-          <thead class="bg-[#7367F0] text-white text-[12px]">
+          <thead class="bg-[#7367F0] text-white text-[14px]">
             <tr>
               <th class="border border-gray-300 p-2">
                 <input id="selectAll"  type="checkbox" name="">
@@ -1375,7 +1526,7 @@
             </tr>
           </thead>
           <!-- Add your data rows here start -->
-          <tbody class="text-[12px]">                  
+          <tbody class="text-[14px]">                  
             <tr>
               <td class="border border-gray-300 p-2">
                 <input   type="checkbox" name="">
@@ -1468,7 +1619,7 @@
 
 
         <div class="mt-4">
-          <h2 class="text-[#07a807] text-[12px] mb-1">অর্ডার ডিলেট করার জন্য অর্ডার তালিকা থেকে অর্ডার নির্বাচন করুন</h2>
+          <h2 class="text-[#07a807] text-[14px] mb-1">অর্ডার ডিলেট করার জন্য অর্ডার তালিকা থেকে অর্ডার নির্বাচন করুন</h2>
           <button class="bg-[#F4F4F6] text-[14px] px-2 py-1 font-normal border">ডিলেট করুন</button>
         </div>
       </div>
@@ -1548,7 +1699,7 @@
       </div>
      </div>
      
-           <!-- ডেলিভারি তারিখ পরিবর্তন করুন tables list -->
+      <!-- ডেলিভারি তারিখ পরিবর্তন করুন tables list -->
      
         <div class="overflow-x-auto mt-6">
           <div class="flex flex-row justify-left md:justify-end mb-4">
@@ -1556,7 +1707,7 @@
               <span class="px-2 py-2 bg-[#A8C093]"> Date Over Delivery</span></h2> 
           </div>
           <table class="min-w-full border border-gray-300 text-center ">
-            <thead class="bg-[#7367F0] text-white text-[12px]">
+            <thead class="bg-[#7367F0] text-white text-[14px]">
               <tr>
                 <th class="border border-gray-300 p-2">
                   <input id="selectAll"  type="checkbox" name="">
@@ -1573,7 +1724,7 @@
               </tr>
             </thead>
             <!-- Add your data rows here start -->
-            <tbody class="text-[12px]">                  
+            <tbody class="text-[14px]">                  
               <tr>
                 <td class="border border-gray-300 p-2">
                   <input   type="checkbox" name="">
@@ -1695,6 +1846,60 @@
     <!-- অর্ডার end -->
 
  
+
+  <div id="ডেলিভারী-দিন" class="content-div" style="display: none;">
+   ডেলিভারী-দিন
+  </div>
+
+  <div id="ডেলিভারী-কৃত-পোশাক" class="content-div" style="display: none;">
+    ডেলিভারী কৃত পোশাক
+   </div>
+ 
+
+  <div id="কাস্টমার-যুক্ত-করুন" class="content-div" style="display: none;">
+    কাস্টমার-যুক্ত-করুন
+  </div>
+
+
+  <div id="কাস্টমার-লিস্ট" class="content-div" style="display: none;">
+    কাস্টমার-লিস্ট
+  </div>
+
+
+
+  <div id="খরচ-যুক্ত-করুন" class="content-div" style="display: none;">
+    খরচ-যুক্ত-করুন
+  </div>
+
+
+  <div id="অন্যান্য-আয়-যুক্ত-করুন" class="content-div" style="display: none;">
+    অন্যান্য-আয়-যুক্ত-করুন
+  </div>
+
+
+
+  <div id="কর্মচারীর-তালিকা" class="content-div" style="display: none;">
+    কর্মচারীর-তালিকা
+  </div>
+
+
+  <div id="এসএমএস-পাঠান" class="content-div" style="display: none;">
+    এসএমএস পাঠান
+  </div>
+  <div id="ফোন-কন্টাক্ট-লিস্ট" class="content-div" style="display: none;">
+    ফোন কন্টাক্ট লিস্ট
+  </div>
+  <div id="পাঠানো-এসএমএস-রেকর্ড" class="content-div" style="display: none;">
+    পাঠানো এসএমএস রেকর্ড
+  </div>
+
+
+ 
+
+
+
+
+  
 
   <div id="print1" class="content-div" style="display: none;">
    Print 1
