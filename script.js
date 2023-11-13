@@ -94,6 +94,7 @@ function toggleSubMenu(submenuId, iconId) {
    initializeTabs('অর্ডারলিস্টTab'); 
    initializeTabs('অর্ডারেরকাজTab'); 
    initializeTabs('ডেলিভারি-তারিখ-পরিবর্তন-Tab'); 
+   initializeTabs('ডেলিভারী-কৃত-পোশাক-Tab'); 
 });
 
 
