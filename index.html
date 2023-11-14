@@ -2392,8 +2392,37 @@
 
 <!-- হিসাব-নিকাশ start -->
    <section>  
+    <!-- খরচ-যুক্ত-করুন start -->
   <div id="খরচ-যুক্ত-করুন" class="content-div" style="display: none;">
-      
+    <div class="ml-2 mb-4 md:w-[800px] w-full">
+      <div class="flex flex-col md:flex-row gpa-4 mt-0 md:mt-4">
+        <div class="mr-0 md:mr-3">
+          <label for="তারিখ_থেকে" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ থেকে</label>
+          <input datepicker datepicker-format="mm/dd/yyyy" type="text" id="তারিখ_থেকে" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ থেকে" required>
+        </div>
+        <div class="mr-0 md:mr-3">
+          <label for="তারিখ_থেকে" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ পর্যন্ত</label>
+          <input datepicker datepicker-format="mm/dd/yyyy" type="text" id="তারিখ_থেকে" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ পর্যন্ত" required>
+        </div>
+        <div>
+          <h2 for="তারিখ_থেকে" class="block mb-2 text-md font-medium text-blue-600 no-underline hover:underline cursor-pointer">নতুন খরচের ধরণ যুক্ত করুন</h2>
+          <div class="relative">
+            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+              <option selected>[ সকল খরচের ধরণ ]</option>
+              <option>পুরুষ</option>
+              <option>মহিলা</option>
+              <option>বাচ্চা</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="ml-2 md:mt-0 mt-4">
+          <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+        </div>              
+      </div>
+    </div>
   </div>
 
 
@@ -2460,10 +2489,13 @@
       <h2 class=" text-white font-semibold text-lg">Copyright © 2015-2023 <span class="uppercase">company Name</span> All rights reserved</h2>
     </footer>
 
+    <!-- datepicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/datepicker.min.js"></script>
+
     <script src="script.js"></script>
     <script
       src="https://kit.fontawesome.com/53025ffb8e.js"
       crossorigin="anonymous"
-    ></script>
+    ></script>    
   </body>
 </html>

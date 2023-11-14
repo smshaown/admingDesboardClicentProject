@@ -203,7 +203,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
+// datepicker code 
+document.addEventListener('DOMContentLoaded', function () {
+    flatpickr('#datepicker', {
+      // Configuration options for flatpickr
+      dateFormat: 'Y-m-d',
+      // Add more options as needed
+    });
+  });
 
 
 
