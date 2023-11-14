@@ -212,7 +212,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Popup box start 
+   // Reusable function for creating popups
+   function createPopup(popupTriggerId, popupId, closePopupId) {
+    const popupTrigger = document.getElementById(popupTriggerId);
+    const popup = document.getElementById(popupId);
+    const closePopup = document.getElementById(closePopupId);
 
+    // Event listener for opening the popup
+    popupTrigger.addEventListener('click', function () {
+      popup.style.display = 'flex'; // Show the popup
+    });
+
+    // Event listener for closing the popup
+    closePopup.addEventListener('click', function () {
+      popup.style.display = 'none'; // Hide the popup
+    });
+  }
+
+  // Initialize popups
+  createPopup('নতুন-খরচের-ধরণ-POPUP-1', 'নতুন-খরচের-ধরণ-POPUP-2', 'নতুন-খরচের-ধরণ-POPUP-close');
+  createPopup('খরচ-যুক্ত-করুন-popup1', 'খরচ-যুক্ত-করুন-popup2', 'খরচ-যুক্ত-করুন-close');
+  createPopup('নতুন-আয়ের-ধরণ-popup1', 'নতুন-আয়ের-ধরণ-popup2', 'নতুন-আয়ের-ধরণ-close');
+  createPopup('আয়-যুক্ত-করুন-popup1', 'আয়-যুক্ত-করুন-popup2', 'আয়-যুক্ত-করুন-close');
 
 
 

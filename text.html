@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+
+    <!-- Left Sidebar -->
+    <div class="flex flex-col md:flex-row ">
+        <div id="left-sidebar" class="md:w-[19%] w-full p-4 border border-gray-300 border-r-gray-300">
+          <div class="flex items-center mb-4">
+            <i class="bi bi-gear-fill text-2xl mr-2"></i>
+            <h2 class="text-xl">Dashboard</h2>
+          </div>
+          <ul>
+            <li class="cursor-pointer mb-2 sidebar-link" onclick="handleFirstClick('Page 1'), changeContent('Page 1')">
+              Page 1
+            </li>          
+            <!-- বেসিক সেটিংস Item start  -->
+            <ul class="">
+              <li class="cursor-pointer mb-2 text-black font-bold " onclick="toggleSubMenu('page-2', 'angle-right-icon-2')">          
+                <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                  <i id="angle-right-icon-2" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
+                </span>
+                বেসিক সেটিংস 
+                           
+              </li>  
+              <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" />         
+              <ul id="page-2-submenu" class="hidden pl-[2.5em] text-[15px]">
+                 <!--  প্রতিস্ঠানের বিবরণ == Left side Nav Bar  -->
+                <li class="cursor-pointer mb-2" onclick="changeContent('প্রতিস্ঠানের-বিবরণ')">
+                  <a href="#" class="hover:underline">প্রতিস্ঠানের বিবরণ</a>
+                </li>
+                <hr class="pb-2" /> 
+                 <!--  পোষাক ও মাপ যুক্ত করুন == Left side Nav Bar  -->
+                <li class="cursor-pointer mb-2" onclick="changeContent('পোষাক-ও-মাপ')">
+                   <a href="#" class="hover:underline">পোষাক ও মাপ যুক্ত করুন</a>
+                </li>
+                <hr class="pb-2" />
+                 <!--  সাব-অ্যাডমিন তৈরি করুন == Left side Nav Bar  -->
+                <li class="cursor-pointer mb-2" onclick="changeContent('সাব-অ্যাডমিন')">
+                   <a href="#" class="hover:underline">সাব-অ্যাডমিন তৈরি করুন</a>
+                </li>
+                <hr class="pb-2" />
+                <li class="cursor-pointer mb-2" onclick="changeContent('subAccess')">
+                   <a href="#" class="hover:underline">সাব-অ্যাডমিন প্রবেশাধিকার নিয়ন্ত্রণ</a>
+                </li> 
+                <hr class="pb-2" />            
+                <li class="cursor-pointer mb-2" onclick="changeContent('account')">
+                   <a href="#" class="hover:underline">অ্যাকাউন্ট </a>
+                </li>
+                <hr class="pb-2" />
+                <li class="cursor-pointer mb-2" onclick="changeContent('মাপ-প্রিন্ট')">
+                   <a href="#" class="hover:underline">মাপ প্রিন্ট সেটিং </a>
+                </li>
+                <hr class="pb-2" />
+              </ul>
+              
+  
+               <!-- বেসিক সেটিংস End  -->           
+  
+              
+  
+               <!-- অর্ডার  item start  -->
+  
+               <li class="cursor-pointer mb-2 text-black font-bold" onclick="toggleSubMenu('page-3', 'angle-right-icon-3')">
+                <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                  <i id="angle-right-icon-3" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
+                </span>
+                অর্ডার              
+              </li>
+              <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" />             
+              <ul id="page-3-submenu" class="hidden pl-[2.5em] text-[15px]">
+                <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডার-দিন')">
+                   <a href="#অর্ডারলিস্ট" class="hover:underline">অর্ডার দিন</a>               
+                </li>
+                 <hr class="pb-2" />
+                <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডার-লিস্ট')">
+                   <a href="#অর্ডারলিস্ট" class="hover:underline">অর্ডারলিস্ট</a>               
+                </li>
+                 <hr class="pb-2" />
+                <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডারের-কাজ')">
+                  <a href="#অর্ডারের-কাজ" class="hover:underline">অর্ডারের কাজ সম্পূন্ন করুন</a>                
+                </li>
+                 <hr class="pb-2" />
+                <li class="cursor-pointer mb-2" onclick="changeContent('অর্ডার-স্থায়ীভাবে-ডিলেট')">
+                  <a href="#" class="hover:underline">অর্ডার স্থায়ীভাবে ডিলেট করুন</a>                  
+                </li>
+                 <hr class="pb-2" />
+                <li class="cursor-pointer mb-2" onclick="changeContent('ডেলিভারি-তারিখ-পরিবর্তন')">
+                  <a href="#" class="hover:underline">ডেলিভারি তারিখ পরিবর্তন করুন</a>                  
+                </li>
+                 <hr class="pb-2" />
+              </ul>
+  
+               <!-- অর্ডার  item end  -->	
+          
+          
+  
+              <li class="cursor-pointer mb-2 text-black font-bold"
+                onclick="toggleSubMenu('page-4', 'angle-right-icon-4')"
+              >
+              <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                  <i
+                    id="angle-right-icon-4"
+                    class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"
+                  ></i>
+                </span>
+  
+                ডেলিভারী
+                
+              </li>
+              <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
+              <ul id="page-4-submenu" class="hidden pl-4">
+                <li class="cursor-pointer mb-2" onclick="changeContent('ডেলিভারী-দিন')">
+                  ডেলিভারী দিন
+                </li>
+                 <hr class="pb-2" />
+                <li class="cursor-pointer mb-2" onclick="changeContent('ডেলিভারী-কৃত-পোশাক')">              
+                      ডেলিভারী কৃত পোশাক
+                </li>
+                 <hr class="pb-2" />
+              </ul>
+  
+  
+              <li class="cursor-pointer mb-2 text-black font-bold"
+                onclick="toggleSubMenu('page-5', 'angle-right-icon-5')"
+              >
+              <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                  <i
+                    id="angle-right-icon-5"
+                    class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"
+                  ></i>
+                </span>
+  
+               কাস্টমার
+                
+              </li>
+              <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
+              <ul id="page-5-submenu" class="hidden pl-4">
+                <li class="cursor-pointer mb-2" onclick="changeContent('কাস্টমার-যুক্ত-করুন')">
+                  কাস্টমার যুক্ত করুন
+                </li>
+                 <hr class="pb-2" />
+                <li class="cursor-pointer mb-2" onclick="changeContent('কাস্টমার-লিস্ট')">              
+                         কাস্টমার লিস্ট
+                </li>
+                 <hr class="pb-2" />
+              </ul>
+  
+  
+              <li class="cursor-pointer mb-2 text-black font-bold"
+                onclick="toggleSubMenu('page-6', 'angle-right-icon-6')"
+              >
+              <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                  <i
+                    id="angle-right-icon-6"
+                    class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"
+                  ></i>
+                </span>
+  
+               হিসাব-নিকাশ
+                
+              </li>
+              <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
+              <ul id="page-6-submenu" class="hidden pl-4">
+                <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-6.1', 'angle-right-icon-6.1')">
+                  <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                    <i id="angle-right-icon-6.1" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
+                  </span>
+  
+                  রিপোর্ট
+                  
+                </li>
+                <hr class="pb-2" />
+  
+                <ul id="page-6.1-submenu" class="hidden pl-4">
+                    <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 6.1')"> আয় ও ব্যয়ের রিপোর্ট</li>
+                     <hr class="pb-2" />
+                    <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 6.2')"> একাউন্ট লগ</li>
+                     <hr class="pb-2" />
+                    <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 6.3')"> অর্ডার ও ডেলিভারি রিপোর্ট</li>
+                     <hr class="pb-2" />
+                    <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 6.4')">  জমা , বাকি ও খরচ দেখুন</li>
+                     <hr class="pb-2" />
+                    <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 6.5')"> লেনদেন লগ</li>
+                     <hr class="pb-2" />
+                </ul>
+  
+  
+                <li class="cursor-pointer mb-2" onclick="changeContent('খরচ-যুক্ত-করুন')">
+                  খরচ যুক্ত করুন   
+                </li>
+                 <hr class="pb-2" />
+                <li class="cursor-pointer mb-2" onclick="changeContent('অন্যান্য-আয়-যুক্ত-করুন')">              
+                      অন্যান্য আয় যুক্ত করুন
+                </li>
+                 <hr class="pb-2" />
+              </ul>
+  
+  
+  
+              <li class="cursor-pointer mb-2 text-black font-bold"
+              onclick="toggleSubMenu('page-7', 'angle-right-icon-7')"
+            >
+            <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                <i
+                  id="angle-right-icon-7"
+                  class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"
+                ></i>
+              </span>
+  
+              কর্মচারী
+              
+            </li>
+            <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
+            <ul id="page-7-submenu" class="hidden pl-4">
+              <li class="cursor-pointer mb-2" onclick="changeContent('কর্মচারীর-তালিকা')">
+                কর্মচারীর তালিকা
+              </li>
+              <hr class="pb-2" />
+            </ul>
+  
+  
+  
+  
+            <!-- ফেব্রিক্স  -->
+              <li class="cursor-pointer mb-2 text-black font-bold"  onclick="toggleSubMenu('page-8', 'angle-right-icon-8')">              
+                <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                  <i id="angle-right-icon-8" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
+                </span>
+                ফেব্রিক্স
+              </li>
+              <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
+              <ul id="page-8-submenu" class="hidden pl-4">
+                  <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-10.1', 'angle-right-icon-10.1')">
+                    page 5.1
+                    <span class="bg-blue-500 rounded-full">
+                      <i id="angle-right-icon-5.1" class="fas fa-angle-right p-1 text-white ml-2"></i>
+                    </span>
+                  </li>
+                  <hr class="pb-2" />
+  
+                  <ul id="page-10.1-submenu" class="hidden pl-4">
+                      <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 10.1')">Subpage 5.1 (ok ok ok)</li>
+                      <hr class="pb-2" />
+                  </ul>
+  
+  
+  
+                  <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-10.2', 'angle-right-icon-10.2')" >
+                    page 5.2
+                    <span class="bg-blue-500 rounded-full">
+                      <i id="angle-right-icon-5.2" class="fas fa-angle-right p-1 text-white ml-2"
+                      ></i>
+                    </span>
+                  </li>
+  
+                  <ul id="page-10.2-submenu" class="hidden pl-4">
+                      <li class="cursor-pointer mb-2" onclick="changeContent('Subpage 10.2')">Subpage 5.1 (ok ok ok)</li>
+                  </ul>          
+             </ul>
+  
+  
+             <!-- এসএমএস -->
+             <li class="cursor-pointer mb-2 text-black font-bold"
+             onclick="toggleSubMenu('page-9', 'angle-right-icon-9')"
+           >
+           <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+               <i
+                 id="angle-right-icon-9"
+                 class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"
+               ></i>
+             </span>
+  
+             এসএমএস
+             
+           </li>
+           <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" /> 
+           <ul id="page-9-submenu" class="hidden pl-4">
+             <li class="cursor-pointer mb-2" onclick="changeContent('এসএমএস-পাঠান')">
+              এসএমএস পাঠান
+             </li>
+              <hr class="pb-2" />
+             <li class="cursor-pointer mb-2" onclick="changeContent('ফোন-কন্টাক্ট-লিস্ট')">
+              ফোন কন্টাক্ট লিস্ট
+             </li>
+              <hr class="pb-2" />
+             <li class="cursor-pointer mb-2" onclick="changeContent('পাঠানো-এসএমএস-রেকর্ড')">
+              পাঠানো এসএমএস রেকর্ড
+             </li>
+              <hr class="pb-2" />
+           </ul>
+          
+        </div>
+
+  </body>
+</html>
