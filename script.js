@@ -95,6 +95,8 @@ function toggleSubMenu(submenuId, iconId) {
    initializeTabs('অর্ডারেরকাজTab'); 
    initializeTabs('ডেলিভারি-তারিখ-পরিবর্তন-Tab'); 
    initializeTabs('ডেলিভারী-কৃত-পোশাক-Tab'); 
+   initializeTabs('আয়-ব্যয়ের-রিপোর্ট-Tab'); 
+   initializeTabs('একাউন্ট-লগ-রিপোর্ট-Tab'); 
 });
 
 
@@ -203,14 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// datepicker code 
-document.addEventListener('DOMContentLoaded', function () {
-    flatpickr('#datepicker', {
-      // Configuration options for flatpickr
-      dateFormat: 'Y-m-d',
-      // Add more options as needed
-    });
-  });
+
 
   // Popup box start 
    // Reusable function for creating popups
@@ -238,12 +233,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  // kaje dibe vobishe 
-  function openNewPage() {
-    var newPage = window.open('about:blank', '_blank');
-    newPage.document.write('<html><head><title>New Page</title></head><body>Content goes here</body></html>');
-    newPage.document.close();
+
+// Function to initialize the datepicker on a given input element
+function initializeDatepicker(inputId) {
+  const input = document.getElementById(inputId);
+  
+  // Get the current date in the format "DD MMM, YYYY"
+  function getCurrentDate() {
+    const monthNames = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+
+    const now = new Date();
+    const day = now.getDate();
+    const month = monthNames[now.getMonth()];
+    const year = now.getFullYear();
+
+    return `${day} ${month}, ${year}`;
   }
+
+  // Set the current date as the placeholder for the input
+  input.placeholder = getCurrentDate();
+}
+
+// Call the function for each datepicker input
+initializeDatepicker('datePicker1');
+initializeDatepicker('datePicker2');
+initializeDatepicker('একাউন্ট-লগdatePicker1');
+initializeDatepicker('একাউন্ট-লগdatePicker2');
   
 
     // <!-- ইনভয়েস লিস্ট javascript code end  -->
