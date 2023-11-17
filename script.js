@@ -15,24 +15,34 @@ function toggleSubMenu(submenuId, iconId) {
     }
   }
     
+// Right Side Bar Create the page start 
+function changeContent(content, clickedLink) {
+  var rightSidebarContent = document.getElementById("right-sidebar-content");
+  var contentDiv = document.getElementById(content);
+
+  if (rightSidebarContent && contentDiv) {
+    var allContentDivs = rightSidebarContent.getElementsByClassName("content-div");
+    for (var i = 0; i < allContentDivs.length; i++) {
+      allContentDivs[i].style.display = "none";
+    }
+
+    contentDiv.style.display = "block";
+
+    // Remove the 'active-link' class from all links
+    var allLinks = document.querySelectorAll(".submenu-link");
+    allLinks.forEach(function(link) {
+      link.classList.remove("active-link");
+    });
+
+    // Add the 'active-link' class to the clicked link
+    if (clickedLink) {
+      clickedLink.classList.add("active-link");
+    }
+  }   
+}
+
   
 
-  // Right Side Bar Creact the page start 
-  function changeContent(content) {
-    var rightSidebarContent = document.getElementById("right-sidebar-content");
-    var contentDiv = document.getElementById(content);
-
-    if (rightSidebarContent && contentDiv) {
-      var allContentDivs = rightSidebarContent.getElementsByClassName("content-div");
-      for (var i = 0; i < allContentDivs.length; i++) {
-        allContentDivs[i].style.display = "none";
-      }
-
-      contentDiv.style.display = "block";
-    }   
-
-
-  }
 
   var firstClicked = false; // Flag to track if a link has been clicked
 
@@ -44,30 +54,6 @@ function toggleSubMenu(submenuId, iconId) {
   }
 
    // Right Side Bar Creact the page end 
-
-  
- 
-
-
-  // document.addEventListener('DOMContentLoaded', function() {
-  //   const tabs = document.querySelectorAll('.tab-button');
-  //   const tabContents = document.querySelectorAll('.tab-content');
-  
-  //   tabs.forEach(tab => {
-  //     tab.addEventListener('click', () => {
-  //       tabs.forEach(t => {
-  //         t.classList.remove('active-tab');
-  //       });
-  
-  //       tab.classList.add('active-tab');
-  
-  //       tabContents.forEach(content => content.classList.add('hidden'));
-  //       document.getElementById(`content${tab.id.slice(-1)}`).classList.remove('hidden');
-  //     });
-  //   });
-  // });
-
-
 
   document.addEventListener('DOMContentLoaded', function() {
     function initializeTabs(containerId) {
@@ -97,6 +83,9 @@ function toggleSubMenu(submenuId, iconId) {
    initializeTabs('ডেলিভারী-কৃত-পোশাক-Tab'); 
    initializeTabs('আয়-ব্যয়ের-রিপোর্ট-Tab'); 
    initializeTabs('একাউন্ট-লগ-রিপোর্ট-Tab'); 
+   initializeTabs('অর্ডার-ডেলিভারি-রিপোর্ট-Tab'); 
+   initializeTabs('জমা-বাকি-খরচ-দেখুন-রিপোর্ট-Tab'); 
+   initializeTabs('সর্বমোট-বযয়-টাকা-Tab'); 
 });
 
 
@@ -164,7 +153,7 @@ function cancelEdit() {
 
 
 
-// script.js
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const selectAllCheckbox = document.getElementById("selectAll");
@@ -241,8 +230,8 @@ function initializeDatepicker(inputId) {
   // Get the current date in the format "DD MMM, YYYY"
   function getCurrentDate() {
     const monthNames = [
-      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
     ];
 
     const now = new Date();
@@ -250,7 +239,7 @@ function initializeDatepicker(inputId) {
     const month = monthNames[now.getMonth()];
     const year = now.getFullYear();
 
-    return `${day} ${month}, ${year}`;
+    return `${day} ${month} ${year}`;
   }
 
   // Set the current date as the placeholder for the input
@@ -262,7 +251,42 @@ initializeDatepicker('datePicker1');
 initializeDatepicker('datePicker2');
 initializeDatepicker('একাউন্ট-লগdatePicker1');
 initializeDatepicker('একাউন্ট-লগdatePicker2');
+initializeDatepicker('অর্ডার-ডেলিভারিdatePicker1');
+initializeDatepicker('অর্ডার-ডেলিভারিdatePicker2');
+initializeDatepicker('লেনদেন-লগdatePicker1');
+initializeDatepicker('লেনদেন-লগdatePicker2');
   
 
-    // <!-- ইনভয়েস লিস্ট javascript code end  -->
+
+
+    // selected Value option start
+    document.addEventListener("DOMContentLoaded", function() {
+      function toggleContent(selectedValue) {
+        var contents = document.getElementsByClassName("custom-tab-content");
+        for (var i = 0; i < contents.length; i++) {
+          contents[i].style.display = "none";
+        }
+  
+        var selectedContent = document.getElementById(selectedValue + "Content");
+        if (selectedContent) {
+          selectedContent.style.display = "block";
+        }
+      }
+  
+      function setupDropdown(dropdownId) {
+        var selectElement = document.getElementById(dropdownId);
+        var defaultSelectedValue = selectElement.options[selectElement.selectedIndex].value;
+        toggleContent(defaultSelectedValue);
+  
+        selectElement.addEventListener("change", function() {
+          var selectedValue = selectElement.options[selectElement.selectedIndex].value;
+          toggleContent(selectedValue);
+        });
+      }
+  
+      // Call setupDropdown for each dropdown you want to initialize
+      setupDropdown("custom-grid-state-1");
+      setupDropdown("custom-grid-state-2");
+      // Add more if needed
+    });
   
