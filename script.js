@@ -86,118 +86,17 @@ function changeContent(content, clickedLink) {
    initializeTabs('অর্ডার-ডেলিভারি-রিপোর্ট-Tab'); 
    initializeTabs('জমা-বাকি-খরচ-দেখুন-রিপোর্ট-Tab'); 
    initializeTabs('সর্বমোট-বযয়-টাকা-Tab'); 
+   initializeTabs('গ্রাহকদের-এসএমএস-পাঠানTab'); 
 });
 
 
 
 
- 
-  function toggleBackgroundColor(element) {
-    var rows = document.querySelectorAll('tr');
-    rows.forEach(function(row) {
-      row.classList.remove('selected');
-    });
-    element.parentElement.parentElement.classList.add('selected');
-  } 
-
-
-
-
-  function enableEdit() {
-    var inputFields = document.querySelectorAll('#updatedInputText');
-    var updateButton = document.getElementById('updateButton');
-    var cancelButton = document.getElementById('cancel');
-    var editButton = document.getElementById('পরিবর্তন');
-
-    inputFields.forEach(function(field) {
-        field.contentEditable = true;
-        field.classList.add('bg-[#fcfcfc]'); // Add background color for visual indication of edit mode
-    });
-
-    updateButton.style.display = 'block';
-    cancelButton.style.display = 'block';
-    editButton.style.display = 'none';
-}
-
-function updateInfo() {
-    var inputFields = document.querySelectorAll('#updatedInputText');
-    var updateButton = document.getElementById('updateButton');
-    var cancelButton = document.getElementById('cancel');
-    var editButton = document.getElementById('পরিবর্তন');
-
-    inputFields.forEach(function(field) {
-        field.contentEditable = false;
-        field.classList.remove('bg-[#fcfcfc]'); // Remove background color
-    });
-
-    updateButton.style.display = 'none';
-    cancelButton.style.display = 'none';
-    editButton.style.display = 'block';
-}
-
-function cancelEdit() {
-    var inputFields = document.querySelectorAll('#updatedInputText');
-    var updateButton = document.getElementById('updateButton');
-    var cancelButton = document.getElementById('cancel');
-    var editButton = document.getElementById('পরিবর্তন');
-
-    inputFields.forEach(function(field) {
-        field.contentEditable = false;
-        field.classList.remove('bg-[#fcfcfc]'); // Remove background color
-    });
-
-    updateButton.style.display = 'none';
-    cancelButton.style.display = 'none';
-    editButton.style.display = 'block';
-}
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const selectAllCheckbox = document.getElementById("selectAll");
-  const tbody = document.querySelector("tbody");
-
-  selectAllCheckbox.addEventListener("change", function () {
-      const checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
-      checkboxes.forEach((checkbox) => {
-          checkbox.checked = selectAllCheckbox.checked;
-          toggleBackgroundColor(checkbox);
-      });
-  });
-
-  // Change background color when individual checkboxes are clicked
-  const checkboxes = document.querySelectorAll("tbody input[type='checkbox']");
-  checkboxes.forEach((checkbox) => {
-      checkbox.addEventListener("change", function () {
-          toggleBackgroundColor(checkbox);
-          // Check if it's the first checkbox in the row
-          if (checkbox.closest("tr").querySelector("input[type='checkbox']") === checkbox) {
-              const rowCheckboxes = checkbox.closest("tr").querySelectorAll("input[type='checkbox']");
-              rowCheckboxes.forEach((rowCheckbox) => {
-                  rowCheckbox.checked = checkbox.checked;
-                  toggleBackgroundColor(rowCheckbox);
-              });
-          }
-      });
-  });
-
-  // Function to toggle background color based on checkbox state
-  function toggleBackgroundColor(checkbox) {
-      const tr = checkbox.closest("tr");
-      if (checkbox.checked) {
-          tr.classList.add("selected-bg");
-      } else {
-          tr.classList.remove("selected-bg");
-      }
-  }
-});
 
 
 
   // Popup box start 
-   // Reusable function for creating popups
+
    function createPopup(popupTriggerId, popupId, closePopupId) {
     const popupTrigger = document.getElementById(popupTriggerId);
     const popup = document.getElementById(popupId);
@@ -219,6 +118,13 @@ document.addEventListener("DOMContentLoaded", function () {
   createPopup('খরচ-যুক্ত-করুন-popup1', 'খরচ-যুক্ত-করুন-popup2', 'খরচ-যুক্ত-করুন-close');
   createPopup('নতুন-আয়ের-ধরণ-popup1', 'নতুন-আয়ের-ধরণ-popup2', 'নতুন-আয়ের-ধরণ-close');
   createPopup('আয়-যুক্ত-করুন-popup1', 'আয়-যুক্ত-করুন-popup2', 'আয়-যুক্ত-করুন-close');
+  createPopup('কর্মচারী-যুক্ত-করুন-popup1', 'কর্মচারী-যুক্ত-করুন-popup2', 'কর্মচারী-যুক্ত-করুন-close');
+  createPopup('পারিশ্রমিক-যুক্ত-করুন-popup1', 'পারিশ্রমিক-যুক্ত-করুন-popup2', 'পারিশ্রমিক-যুক্ত-করুন-close');
+  createPopup('খরচ-ঋণ-প্রদান-popup1', 'খরচ-ঋণ-প্রদান-popup2', 'খরচ-ঋণ-প্রদান-close');
+  createPopup('ঋণ-ফেরত-popup1', 'ঋণ-ফেরত-popup2', 'ঋণ-ফেরত-close');
+  createPopup('Add-New-Group-popup1', 'Add-New-Group-popup2', 'Add-New-Group-close');
+  createPopup('Add-New-Mobile-Number-popup1', 'Add-New-Mobile-Number-popup2', 'Add-New-Mobile-Number-close');
+  createPopup('Customer-popup1', 'Customer-popup2', 'Customer-close');
 
 
 

@@ -20,7 +20,7 @@
 
     <!-- Top Header section Start -->
     <header class="">
-        <div class="py-5 px-4 text-white flex flex-col md:flex-row justify-between items-center" style="background-color: #7367f0">
+        <div class="py-[13px] px-[13px] text-white flex flex-col md:flex-row justify-between items-center" style="background-color: #7367f0">
             <!-- Left side  -->
            <div class="flex flex-col md:flex-row justify-center items-center">
             <!-- logo img  -->
@@ -31,24 +31,23 @@
            <div class="text-[18px] font-medium text-white">
              <p class="">Welcome | <span>User Name</span></p>
               <ul class="flex flex-row justify-center items-center">
-                <li><a href="#">Profile <span class="mr-1">|</span> </a></li>
+                <li class="cursor-pointer mb-2 list-none md:mt-[7px]" onclick="handleFirstClick('Profile'), changeContent('Profile')"><a href="#">Profile <span class="mr-1">|</span> </a></li>                 
                 <li class="hover:underline"><a href="#"> Logout</a></li>
               </ul>
            </div>
         </div>
     </header>
     <!-- Left Sidebar -->
-    <div class="flex flex-col md:flex-row ">
-      <div id="left-sidebar" class="md:w-[19%] w-full p-4 border border-gray-300 border-r-gray-300">
+    <div class="flex flex-col md:flex-row min-h-screen">
+      <!-- border border-gray-300 border-r-gray-300 -->
+      <div id="left-sidebar" class=" md:w-[19%] w-full p-4">
         <div class="flex items-center mb-4">
           <i class="bi bi-gear-fill text-2xl mr-2"></i>
-          <h2 class="text-xl">Dashboard</h2>
+        <li onclick="handleFirstClick('QUICK-ORDER'), changeContent('QUICK-ORDER')" class="bg-gradient-to-r from-violet-500 to-fuchsia-500 list-none px-8 py-4 text-center text-[14px] text-white font-normal rounded-md mb-6 cursor-pointer ">QUICK ORDER</li>
         </div>
 
         <div>
-          <li class="cursor-pointer mb-2 sidebar-link list-none" onclick="handleFirstClick('Page 1'), changeContent('Page 1')">
-            Page 1
-          </li>          
+                  
           <!-- বেসিক সেটিংস Item start  -->
           <ul class="">
             <li class="cursor-pointer mb-2 text-black font-bold" onclick="toggleSubMenu('page-2', 'angle-right-icon-2')">
@@ -206,81 +205,81 @@
       <!-- হিসাব-নিকাশ end -->
 
  
- <!-- কর্মচারী start -->
-<ul>
-  <li class="cursor-pointer mb-2 text-black font-bold" onclick="toggleSubMenu('page-7', 'angle-right-icon-7')">
-      <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
-          <i id="angle-right-icon-7" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
-      </span>
-      কর্মচারী
-  </li>
-  <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" />
-  <ul id="page-7-submenu" class="hidden pl-4">
-      <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('কর্মচারীর-তালিকা', this)">
-          কর্মচারীর তালিকা
-      </li>
-      <hr class="pb-2" />
-  </ul>
-</ul>
-<!-- কর্মচারী end -->
+      <!-- কর্মচারী start -->
+      <ul>
+        <li class="cursor-pointer mb-2 text-black font-bold" onclick="toggleSubMenu('page-7', 'angle-right-icon-7')">
+            <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+                <i id="angle-right-icon-7" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
+            </span>
+            কর্মচারী
+        </li>
+        <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" />
+        <ul id="page-7-submenu" class="hidden pl-4">
+            <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('কর্মচারীর-তালিকা', this)">
+                কর্মচারীর তালিকা
+            </li>
+            <hr class="pb-2" />
+        </ul>
+      </ul>
+      <!-- কর্মচারী end -->
 
-<!-- ফেব্রিক্স -->
-<ul>
-  <li class="cursor-pointer mb-2 text-black font-bold" onclick="toggleSubMenu('page-8', 'angle-right-icon-8')">
-      <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
-          <i id="angle-right-icon-8" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
-      </span>
-      ফেব্রিক্স
-  </li>
-  <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" />
-  <ul id="page-8-submenu" class="hidden pl-4">
-      <li class="cursor-pointer mb-2 submenu-link" onclick="toggleSubMenu('page-10.1', 'angle-right-icon-10.1')">
-          page 5.1
-          <span class="bg-blue-500 rounded-full">
-              <i id="angle-right-icon-5.1" class="fas fa-angle-right p-1 text-white ml-2"></i>
+    <!-- ফেব্রিক্স -->
+    <ul>
+      <li class="cursor-pointer mb-2 text-black font-bold" onclick="toggleSubMenu('page-8', 'angle-right-icon-8')">
+          <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+              <i id="angle-right-icon-8" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
           </span>
+          ফেব্রিক্স
       </li>
-      <hr class="pb-2" />
-      <ul id="page-10.1-submenu" class="hidden pl-4">
-          <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('Subpage 10.1')">Subpage 5.1 (ok ok ok)</li>
+      <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" />
+      <ul id="page-8-submenu" class="hidden pl-4">
+          <li class="cursor-pointer mb-2 submenu-link" onclick="toggleSubMenu('page-10.1', 'angle-right-icon-10.1')">
+              page 5.1
+              <span class="bg-blue-500 rounded-full">
+                  <i id="angle-right-icon-5.1" class="fas fa-angle-right p-1 text-white ml-2"></i>
+              </span>
+          </li>
+          <hr class="pb-2" />
+          <ul id="page-10.1-submenu" class="hidden pl-4">
+              <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('Subpage 10.1')">Subpage 5.1 (ok ok ok)</li>
+              <hr class="pb-2" />
+          </ul>
+          <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-10.2', 'angle-right-icon-10.2')">
+              page 5.2
+              <span class="bg-blue-500 rounded-full">
+                  <i id="angle-right-icon-5.2" class="fas fa-angle-right p-1 text-white ml-2"></i>
+              </span>
+          </li>
+          <ul id="page-10.2-submenu" class="hidden pl-4">
+              <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('Subpage 10.2')">Subpage 5.2 (ok ok ok)</li>
+          </ul>
+      </ul>
+    </ul>
+
+    <!-- এসএমএস -->
+    <ul>
+      <li class="cursor-pointer mb-2 text-black font-bold" onclick="toggleSubMenu('page-9', 'angle-right-icon-9')">
+          <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
+              <i id="angle-right-icon-9" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
+          </span>
+          এসএমএস
+      </li>
+      <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" />
+      <ul id="page-9-submenu" class="hidden pl-4">
+          <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('এসএমএস-পাঠান', this)">
+              এসএমএস পাঠান
+          </li>
+          <hr class="pb-2" />
+          <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('ফোন-কন্টাক্ট-লিস্ট', this)">
+              ফোন কন্টাক্ট লিস্ট
+          </li>
+          <hr class="pb-2" />
+          <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('পাঠানো-এসএমএস-রেকর্ড', this)">
+              পাঠানো এসএমএস রেকর্ড
+          </li>
           <hr class="pb-2" />
       </ul>
-      <li class="cursor-pointer mb-2" onclick="toggleSubMenu('page-10.2', 'angle-right-icon-10.2')">
-          page 5.2
-          <span class="bg-blue-500 rounded-full">
-              <i id="angle-right-icon-5.2" class="fas fa-angle-right p-1 text-white ml-2"></i>
-          </span>
-      </li>
-      <ul id="page-10.2-submenu" class="hidden pl-4">
-          <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('Subpage 10.2')">Subpage 5.2 (ok ok ok)</li>
-      </ul>
-  </ul>
-</ul>
-
-<!-- এসএমএস -->
-<ul>
-  <li class="cursor-pointer mb-2 text-black font-bold" onclick="toggleSubMenu('page-9', 'angle-right-icon-9')">
-      <span class="rounded-full icon pl-[1px] pr-[1px] items-center mr-3">
-          <i id="angle-right-icon-9" class="fas fa-angle-right text-white ml-1 text-[14px] font-bold"></i>
-      </span>
-      এসএমএস
-  </li>
-  <hr class="pb-2 md:w-[90%] w-full md:ml-[1.5rem]" />
-  <ul id="page-9-submenu" class="hidden pl-4">
-      <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('এসএমএস-পাঠান', this)">
-          এসএমএস পাঠান
-      </li>
-      <hr class="pb-2" />
-      <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('ফোন-কন্টাক্ট-লিস্ট', this)">
-          ফোন কন্টাক্ট লিস্ট
-      </li>
-      <hr class="pb-2" />
-      <li class="cursor-pointer mb-2 submenu-link" onclick="changeContent('পাঠানো-এসএমএস-রেকর্ড', this)">
-          পাঠানো এসএমএস রেকর্ড
-      </li>
-      <hr class="pb-2" />
-  </ul>
-</ul>
+    </ul>
 
 
         </ul>
@@ -293,8 +292,8 @@
     
 
   <div id="right-sidebar-content" class="md:w-[81%] w-full p-4">
-  <!-- Content for Page 1 -->
-  <div id="Page 1" class="content-div">  
+  <!-- Content for Profile -->
+  <div id="Profile" class="content-div" >  
       <h1 class="text-base font-semibold text-[#7367f0]">পরিচালকের প্রোফাইল</h1>
       <!-- Profile Details start -->
       <div class="bg-[#FAFAFA] px-4 py-4 flex flex-row gap-4 mt-4 border border-[#f2f2f2]">
@@ -333,7 +332,7 @@
     
           <div class="mt-4">
             <div id="content1" class="tab-content">
-              <table class="min-w-full border border-gray-300 text-center">
+              <table class="min-w-full overflow-x-auto border border-gray-300 text-center">
                 <thead class="bg-gray-200 text-[14px]">
                   <tr>
                     <th class="border border-gray-300 p-2">#</th>
@@ -352,8 +351,8 @@
                 <!-- Add your data rows here start -->
                 <tbody class="text-[14px]">                  
                   <tr>
-                    <td class="border border-gray-300 p-2">
-                      <span  onclick="toggleBackgroundColor(this)"><i class="fa-regular fa-hand-pointer"></i></span>
+                    <td class="border border-gray-300 p-2">                      
+                      <a href="#" class="bg-[#00C869] hover:bg-[#000] text-white rounded-full px-[5px] py-[4px] cursor-pointer"><i class="fa-regular fa-hand-pointer"></i></a>
                     </td>
                     <td class="border border-gray-300 p-2">2023-10-15</td>
                     <td class="border border-gray-300 p-2">2023-10-30</td>
@@ -369,8 +368,8 @@
                     </td>
                   </tr>                
                   <tr>
-                    <td class="border border-gray-300 p-2">
-                      <span  onclick="toggleBackgroundColor(this)"><i class="fa-regular fa-hand-pointer"></i></span>
+                    <td class="border border-gray-300 p-2">                      
+                      <a href="#" class="bg-[#00C869] hover:bg-[#000] text-white rounded-full px-[5px] py-[4px] cursor-pointer"><i class="fa-regular fa-hand-pointer"></i></a>
                     </td>
                     <td class="border border-gray-300 p-2">2023-10-15</td>
                     <td class="border border-gray-300 p-2">2023-10-30</td>
@@ -456,6 +455,94 @@
         </div>
        </div>
        <!-- Tabs content Home page profile end  -->
+  </div>
+
+  <!-- QUICK-ORDER start -->
+  <div id="QUICK-ORDER" class="content-div" style="display: none;">
+    <h2 class="text-lg"><span class="text-[30px] font-bold">Quick Order:</span> Order Number: <span>000</span> </h2>
+    <div class="flex flex-row justify-between items-center mt-3">
+     <div class="flex flex-row gap-2">
+      <div class="relative w-[200px]">
+        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+          <option selected>[ SELECT DRESS ]</option>
+          <option>সার্ট</option>
+          <option>প্যান্ট</option>
+          <option>একছাটা পাঞ্জাবি</option>
+          <option>কল্লিদার পাঞ্জাবি</option>
+          <option>কল্লিদার বাংলা জুব্বা</option>
+          <option>একছাটা এরাবিয়ান</option>
+          <option>কল্লিদার এরাবিয়ান</option>
+          <option>ফতুয়া</option>
+          <option>কাতুয়া</option>
+          <option>ব্যাপারী শার্ট</option>
+          <option>কাবলি</option>
+          <option>পায়জামা</option>
+          <option>প্যান্ট কাটিং পায়জামা</option>
+          <option>শার্ট</option>
+          <option>কোটি</option>
+          <option>ব্লেজার</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+        </div>
+      </div>
+      <button class="tab-button">Add Dress</button>
+     </div>
+     <div> <button id="Customer-popup1" class="tab-button uppercase "><i class="fas fa-user-plus"></i> Customer</button></div>
+     </div>
+
+
+
+     <!-- Customerpopup -->
+  
+     <!-- Customer-popup1 start -->
+        <div id="Customer-popup2" class="overlay ">
+          <div class="bg-white md:w-[500px] h-[500px] md:mt-[-100px]  rounded shadow-md popup-animation">
+            <div class="bg-[#0C817A] relative px-4 pt-4 pb-4 ">
+              <h2 class="text-white text-lg font-bold text-center"> Add Customer </h2>    
+              <span id="Customer-close" class="absolute cursor-pointer right-[8px] top-[1px] text-white hover:text-gray-400">x</span>      
+            </div>
+
+            <div class="mt-4 px-4 ">
+              <form>
+                <div class="mt-1">
+                  <label for="">Mobile number </label>
+                  <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="find customer by phone">
+                </div>
+                <div class="mt-2">
+                  <label for="">Customer name</label>
+                  <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="find customer by name">
+                </div>
+                <div class="mt-2">
+                  <label for="">Address</label>
+                  <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="">
+                </div>
+                <div class="mt-2 pb-6">
+                  <label for="">Gender</label>
+                  <div class="relative">
+                    <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">                      
+                      <option>পুরুষ</option>
+                      <option>মহিলা</option>
+                      <option>বাচ্চা</option>                      
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+
+               <div class="flex justify-center items-center">
+                <butto class="tab-button mt-6">Add Customer <i class="fa fa-paper-plane"></i></butto>
+               </div>
+              </form>
+            </div>
+          
+          </div>
+        </div>
+     <!-- খকর্মচারী-যুক্ত-করুন-popup1 end -->
+
+
   </div>
  
 
@@ -562,61 +649,45 @@
             <tbody class="text-[14px]">                  
               <tr>
                 <td class="border border-gray-300 p-2">
-                  <a href="#" class="bg-[#00C869] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-regular fa-pen-to-square"></i></a>
+                  <a href="#" class="bg-[#00C869] hover:bg-[#000] text-white rounded-full px-[5px] py-[4px] cursor-pointer"><i class="fa-regular fa-pen-to-square "></i></a>
                 </td>
                 <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">সার্ট</td>
-                <td class="border border-gray-300 p-2">
-                  <div class="w-[100px] h-[100px] rounded-mb flex justify-center items-center "><img class="w-[100%] h-[100%]" src="img/cloths/clothing3.jpeg" alt=""></div>
+                <td class="border border-gray-300 p-2 flex justify-center items-center ">
+                  <div class="w-[100px] h-[100px] rounded-mb "><img class="w-[100%] h-[100%]" src="img/cloths/clothing3.jpeg" alt=""></div>
                 </td>
                 <td class="border border-gray-300 p-2">
-                  <a href="#" class="bg-[#CC0061] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
+                  <a href="#" class="bg-[#CC0061] hover:bg-[#000] text-white rounded-full px-[4px] py-[4px] cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
                 </td>
-                <td class="border border-gray-300 p-2"><a href="#" class="bg-[#00C4C8] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-vest-patches"></i></a></td>
-                <td class="border border-gray-300 py-1 px-2 w-full md:w-[80px]">
-                  <input class="border border-[#000] py-2" type="text" placeholder="1">
+                <td class="border border-gray-300 p-2"><a href="#" class="bg-[#00C4C8] text-white rounded-full px-[5px] hover:bg-[#000] py-[4px] cursor-pointer"><i class="fa-solid fa-vest-patches"></i></a>
+                </td>
+                <td class="border border-gray-300 py-1 px-2 w-full md:w-[50px] ">
+                  <input class="border w-[50px] border-[#000] py-2" type="text" placeholder="1">
                 </td>
                 <td class="border border-gray-300 p-2">         
-                  <a href="#" class="bg-[#EC1C23] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-trash-can"></i></a>
+                  <a href="#" class="bg-[#EC1C23] hover:bg-[#000] text-white rounded-full px-[5px] py-[4px] cursor-pointer"><i class="fa-solid fa-trash-can"></i></a>
                 </td>
-              </tr>                 
+              </tr>                
               <tr>
                 <td class="border border-gray-300 p-2">
-                  <a href="#" class="bg-[#00C869] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-regular fa-pen-to-square"></i></a>
+                  <a href="#" class="bg-[#00C869] hover:bg-[#000] text-white rounded-full px-[5px] py-[4px] cursor-pointer"><i class="fa-regular fa-pen-to-square "></i></a>
                 </td>
-                <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">প্যান্ট</td>
+                <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">সার্ট</td>
+                <td class="border border-gray-300 p-2 flex justify-center items-center ">
+                  <div class="w-[100px] h-[100px] rounded-mb "><img class="w-[100%] h-[100%]" src="img/cloths/clothing2.jpeg" alt=""></div>
+                </td>
                 <td class="border border-gray-300 p-2">
-                  <div class="w-[100px] h-[100px] rounded-mb flex justify-center items-center "><img class="w-[100%] h-[100%]" src="img/cloths/clothing2.jpeg" alt=""></div>
+                  <a href="#" class="bg-[#CC0061] hover:bg-[#000] text-white rounded-full px-[4px] py-[4px] cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
                 </td>
-                <td class="border border-gray-300 p-2">
-                  <a href="#" class="bg-[#CC0061] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
+                <td class="border border-gray-300 p-2"><a href="#" class="bg-[#00C4C8] text-white rounded-full px-[5px] hover:bg-[#000] py-[4px] cursor-pointer"><i class="fa-solid fa-vest-patches"></i></a>
                 </td>
-                <td class="border border-gray-300 p-2"><a href="#" class="bg-[#00C4C8] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-vest-patches"></i></a></td>
-                <td class="border border-gray-300 py-1 px-2 w-full md:w-[80px]">
-                  <input class="border border-[#000] py-2 " type="text" placeholder="1">
+                <td class="border border-gray-300 py-1 px-2 w-full md:w-[50px] ">
+                  <input class="border w-[50px] border-[#000] py-2" type="text" placeholder="1">
                 </td>
                 <td class="border border-gray-300 p-2">         
-                  <a href="#" class="bg-[#EC1C23] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-trash-can"></i></a>
+                  <a href="#" class="bg-[#EC1C23] hover:bg-[#000] text-white rounded-full px-[5px] py-[4px] cursor-pointer"><i class="fa-solid fa-trash-can"></i></a>
                 </td>
-              </tr>   
-              <tr>
-                <td class="border border-gray-300 p-2">
-                  <a href="#" class="bg-[#00C869] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-regular fa-pen-to-square"></i></a>
-                </td>
-                <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">একছাটা পাঞ্জাবি</td>
-                <td class="border border-gray-300 p-2">
-                  <div class="w-[100px] h-[100px] rounded-mb flex justify-center items-center "><img class="w-[100%] h-[100%]" src="img/cloths/clothing1.jpeg" alt=""></div>
-                </td>
-                <td class="border border-gray-300 p-2">
-                  <a href="#" class="bg-[#CC0061] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
-                </td>
-                <td class="border border-gray-300 p-2"><a href="#" class="bg-[#00C4C8] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-vest-patches"></i></a></td>
-                <td class="border border-gray-300 py-1 px-2 w-full md:w-[80px]">
-                  <input class="border border-[#000] py-2" type="text" placeholder="1">
-                </td>
-                <td class="border border-gray-300 p-2">         
-                  <a href="#" class="bg-[#EC1C23] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-trash-can"></i></a>
-                </td>
-              </tr>   
+              </tr>     
+               
               
               <!-- Add more rows as needed -->
             </tbody>     
@@ -701,15 +772,121 @@
             </div>
           </div>
 
-        <div class="md:ml-[322px]" > <button class="buttonSub">save & continue</button></div>
+        <div class="md:ml-[322px]" > <button class="tab-button">save & continue</button></div>
         </div>
       </div>
       <!-- বেসিক সেটিংস for item => সাব-অ্যাডমিন তৈরি করুন start -->
 
       <div id="subAccess" class="content-div" style="display: none;">
-        সাব-প্রবেশাধিকার
+            <h2 class="text-base font-semibold text-[#7367f0]">সাব-অ্যাডমিন এর প্রবেশাধিকার নিয়ন্ত্রণ করুন</h2>
+        <hr class="mt-3 mb-3" />
+        <div>
+          <div class="relative w-[300px]">
+            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+              <option selected>[ সাব-অ্যাডমিন নির্বাচন করুন ]</option>
+              <option>Name</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            </div>
+          </div>
+
+          
       </div>
-    
+
+      <!-- আরো পেজ যোগ করুন অথবা সাব-অ্যাডমিন থেকে এক্সেস পেজ মুছে ফেলুন  -->
+      <div>
+         <!-- Add your data rows here start -->
+         <table class="min-w-full border border-gray-300 text-center">
+          <thead class="bg-[#7367F0] text-white text-[14px]">
+            <tr>
+              <th scope="col">ক্যাটাগরি লিংক</th>
+              <th scope="col">সাব ক্যাটাগরি লিংক</th>
+              <th class="border border-gray-300 p-2">
+                <input
+                type="checkbox"
+                name=""
+                class="form-checkbox text-[#7367F0] focus:ring-[#7367F0] h-4 w-4"
+              /><label
+                class="">পৃষ্ঠার শিরোনাম (এক্সেস এর জন্য পেজ নির্বাচন করুন)</label
+              ></th>
+                        
+            </tr>
+          </thead>
+          <!-- Data Rows -->
+          <tbody class="text-[14px]">
+            <tr>
+              <td rowspan="6" class="border border-gray-300 p-2">বেসিক সেটিংস</td>
+              <td rowspan="6" class="border border-gray-300 p-2"></td>
+              <td class="border border-gray-300 p-2">
+                <input
+                  type="checkbox"
+                  name=""
+                  class="form-checkbox text-[#7367F0] focus:ring-[#7367F0] h-4 w-4"
+                /><label
+                  class="text-[#7367F0]">প্রতিস্ঠানের বিবরণ</label
+                >
+              </td>
+            </tr>
+            <tr class="alt">
+              <td class="border border-gray-300 p-2">
+                <input
+                  type="checkbox"
+                  name=""
+                  class="form-checkbox text-[#7367F0] focus:ring-[#7367F0] h-4 w-4"
+                /><label
+                  class="text-[#7367F0]">পোষাক ও মাপ যুক্ত করুন</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2">
+                <input
+                  type="checkbox"
+                  name=""
+                  class="form-checkbox text-[#7367F0] focus:ring-[#7367F0] h-4 w-4"
+                /><label
+                  class="text-[#7367F0]">সাব-অ্যাডমিন তৈরি করুন</label
+                >
+              </td>
+            </tr>
+            <tr class="alt">
+              <td class="border border-gray-300 p-2">
+                <input
+                  type="checkbox"
+                  name=""
+                  class="form-checkbox text-[#7367F0] focus:ring-[#7367F0] h-4 w-4"
+                /><label
+                  class="text-[#7367F0]">সাব-অ্যাডমিন প্রবেশাধিকার নিয়ন্ত্রণ</label
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2">
+                <!-- Removed the name attribute from the checkbox -->
+                <input
+                  type="checkbox"
+                  class="form-checkbox text-[#7367F0] focus:ring-[#7367F0] h-4 w-4"
+                /><label
+                  class="text-[#7367F0]">অ্যাকাউন্ট</label>
+              </td>
+            </tr>
+            <tr class="alt">
+              <td class="border border-gray-300 p-2">
+                <input
+                  type="checkbox"
+                  name="ctl00$body$LinkGridView$ctl07$LinkCheckBox"
+                  class="form-checkbox text-[#7367F0] focus:ring-[#7367F0] h-4 w-4"
+                /><label
+                  class="text-[#7367F0]">মাপ প্রিন্ট সেটিং</label
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table> 
+        <button class="tab-button hover:bg-[#414366] mt-4">সিরিয়ালগুলো আপডেট করুন</button>  
+      </div>
+    </div>
 
       <!-- বেসিক সেটিংস for item => অ্যাকাউন্ট start -->
       <div id="account" class="content-div" style="display: none;">
@@ -865,14 +1042,7 @@
               <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
             </div>
           </div>
-
-
-
         </div>
-        <!-- <div class="flex flex-row items-center justify-between mt-1">
-          <h2>ডিসকাউন্ট লিমিট</h2>
-          <input id="inline-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-        </div> -->
 
         <div class="flex items-end justify-end mt-5 cursor-pointer">
           <span>
@@ -882,7 +1052,8 @@
 
 
       </div>
-      <div class="mt-10 "> <a href="#" class="cursor-pointer font-bold text-[18px] hover:underline text-[#005087]">নতুন অর্ডার দিন</a></div>
+
+      <div  class="mt-10 "> <a href="#নতুন-অর্ডার-দিন" class="cursor-pointer font-bold text-[18px] hover:underline text-[#005087]">নতুন অর্ডার দিন</a></div>
       </div>
       <!-- বেসিক সেটিংস for item => মাপ প্রিন্ট সেটিং end -->
     </section>
@@ -959,7 +1130,7 @@
               </div>
               <div>
                 <table class="min-w-full border border-gray-300 text-center">
-                  <thead class="bg-[#9087E4] text-white text-[14px]">
+                  <thead class="bg-[#9087E4] text-white text-[12px]">
                     <tr>
                       <th class="border border-gray-300 p-2">অর্ডার দিন</th>
                       <th class="border border-gray-300 p-2">কাস্টমার নং</th>
@@ -973,9 +1144,11 @@
                     </tr>            							
                   </thead>
                   <!-- Add your data rows here start -->
-                  <tbody class="text-[14px]">                  
+                  <tbody class="text-[12px]">                  
                     <tr>
-                      <td class="border border-gray-300 p-2">icon </td>              					
+                      <td class="border border-gray-300 p-2">                        
+                         <a href="#" class="bg-[#FF9400] hover:bg-[#000] text-white rounded-full px-[4px] py-[4px] cursor-pointer"><i class="fa-solid fa-cart-plus"></i>
+                      </td>              					
                       <td class="border border-gray-300 p-2"> 4</td>
                       <td class="border border-gray-300 p-2">	ফিরোজ ভাই</td>
                       <td class="border border-gray-300 p-2">01611212220</td>
@@ -985,7 +1158,7 @@
                       <td class="border border-gray-300 p-2"> 2 Oct 2020</td>                           
                     </tr>                
                     <tr>
-                      <td class="border border-gray-300 p-2">icon </td>              					
+                      <td class="border border-gray-300 p-2"> <a href="#" class="bg-[#FF9400] hover:bg-[#000] text-white rounded-full px-[4px] py-[4px] cursor-pointer"><i class="fa-solid fa-cart-plus"></i> </td>              					
                       <td class="border border-gray-300 p-2"> 4</td>
                       <td class="border border-gray-300 p-2">	ফিরোজ ভাই</td>
                       <td class="border border-gray-300 p-2">01611212220</td>
@@ -995,7 +1168,7 @@
                       <td class="border border-gray-300 p-2"> 2 Oct 2020</td>                           
                     </tr>  
                     <tr>
-                      <td class="border border-gray-300 p-2">icon </td>              					
+                      <td class="border border-gray-300 p-2"> <a href="#" class="bg-[#FF9400] hover:bg-[#000] text-white rounded-full px-[4px] py-[4px] cursor-pointer"><i class="fa-solid fa-cart-plus"></i> </td>              					
                       <td class="border border-gray-300 p-2"> 4</td>
                       <td class="border border-gray-300 p-2">	ফিরোজ ভাই</td>
                       <td class="border border-gray-300 p-2">01611212220</td>
@@ -1003,25 +1176,30 @@
                       <td class="border border-gray-300 p-2">38</td>
                       <td class="border border-gray-300 p-2">19 Sep 2023</td>
                       <td class="border border-gray-300 p-2"> 2 Oct 2020</td>                           
-                    </tr>          
+                    </tr>  
+                     <tr class="bg-[#9087e4]">
+                        <td colspan="8">
+                          <table>
+                            <tbody>
+                              <tr class="text-[14px] flex flex-row gap-2 py-1">
+                              <td><span class="mr-1 ml-1">|</span><a class="text-white" href="">1</a></td>
+                              <td><span class="mr-1">|</span><a class="hover:text-white" href="">2</a></td>
+                              <td><span class="mr-1">|</span><a class="hover:text-white" href="">4</a></td>
+                              <td><span class="mr-1">|</span><a class="hover:text-white" href="">5</a></td>
+                              <td><span class="mr-1">|</span><a class="hover:text-white" href="">6</a></td>
+                              <td><span class="mr-1">|</span><a class="hover:text-white" href="">7</a></td>
+                              <td><span class="mr-1">|</span><a class="hover:text-white" href="">8</a></td>
+                              <td><span class="mr-1">|</span><a class="hover:text-white" href="">9</a></td>
+                              <td><span class="mr-1">|</span><a class="hover:text-white" href="">10</a></td>
+                              <td><span class="mr-1">|</span><a class="hover:text-white" href="">...</a></td>
+                            </tr>
+                          </tbody>
+                          </table>
+                        </td>
+                      </tr>        
                     <!-- Add more rows as needed -->
                   </tbody>             
-                </table>
-                <!-- pagination  -->
-                <nav class="bg-[#9087e4]">
-                  <ul class="flex flex-row gap-2">                
-                    <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">4</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">5</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">6</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">7</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">8</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">9</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">10</a></li>                 
-                  </ul>
-                </nav>  
+                </table>                 
               </div>
             </div>
           </div>
@@ -1038,52 +1216,56 @@
               <button class="tab-button hover:bg-[#414366]" id="tab2">Order Date</button>    
           
             <div class="mt-4">  
-              <div id="content1" class="tab-content">
-                <div class="ml-2 mb-4 md:w-[500px] w-full">
-                  <div class="flex flex-col md:flex-row gpa-4">
-                    <div class="mr-0 md:mr-3">
-                      <label for="মোবাইল নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">মোবাইল নাম্বার</label>
-                      <input type="text" id="মোবাইল নাম্বার" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="মোবাইল নাম্বার" required>
-                    </div>
-                    <div>
-                      <label for="অর্ডার_নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">অর্ডার নাম্বার</label>
-                      <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="অর্ডার নাম্বার" required>
-                    </div>
+             
+            <div id="content1" class="tab-content">
+              <div class="ml-2 mb-4 md:w-[500px] w-full">
+                <div class="flex flex-col md:flex-row gpa-4">
+                  <div class="mr-0 md:mr-3">
+                    <label for="মোবাইল নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">মোবাইল নাম্বার</label>
+                    <input type="text" id="মোবাইল নাম্বার" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="মোবাইল নাম্বার" required>
                   </div>
-                  <div class="flex flex-col md:flex-row gpa-4 mt-0 md:mt-4">
-                    <div class="mr-0 md:mr-3">
-                      <label for="কাস্টমারের_নাম" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কাস্টমারের নাম</label>
-                      <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কাস্টমারের নাম" required>
-                    </div>
-                    <div>
-                      <label for="ঠিকানা" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ঠিকানা</label>
-                      <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ঠিকানা" required>
-                    </div>
-                    <div class="ml-2 md:mt-0 mt-4">
-                      <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
-                    </div>              
+                  <div>
+                    <label for="অর্ডার_নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">অর্ডার নাম্বার</label>
+                    <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="অর্ডার নাম্বার" required>
                   </div>
                 </div>
-              </div>
-              <div id="content2" class="tab-content">
-                <div class="ml-2 mb-4 md:w-[500px] w-full">
-                  <div class="flex flex-col md:flex-row gpa-4 mt-0 md:mt-4">
-                    <div class="mr-0 md:mr-3">
-                      <label for="তারিখ_থেকে" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ থেকে</label>
-                      <input type="text" id="তারিখ_থেকে" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ থেকে" required>
-                    </div>
-                    <div>
-                      <label for="তারিখ-পর্যন্ত" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ পর্যন্ত</label>
-                      <input type="text" id="তারিখ-পর্যন্ত" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ পর্যন্ত" required>
-                    </div>
-                    <div class="ml-2 md:mt-0 mt-4">
-                      <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
-                    </div>              
+                <div class="flex flex-col md:flex-row gpa-4 mt-0 md:mt-4">
+                  <div class="mr-0 md:mr-3">
+                    <label for="কাস্টমারের_নাম" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কাস্টমারের নাম</label>
+                    <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কাস্টমারের নাম" required>
                   </div>
+                  <div>
+                    <label for="ঠিকানা" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ঠিকানা</label>
+                    <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ঠিকানা" required>
+                  </div>
+                  <div class="ml-2 md:mt-0 mt-4">
+                    <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+                  </div>              
                 </div>
-              
-              </div>
-                <!-- অর্ডারলিস্ট table start -->
+              </div> 
+            </div>
+
+            <div id="content2" class="tab-content hidden">
+              <div class="ml-2 mb-4 md:w-[500px] w-full">
+                <div class="flex flex-col md:flex-row gpa-4 mt-0 md:mt-4">
+                  <div class="mr-0 md:mr-3">
+                    <label for="তারিখ_থেকে" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ থেকে</label>
+                    <input type="text" id="তারিখ_থেকে" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ থেকে" required>
+                  </div>
+                  <div>
+                    <label for="তারিখ-পর্যন্ত" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">কোন তারিখ পর্যন্ত</label>
+                    <input type="text" id="তারিখ-পর্যন্ত" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="কোন তারিখ পর্যন্ত" required>
+                  </div>
+                  <div class="ml-2 md:mt-0 mt-4">
+                    <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+                  </div>              
+                </div>
+              </div>          
+            </div>
+
+            </div>  
+
+            <!-- অর্ডারলিস্ট table start -->
                 <div class="overflow-x-auto">
                   <div class="flex flex-row justify-between items-center mb-4 md:gap-0 gap-2">
                     <h2 class="font-bold text-[18px]">সর্বমোট অর্ডার: 63 টি</h2>
@@ -1110,9 +1292,9 @@
                     <!-- Add your data rows here start -->
                     <tbody class="text-[14px]">                  
                       <tr>
-                        <td class="border border-gray-300 p-2 flex flex-row items-center">
-                          <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer mr-2"><i class="fa-solid fa-print"></i></a>
-                          <span>0</span>
+                        <td class="border border-gray-300 p-2">
+                          <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-[4px] py-[3px] cursor-pointer"><i class="fa-solid fa-print"></i></a>                           <span>0</span>                    
+                      
                         </td>
                         <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">13493</td>
                         <td class="border border-gray-300 p-2">
@@ -1134,29 +1316,29 @@
                           20 Nov 2023
                         </td>
                         <td class="border border-gray-300 p-2">     
-                          <a href="#" class="bg-[#FF7E00] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-file-circle-plus"></i></a> 
+                          <a href="#" class="bg-[#FF7E00] hover:bg-[#000] text-white rounded-full px-[3px] py-[3px] cursor-pointer"><i class="fa-solid fa-file-circle-plus"></i></a> 
                         </td>
                         <td class="border border-gray-300 p-2">
-                          <a href="#" class="bg-[#0077E1] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
+                          <a href="#" class="bg-[#0077E1] hover:bg-[#000] text-white rounded-full px-[3px] py-[3px] cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
                         </td>
                         <td class="border border-gray-300 p-2">
-                          <a href="#" class="bg-[#CC0061] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-bangladeshi-taka-sign"></i></a>
+                          <a href="#" class="bg-[#CC0061] hover:bg-[#000] text-white rounded-full px-[5px] py-[2px] cursor-pointer"><i class="fa-solid fa-bangladeshi-taka-sign"></i></a>
                         </td>
                         <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">
                           Update
                         </td>
                       </tr>    			  		
                       <tr>
-                        <td class="border border-gray-300 p-2 flex flex-row items-center">
-                          <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer mr-2"><i class="fa-solid fa-print"></i></a>
-                          <span>1</span>
-                        </td>
-                        <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">14000</td>
                         <td class="border border-gray-300 p-2">
-                          (5000) শাওন 
+                          <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-[4px] py-[3px] cursor-pointer"><i class="fa-solid fa-print"></i></a>                           <span>0</span>                    
+                      
+                        </td>
+                        <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">13493</td>
+                        <td class="border border-gray-300 p-2">
+                          (4886) নজরুল ইসলাম 
                         </td>
                         <td class="border border-gray-300 p-2">
-                          01709198065
+                          01915611548
                         </td>
                         <td class="border border-gray-300 p-2">
                           netrokuna
@@ -1171,31 +1353,72 @@
                           20 Nov 2023
                         </td>
                         <td class="border border-gray-300 p-2">     
-                          <a href="#" class="bg-[#FF7E00] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-file-circle-plus"></i></a> 
+                          <a href="#" class="bg-[#FF7E00] hover:bg-[#000] text-white rounded-full px-[3px] py-[3px] cursor-pointer"><i class="fa-solid fa-file-circle-plus"></i></a> 
                         </td>
                         <td class="border border-gray-300 p-2">
-                          <a href="#" class="bg-[#0077E1] hover:bg-[#000] text-white rounded-full px-2 py-2 cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
+                          <a href="#" class="bg-[#0077E1] hover:bg-[#000] text-white rounded-full px-[3px] py-[3px] cursor-pointer"><i class="fa-solid fa-ruler-horizontal"></i></a>
                         </td>
                         <td class="border border-gray-300 p-2">
-                          <a href="#" class="bg-[#CC0061] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer"><i class="fa-solid fa-bangladeshi-taka-sign"></i></a>
+                          <a href="#" class="bg-[#CC0061] hover:bg-[#000] text-white rounded-full px-[5px] py-[2px] cursor-pointer"><i class="fa-solid fa-bangladeshi-taka-sign"></i></a>
                         </td>
                         <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer">
                           Update
                         </td>
-                      </tr> 	
+                      </tr>
+                      <tr class="bg-[#9087e4]">
+                        <td colspan="12">
+                          <table>
+                            <tbody>
+                              <tr class="text-[13px] flex flex-row gap-2 py-1">
+                                <td>
+                                  <span class="mr-1 ml-1">|</span
+                                  ><a class="text-white" href="">1</a>
+                                </td>
+                                <td>
+                                  <span class="mr-1">|</span
+                                  ><a class="hover:text-white" href="">2</a>
+                                </td>
+                                <td>
+                                  <span class="mr-1">|</span
+                                  ><a class="hover:text-white" href="">4</a>
+                                </td>
+                                <td>
+                                  <span class="mr-1">|</span
+                                  ><a class="hover:text-white" href="">5</a>
+                                </td>
+                                <td>
+                                  <span class="mr-1">|</span
+                                  ><a class="hover:text-white" href="">6</a>
+                                </td>
+                                <td>
+                                  <span class="mr-1">|</span
+                                  ><a class="hover:text-white" href="">7</a>
+                                </td>
+                                <td>
+                                  <span class="mr-1">|</span
+                                  ><a class="hover:text-white" href="">8</a>
+                                </td>
+                                <td>
+                                  <span class="mr-1">|</span
+                                  ><a class="hover:text-white" href="">9</a>
+                                </td>
+                                <td>
+                                  <span class="mr-1">|</span
+                                  ><a class="hover:text-white" href="">10</a>
+                                </td>
+                                <td>
+                                  <span class="mr-1">|</span
+                                  ><a class="hover:text-white" href="">...</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
                       <!-- Add more rows as needed -->
                     </tbody>             
                   </table>
-                  <!-- pagination  -->
-                  <nav class="bg-[#9087e4]">
-                    <ul class="flex flex-row gap-2">                
-                      <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
-                      <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
-                      <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>   
-                    </ul>
-                  </nav>
                 </div>
-            </div>  
           </div>
         </div>
 
@@ -1210,7 +1433,7 @@
 
 
             <div class="mt-4">
-              <div id="content1" class="tab-content overflow-x-auto">
+              <div id="content1" class="tab-content">
                 <div class="ml-2 mb-4 md:w-[500px] w-full">
                   <div>    
 
@@ -1245,7 +1468,7 @@
                   </div>        
                 </div>
               </div>
-              <div id="content2" class="tab-content overflow-x-auto hidden">
+              <div id="content2" class="tab-content hidden">
               <div>
                 <form class="md:w-[600px] flex flex-col md:flex-row w-full gap-4 ">
                   <div class="mt-1">
@@ -1268,7 +1491,7 @@
 
 
           <!-- অর্ডারের কাজ table start -->
-          <div class="overflow-x-autol mt-6">
+          <div class="overflow-x-auto mt-6">
                 <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4 md:gap-0 gap-2">
                   <h2 class="font-bold text-[18px]">সর্বমোট: 62 টি অর্ডারের কাজ অসম্পুন্ন অবস্থায় আছে</h2>
                   <div >
@@ -1354,7 +1577,7 @@
                         <input  type="checkbox" name="">
                       </td>
                       <td class="border border-gray-300 p-2">
-                        <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer mr-2"><i class="fa-solid fa-print"></i></a>
+                        <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-[4px] py-[3px] cursor-pointer mr-2"><i class="fa-solid fa-print"></i></a>
                       </td>   
                                   
                     </tr>   			  		
@@ -1414,22 +1637,40 @@
                         <input  type="checkbox" name="">
                       </td>
                       <td class="border border-gray-300 p-2">
-                        <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-2.5 py-2 cursor-pointer mr-2"><i class="fa-solid fa-print"></i></a>
+                        <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full px-[4px] py-[3px] cursor-pointer mr-2"><i class="fa-solid fa-print"></i></a>
                       </td>   
                                   
-                    </tr>   		  		
-                      
+                    </tr>
+                     <tr class="bg-[#9087e4]">
+                    <td colspan="13">
+                      <table>
+                        <tbody>
+                          <tr class="text-[13px] flex flex-row gap-2 py-1">
+                            <td>
+                              <span class="mr-1 ml-1">|</span
+                              ><a class="text-white" href="">1</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">2</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">3</a>
+                            </td>              
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">...</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>   		  		
+                                    
                     <!-- Add more rows as needed -->
                   </tbody>             
                 </table>
-                <!-- pagination  -->
-                <nav class="bg-[#9087e4]">
-                  <ul class="flex flex-row gap-2">                
-                    <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>   
-                  </ul>
-                </nav>
 
                 <button class="tab-button hover:bg-[#414366] mt-4 mb-4">কাজ সম্পূর্ণ করুন</button>
           </div>   
@@ -1562,22 +1803,61 @@
                       Pending
                     </td>              
                                 
-                  </tr>   			  		
+                  </tr> 
+                  <tr class="bg-[#9087e4]">
+                    <td colspan="20">
+                      <table>
+                        <tbody>
+                          <tr class="text-[13px] flex flex-row gap-2 py-1">
+                            <td>
+                              <span class="mr-1 ml-1">|</span
+                              ><a class="text-white" href="">1</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">2</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">4</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">5</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">6</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">7</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">8</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">9</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">10</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">...</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>  			  		
             
                   <!-- Add more rows as needed -->
                 </tbody>             
-              </table>
-              <!-- pagination  -->
-              <nav class="bg-[#9087e4]">
-                <ul class="flex flex-row gap-2">                
-                  <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
-                  <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
-                  <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>   
-                  <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">4</a></li>   
-                  <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">5</a></li>   
-                  <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">......</a></li>   
-                </ul>
-              </nav>
+              </table>           
 
 
               <div class="mt-4">
@@ -1774,20 +2054,63 @@
                         <input  type="checkbox" name="" />                
                       </td>             
                           
-                    </tr>   			  		
+                    </tr> 
+                    <tr class="bg-[#9087e4]">
+                    <td colspan="20">
+                      <table>
+                        <tbody>
+                          <tr class="text-[13px] flex flex-row gap-2 py-1">
+                            <td>
+                              <span class="mr-1 ml-1">|</span
+                              ><a class="text-white" href="">1</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">2</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">4</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">5</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">6</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">7</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">8</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">9</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">10</a>
+                            </td>
+                            <td>
+                              <span class="mr-1">|</span
+                              ><a class="hover:text-white" href="">...</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>    			  		
                             
                       
                     <!-- Add more rows as needed -->
                   </tbody>             
                 </table>
-                <!-- pagination  -->
-                <nav class="bg-[#9087e4]">
-                  <ul class="flex flex-row gap-2">                
-                    <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>   
-                  </ul>
-                </nav>
+                
         
                   <div class="mt-4">
                       <h2 class="px-1">পরিবর্তিত তারিখ</h2>
@@ -1982,6 +2305,56 @@
                           
                       <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#00C8EA] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[5px] pl-[5px] pr-[5px] cursor-pointer mr-2"><i class="fa-solid fa-truck"></i></a></td>               
                           
+                    </tr>  
+                    <tr class="bg-[#9087e4]">
+                      <td colspan="20">
+                        <table>
+                          <tbody>
+                            <tr class="text-[13px] flex flex-row gap-2 py-1">
+                              <td>
+                                <span class="mr-1 ml-1">|</span
+                                ><a class="text-white" href="">1</a>
+                              </td>
+                              <td>
+                                <span class="mr-1">|</span
+                                ><a class="hover:text-white" href="">2</a>
+                              </td>
+                              <td>
+                                <span class="mr-1">|</span
+                                ><a class="hover:text-white" href="">4</a>
+                              </td>
+                              <td>
+                                <span class="mr-1">|</span
+                                ><a class="hover:text-white" href="">5</a>
+                              </td>
+                              <td>
+                                <span class="mr-1">|</span
+                                ><a class="hover:text-white" href="">6</a>
+                              </td>
+                              <td>
+                                <span class="mr-1">|</span
+                                ><a class="hover:text-white" href="">7</a>
+                              </td>
+                              <td>
+                                <span class="mr-1">|</span
+                                ><a class="hover:text-white" href="">8</a>
+                              </td>
+                              <td>
+                                <span class="mr-1">|</span
+                                ><a class="hover:text-white" href="">9</a>
+                              </td>
+                              <td>
+                                <span class="mr-1">|</span
+                                ><a class="hover:text-white" href="">10</a>
+                              </td>
+                              <td>
+                                <span class="mr-1">|</span
+                                ><a class="hover:text-white" href="">...</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
                     </tr>   			  		
                     		  		
                             
@@ -1989,14 +2362,6 @@
                     <!-- Add more rows as needed -->
                   </tbody>             
                 </table>
-                <!-- pagination  -->
-                <nav class="bg-[#9087e4]">
-                  <ul class="flex flex-row gap-2">                
-                    <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
-                    <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>   
-                  </ul>
-                </nav>
         
                 <button class="tab-button hover:bg-[#414366] mt-4 mb-4">Send SMS</button>
               </div>  
@@ -2017,12 +2382,11 @@
 
 
         <div class="mt-4"> 
-          <div id="content1" class="tab-content overflow-x-auto">
+          <div id="content1" class="tab-content">
             <div class="ml-2 mb-4 md:w-[500px] w-full">
-              <div>    
+              <div>  
 
-                <form class="mb-4 md:w-[500px] w-full">
-                
+                <form class="mb-4 md:w-[500px] w-full">                
                     <div class="flex flex-col md:flex-row gpa-4">
                       <div class="mr-0 md:mr-3">
                         <label for="মোবাইল নাম্বার" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">মোবাইল নাম্বার</label>
@@ -2049,8 +2413,8 @@
                     </div>
 
 
-                        <div class="ml-2 md:mt-0">
-                          <img src="img/Search.png" class="mt-0 md:mt-[72px]" alt="">
+                        <div class="ml-2">
+                          <img src="img/Search.png" class="mt-[60px] md:mt-[72px]" alt="">
                         </div>
                       </div>
                         
@@ -2074,7 +2438,7 @@
               </div>        
               
               <div>
-                <img src="img/Search.png" class="mt-0 md:mt-[36px]" alt="">
+                <img src="img/Search.png" class="md:mt-[36px]" alt="">
               </div>
             </form>
           </div>          
@@ -2164,19 +2528,40 @@
                 </td>
                 <td class="border border-gray-300 p-2"> </td>             
               </tr>    		  		
-                
+              <tr class="bg-[#9087e4]">
+                <td colspan="20">
+                  <table>
+                    <tbody>
+                      <tr class="text-[13px] flex flex-row gap-2 py-1">
+                        <td>
+                          <span class="mr-1 ml-1">|</span
+                          ><a class="text-white" href="">1</a>
+                        </td>
+                        <td>
+                          <span class="mr-1">|</span
+                          ><a class="hover:text-white" href="">2</a>
+                        </td>
+                        <td>
+                          <span class="mr-1">|</span
+                          ><a class="hover:text-white" href="">4</a>
+                        </td>
+                       
+                        <td>
+                          <span class="mr-1">|</span
+                          ><a class="hover:text-white" href="">10</a>
+                        </td>
+                        <td>
+                          <span class="mr-1">|</span
+                          ><a class="hover:text-white" href="">...</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>  
               <!-- Add more rows as needed -->
             </tbody>             
           </table>
-          <!-- pagination  -->
-          <nav class="bg-[#9087e4]">
-            <ul class="flex flex-row gap-2">                
-              <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
-              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
-              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>   
-              <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">Last</a></li>   
-            </ul>
-          </nav>
     </div> 
 
       </div>
@@ -2259,7 +2644,7 @@
           <h2 class="text-[#090] mt-3 mb-2">সর্বমোট : 6652 জন কাস্টমার</h2>
           <h2 class="mb-2">মোট বাকি: ৳915,283.60</h2>
         </div>
-        <table class="min-w-full border border-gray-300 text-center">
+        <table class="overflow-x-auto min-w-full border border-gray-300 text-center">
           <thead class="bg-[#9087E4] text-white text-[12px]">
             <tr>
               <th class="border border-gray-300 p-2">বিস্তারিত</th>
@@ -2327,25 +2712,60 @@
               </td> 
               <td class="border border-gray-300 p-2 text-[#076db3] cursor-pointer"> <a href="#" class="bg-[#EC1C23] hover:bg-[#000] text-white rounded-full pt-[4px] pb-[4px] pl-[5px] pr-[6px] cursor-pointer mr-2"><i class="fa-solid fa-trash-can"></i></a>
               </td> 
-            </tr>          
+            </tr>  
+            <tr class="bg-[#9087e4]">
+              <td colspan="30">
+              <table>
+                <tbody>
+                  <tr class="text-[13px] flex flex-row gap-2 py-1">
+                    <td>
+                      <span class="mr-1 ml-1">|</span
+                      ><a class="text-white" href="">1</a>
+                    </td>
+                    <td>
+                      <span class="mr-1">|</span
+                      ><a class="hover:text-white" href="">2</a>
+                    </td>
+                    <td>
+                      <span class="mr-1">|</span
+                      ><a class="hover:text-white" href="">4</a>
+                    </td>
+                    <td>
+                      <span class="mr-1">|</span
+                      ><a class="hover:text-white" href="">5</a>
+                    </td>
+                    <td>
+                      <span class="mr-1">|</span
+                      ><a class="hover:text-white" href="">6</a>
+                    </td>
+                    <td>
+                      <span class="mr-1">|</span
+                      ><a class="hover:text-white" href="">7</a>
+                    </td>
+                    <td>
+                      <span class="mr-1">|</span
+                      ><a class="hover:text-white" href="">8</a>
+                    </td>
+                    <td>
+                      <span class="mr-1">|</span
+                      ><a class="hover:text-white" href="">9</a>
+                    </td>
+                    <td>
+                      <span class="mr-1">|</span
+                      ><a class="hover:text-white" href="">10</a>
+                    </td>
+                    <td>
+                      <span class="mr-1">|</span
+                      ><a class="hover:text-white" href="">...</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+             </td>
+            </tr>        
             <!-- Add more rows as needed -->
           </tbody>             
-        </table>
-        <!-- pagination  -->
-        <nav class="bg-[#9087e4]">
-          <ul class="flex flex-row gap-2">                
-            <li><span class="ml-2 mr-2">|</span><a class="text-white hover:bg-[#9087e4]" href="#">1</a></li>                 
-            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">2</a></li>                 
-            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">3</a></li>                 
-            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">4</a></li>                 
-            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">5</a></li>                 
-            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">6</a></li>                 
-            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">7</a></li>                 
-            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">8</a></li>                 
-            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">9</a></li>                 
-            <li><span class="mr-2">|</span><a class="hover:text-white hover:bg-[#9087e4]" href="#">10</a></li>                 
-          </ul>
-        </nav>  
+        </table>         
       </div>
     </div>
    </section>
@@ -3661,27 +4081,400 @@
 <!-- হিসাব-নিকাশ end -->
 
 <!--  কর্মচারীর-তালিকা start -->
-
     <section>
       <div id="কর্মচারীর-তালিকা" class="content-div" style="display: none;">
-        কর্মচারীর-তালিকা
+        <h2 class="text-[1.75rem] font-normal ">কর্মচারী তালিকা</h2>
+        <hr class="mt-3 mb-6" />
+
+        <!-- কর্মচারী যুক্ত করুন popup -->
+         <button id="কর্মচারী-যুক্ত-করুন-popup1" class=" tab-button cursor-pointer md:mt-0 mt-1 mb-4">কর্মচারী যুক্ত করুন</button>
+
+         <!-- খকর্মচারী-যুক্ত-করুন-popup1 start -->
+            <div id="কর্মচারী-যুক্ত-করুন-popup2" class="overlay ">
+              <div class="bg-white md:w-[500px] h-[360px] md:mt-[-150px]  rounded shadow-md popup-animation">
+                <div class="bg-[#0C817A] relative px-4 pt-4 pb-4 ">
+                  <h2 class="text-white font-bold"> কর্মচারী যুক্ত করুন </h2>    
+                  <span id="কর্মচারী-যুক্ত-করুন-close" class="absolute cursor-pointer right-[8px] top-[1px] text-white hover:text-gray-400">x</span>      
+                </div>
+
+                <div class="mt-4 px-4 ">
+                  <form>
+                    <div class="mt-1">
+                      <label for="">নাম </label>
+                      <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+                    </div>
+                    <div class="mt-2">
+                      <label for="">ফোন</label>
+                      <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+                    </div>
+                    <div class="mt-2">
+                      <label for="">পদবী</label>
+                      <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+                    </div>
+
+                    <butto class="tab-button mt-3">যুক্ত করুন</butto>
+                  </form>
+                </div>
+              
+              </div>
+            </div>
+         <!-- খকর্মচারী-যুক্ত-করুন-popup1 end -->
+
+        <!-- table  -->
+        <div>
+          <table class="min-w-full  border border-gray-300 ">
+            <thead class="bg-[#9087E4] text-white text-[16px]">
+              <tr class="text-left">
+                <th class="border border-gray-300 p-2">নাম</th>
+                <th class="border border-gray-300 p-2">ফোন</th>
+                <th class="border border-gray-300 p-2">পদবী</th>
+                <th class="border border-gray-300 p-2">ব্যালেন্স</th> 
+                <th class="border border-gray-300 p-2"></th>  
+                <th class="border border-gray-300 p-2"></th> 
+                			
+              </tr>            							
+            </thead>
+            <!-- Add your data rows here start -->
+            <tbody class="text-[16px]">                  
+              <tr>
+                <td class="border border-gray-300 p-2 text-[#007bff] cursor-pointer hover:underline"  onclick="changeContent('EmployeeDetails')" >1. জহিরুল ইসলাম</td>
+                <td class="border border-gray-300 p-2">01792499895</td>
+                <td class="border border-gray-300 p-2">সাট ম্যান</td>
+                <td class="border border-gray-300 p-2">0.00</td>
+                <td class="border border-gray-300 p-2 text-[#007bff] cursor-pointer hover:underline">Edit</td>
+                <td class="border border-gray-300 p-2 text-[#007bff] cursor-pointer hover:underline">Delete</td>                 				
+              </tr>                
+              <tr>
+                <td class="border border-gray-300 p-2 text-[#007bff] cursor-pointer hover:underline">2. লুতফর রহমান </td>
+                <td class="border border-gray-300 p-2">01792499895</td>
+                <td class="border border-gray-300 p-2">পাঞ্জাবি ম্যান</td>
+                <td class="border border-gray-300 p-2">0.00</td>
+                <td class="border border-gray-300 p-2 text-[#007bff] cursor-pointer hover:underline">Edit</td>
+                <td class="border border-gray-300 p-2 text-[#007bff] cursor-pointer hover:underline">Delete</td>                 				
+              </tr>          
+              <!-- Add more rows as needed -->
+            </tbody>             
+          </table>
+        </div>
+
+      
+
+
       </div>
     </section>
 <!--  কর্মচারীর-তালিকা end -->
   
 
 <!-- এসএমএস start  -->
-  <section>
-      <div id="এসএমএস-পাঠান" class="content-div" style="display: none;">
-      এসএমএস পাঠান
+<section>
+  <div id="এসএমএস-পাঠান" class="content-div" style="display: none">
+    <!-- এসএমএস-পাঠান -->
+  </div>
+
+  <div id="ফোন-কন্টাক্ট-লিস্ট" class="content-div" style="display: none">
+    <h2 class="text-base font-semibold text-[#7367f0]">
+      Saved Contact List (Remaining SMS: 1)
+    </h2>
+    <hr class="mt-3 mb-6" />
+    <div class="ml-2 mb-4 md:w-[800px] w-full">
+      <form class="flex flex-col md:flex-row gpa-4 mt-0 md:mt-4">
+        <div class="mr-0 md:mr-3">
+          <h2
+            id="Add-New-Group-popup1"
+            class="block mb-2 text-md font-medium text-[#005087] no-underline hover:underline cursor-pointer md:mt-0 mt-1"
+          >
+            Add New Group
+          </h2>
+
+          <div>
+            <div class="relative">
+              <select
+                class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-state"
+              >
+                <option selected>[ ALL GROUP ]</option>
+                <option>Vip</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- Add New Group -popup1 start -->
+          <div id="Add-New-Group-popup2" class="overlay">
+            <div class="bg-white rounded shadow-md">
+              <div class="bg-[#0C817A] relative pt-4 pb-4">
+                <h2 class="text-white font-bold text-center">
+                  Create New Group
+                </h2>
+                <span
+                  id="Add-New-Group-close"
+                  class="absolute cursor-pointer right-[8px] top-[1px] text-white hover:text-gray-400"
+                  >x</span
+                >
+              </div>
+
+              <div
+                class="mt-4 px-4 pb-[20px] flex flex-col justify-center items-center"
+              >
+                <div class="w-full">
+                  <div class="w-full">
+                    <label
+                      for=""
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Group Name</label
+                    >
+                    <div class="flex flex-row items-center gap-2">
+                      <input
+                        type="text"
+                        id="তারিখ_থেকে"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[70%]"
+                        placeholder="কোন তারিখ পর্যন্ত"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row gap-2 mt-2">
+                    <button class="tab-button text-[14px]">
+                      Save Group
+                    </button>
+                    <button class="tab-button text-[14px]">Cancel</button>
+                  </div>
+                </div>
+
+                <div class="w-full mt-2">
+                  <table class="w-full border border-gray-300 text-center">
+                    <thead class="bg-[#9087E4] text-white text-[12px]">
+                      <tr>
+                        <th class="border border-gray-300 p-2">
+                          Group Name
+                        </th>
+                        <th class="border border-gray-300 p-2"></th>
+                        <th class="border border-gray-300 p-2"></th>
+                      </tr>
+                    </thead>
+                    <!-- Add your data rows here start -->
+                    <tbody class="text-[12px]">
+                      <tr>
+                        <td class="border border-gray-300 p-2">vip</td>
+                        <td class="border border-gray-300 p-2">Edit</td>
+                        <td class="border border-gray-300 p-2">Delete</td>
+                      </tr>
+
+                      <!-- Add more rows as needed -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  Add New Group -popup2 end -->
+        </div>
+        <div class="mr-0 md:mr-3">
+          <label
+            for="তারিখ_থেকে"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >
+            Name OR Mobile No.</label
+          >
+          <input
+            type="text"
+            id="তারিখ_থেকে"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required
+          />
+        </div>
+        <div>
+          <button class="tab-button md:mt-[30px] mt-2">search</button>
+        </div>
+      </form>
     </div>
-    <div id="ফোন-কন্টাক্ট-লিস্ট" class="content-div" style="display: none;">
-      ফোন কন্টাক্ট লিস্ট
+    <!-- Add New Mobile Number 	 -->
+    <h2
+      id="Add-New-Mobile-Number-popup1"
+      class="text-md font-medium text-[#005087] no-underline hover:underline cursor-pointer md:mt-0 mt-2"
+    >
+      Add New Mobile Number
+    </h2>
+
+    <!-- Add New Mobile Number popup1 start -->
+    <div id="Add-New-Mobile-Number-popup2" class="overlay">
+      <div class="bg-white w-[260px] rounded shadow-md">
+        <div class="bg-[#0C817A] relative pt-4 pb-4">
+          <h2 class="text-white font-bold text-center">
+            Add To Contact List
+          </h2>
+          <span
+            id="Add-New-Mobile-Number-close"
+            class="absolute cursor-pointer right-[8px] top-[1px] text-white hover:text-gray-400"
+            >x</span
+          >
+        </div>
+
+        <div class="mt-4 px-4 flex flex-col justify-center items-center">
+          <h2
+            class="block mb-2 text-md font-medium text-blue-600 no-underline hover:underline cursor-pointer md:mt-0 mt-1 text-[18px]"
+          >
+            Group Name
+          </h2>
+          <form class="w-full pb-4">
+            <div class="relative w-full">
+              <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-state"
+              >
+                <option selected>[ SELECT ]</option>
+                <option>VIP</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="mt-1 w-full">
+              <label for="" class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Person Name</label
+              >
+              <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Person Name" required
+              />
+            </div>
+            <div class="mt-1 w-full">
+              <label
+                for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Mobile Number</label
+              >
+              <input
+                type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Mobile Number" required
+              />
+            </div>
+            <div class="mt-1 w-full">
+              <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Address</label
+              >
+              <textarea name="" id="" cols="3" rows="3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              ></textarea>
+            </div>
+
+            <button class="tab-button mt-2">Add To List</button>
+          </form>
+        </div>
+      </div>
     </div>
-    <div id="পাঠানো-এসএমএস-রেকর্ড" class="content-div" style="display: none;">
-      পাঠানো এসএমএস রেকর্ড
+    <!-- Add New Mobile Number end -->
+
+    <!-- Total: 0 Contact start -->
+    <div class="mt-0">
+      <h2>Total: 0 Contact.</h2>
     </div>
-  </section>
+  </div>
+
+  <div id="পাঠানো-এসএমএস-রেকর্ড" class="content-div" style="display: none">
+    <h2 class="text-base font-semibold text-[#7367f0]">
+      প্রেরিত এসএমএস রেকর্ড (অবশিষ্ট এসএমএস: 1)
+    </h2>
+    <hr class="mt-3 mb-6" />
+    <div class="mb-6">
+            <form class="w-full md:w-[700px] flex flex-col md:flex-row w-full gap-4 ">
+              <div class="mt-1">
+                <h2 class="text-[14px]">From Date</h2>
+                <input datepicker datepicker-format="mm/dd/yyyy" type="text" class="w-full md:w-[160px] appearance-none block text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="From Date">
+              </div>
+              <div class="mt-1">
+                <h2 class="text-[14px]">To Date</h2>
+                <input datepicker datepicker-format="mm/dd/yyyy" type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder=" 	To Date">
+              </div>        
+              <div class="mt-1">
+                <h2 class="text-[14px]">Mobile No. or Purpose Of SMS 	 </h2>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder=" 	Mobile No. or Purpose Of SMS 	 ">
+              </div>        
+              
+              <div>
+                <button class="tab-button md:mt-[32px] mt-2">Find</button>
+              </div>
+            </form>
+    </div>
+    <!-- Table  -->
+    <div class="overflow-x-auto mt-3">     
+                  
+      <!-- খরচ-যুক্ত-করুন-popup1 end -->
+      <h3 class="text-[#33CC33] font-bold mb-2">সর্বমোট খরচ: <span>36296646</span> টাকা</h3>
+      <table class="min-w-full  border border-gray-300 text-center">
+          <thead class="bg-[#9087E4] text-white text-[12px]">
+            <tr>
+              <th class="border border-gray-300 p-2">Phone Number</th>
+              <th class="border border-gray-300 p-2">Text SMS</th>
+              <th class="border border-gray-300 p-2">SMS Count</th>
+              <th class="border border-gray-300 p-2">Purpose</th> 
+              <th class="border border-gray-300 p-2">Status</th>  
+              <th class="border border-gray-300 p-2">Date</th>      
+            </tr>            							
+          </thead>
+          <!-- Add your data rows here start -->
+          <tbody class="text-[12px]">                  
+            <tr>
+              <td class="border border-gray-300 p-2">01934322088</td>
+              <td class="border border-gray-300 p-2">	প্রিয় গ্রাহক, আপনার অর্ডারকৃত 1 টি সার্ট, তৈরি হয়েছে। অর্ডার নং 9688। a.mannan tailors and fabrics</td>
+              <td class="border border-gray-300 p-2">2</td>
+              <td class="border border-gray-300 p-2">Completed Work</td>
+              <td class="border border-gray-300 p-2">Sent</td>
+              <td class="border border-gray-300 p-2">13 Mar 2023 (11:33 AM)</td>
+            </tr>                
+            <tr>
+              <td class="border border-gray-300 p-2">01934322088</td>
+              <td class="border border-gray-300 p-2">	প্রিয় গ্রাহক, আপনার অর্ডারকৃত 1 টি সার্ট, তৈরি হয়েছে। অর্ডার নং 9688। a.mannan tailors and fabrics</td>
+              <td class="border border-gray-300 p-2">2</td>
+              <td class="border border-gray-300 p-2">Completed Work</td>
+              <td class="border border-gray-300 p-2">Sent</td>
+              <td class="border border-gray-300 p-2">13 Mar 2023 (11:33 AM)</td>
+            </tr>  
+            <tr class="bg-[#9087e4]">
+              <td colspan="6">
+                <table>
+                  <tbody>
+                    <tr class="text-[13px] flex flex-row gap-2 py-1">
+                    <td><span class="mr-1 ml-1">|</span><a class="hover:text-white" href="">1</a></td>
+                    <td><span class="mr-1">|</span><a class="hover:text-white" href="">2</a></td>
+                    <td><span class="mr-1">|</span><a class="hover:text-white" href="">4</a></td>
+                    <td><span class="mr-1">|</span><a class="hover:text-white" href="">5</a></td>
+                    <td><span class="mr-1">|</span><a class="hover:text-white" href="">6</a></td>
+                    <td><span class="mr-1">|</span><a class="hover:text-white" href="">7</a></td>
+                    <td><span class="mr-1">|</span><a class="hover:text-white" href="">8</a></td>
+                    <td><span class="mr-1">|</span><a class="hover:text-white" href="">9</a></td>
+                    <td><span class="mr-1">|</span><a class="hover:text-white" href="">10</a></td>
+                    <td><span class="mr-1">|</span><a class="hover:text-white" href="">...</a></td>
+                  </tr>
+                </tbody>
+                </table>
+              </td>
+            </tr>        
+            <!-- Add more rows as needed -->
+          </tbody>             
+        </table>
+        
+    </div>
+  </div>
+</section>
 <!-- এসএমএস end  -->
 
  
@@ -3690,7 +4483,143 @@
 
 
   
+  <!--কর্মচারীর-তালিকা Employee Details start  -->
+  <div id="EmployeeDetails" class="content-div" style="display: none">
+      <h2 class="text-[22px] font-normal">[<span>1</span>] জহিরুল ইসলাম 01879965794 <span class="bg-[#007BFF] rounded-md px-3 py-1 text-white">ব্যালেন্স: 0.00 টাকা</span> </h2>
+    <hr class="mt-3 mb-3" />
+     <!-- 3 button  -->
+    <div class="">
+      <button id="পারিশ্রমিক-যুক্ত-করুন-popup1" class="px-2 py-1 bg-[#007bff] hover:bg-[#0069D9] rounded-md text-white">পারিশ্রমিক যুক্ত করুন</button>
+      <button id="খরচ-ঋণ-প্রদান-popup1" class="px-2 py-1 bg-[#28a745] hover:bg-[#218838] rounded-md text-white">খরচ/ঋণ প্রদান</button>
+      <button id="ঋণ-ফেরত-popup1" class="px-2 py-1 bg-[#9087E4] hvoer:bg-[#9087E4] rounded-md text-white">ঋণ ফেরত</button>
+    </div>
 
+    <!-- Employee Details popup added data start -->
+    <div>
+      <!-- পারিশ্রমিক যুক্ত করুন start popup1 -->
+      <div id="পারিশ্রমিক-যুক্ত-করুন-popup2" class="overlay ">
+        <div class="bg-white md:w-[500px] h-[360px] md:mt-[-150px]  rounded shadow-md popup-animation">
+          <div class="bg-[#007bff] relative px-4 pt-4 pb-4 ">
+            <h2 class="text-white font-bold">পারিশ্রমিক যুক্ত করুন</h2>    
+            <span id="পারিশ্রমিক-যুক্ত-করুন-close" class="absolute cursor-pointer right-[8px] top-[1px] text-white hover:text-gray-400">x</span>      
+          </div>
+          
+           
+          <div class="mt-4 px-4 ">
+            <form>
+              <div class="mt-1">
+                <label for="">কাজের নাম </label>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+              </div>
+              <div class="mt-2">
+                <label for="">টাকা</label>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+              </div>
+              <div class="mt-2">
+                <label for="">তারিখ</label>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+              </div>
+
+              <butto class="tab-button mt-3">যুক্ত করুন</butto>
+            </form>
+          </div>
+        
+        </div>
+      </div>
+
+      <!-- খরচ/ঋণ প্রদান start -->
+      <div id="খরচ-ঋণ-প্রদান-popup2" class="overlay ">
+        <div class="bg-white md:w-[500px] h-[360px] md:mt-[-150px]  rounded shadow-md popup-animation">
+          <div class="bg-[#28a745] relative px-4 pt-4 pb-4 ">
+            <h2 class="text-white font-bold"> খরচ/ঋণ প্রদান </h2>    
+            <span id="খরচ-ঋণ-প্রদান-close" class="absolute cursor-pointer right-[8px] top-[1px] text-white hover:text-gray-400">x</span>      
+          </div>
+
+          <div class="mt-4 px-4 ">
+            <form>
+              <div class="mt-1">
+                <label for="">পাওনা টাকা বা ঋণের বিবরণ</label>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+              </div>
+              <div class="mt-2">
+                <label for="">ফোন</label>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+              </div>
+              <div class="mt-2">
+                <label for="">পদবী</label>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+              </div>
+
+              <butto class="tab-button mt-3">যুক্ত করুন</butto>
+            </form>
+          </div>
+        
+        </div>
+      </div>
+
+      <!-- ঋণ ফেরত start -->
+      <div id="ঋণ-ফেরত-popup2" class="overlay ">
+        <div class="bg-white md:w-[500px] h-[360px] md:mt-[-150px]  rounded shadow-md popup-animation">
+          <div class="bg-[#9087E4] relative px-4 pt-4 pb-4 ">
+            <h2 class="text-white font-bold">  ঋণ ফেরত</h2>    
+            <span id="ঋণ-ফেরত-close" class="absolute cursor-pointer right-[8px] top-[1px] text-white hover:text-gray-400">x</span>      
+          </div>
+         
+          <div class="mt-4 px-4 ">
+            <form>
+              <div class="mt-1">
+                <label for="">ফেরতের বর্ণনা  </label>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+              </div>
+              <div class="mt-2">
+                <label for="">ফোন</label>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+              </div>
+              <div class="mt-2">
+                <label for="">পদবী</label>
+                <input type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 mb-3 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="Date">
+              </div>
+
+              <butto class="tab-button mt-3">যুক্ত করুন</butto>
+            </form>
+          </div>
+        
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <div class="mt-2">
+      <form class="md:w-[700px] flex flex-col md:flex-row w-full gap-4 ">    
+        <div class="mt-1">
+          <input  datepicker datepicker-autohide type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4  leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="From date">
+        </div>
+        <div class="mt-1">
+          <input  datepicker datepicker-autohide type="text" class="appearance-none block w-full text-gray-700 border border-gray-400 rounded md:mt-2 py-2 px-4 leading-tight focus:outline-none focus:shadow focus:border-gray-500" placeholder="To date">
+        </div>
+        <div><button class="tab-button md:mt-[12px]">Find</button></div>
+      </form>
+    </div>
+
+    <div class="flex md:flex-row flex-col gap-2 mt-4">
+      <div class="bg-[#DDDDDD] md:w-[350px] w-full h-[80px] py-2 flex flex-col justify-center items-center">
+          <h3>0</h3>
+          <h2>পারিশ্রমিক</h2>
+      </div>
+      <div class="bg-[#DDDDDD] md:w-[350px] w-full h-[80px] py-2 flex flex-col justify-center items-center">
+          <h3>0</h3>
+          <h2>খরচ/ঋণ</h2>
+      </div>
+      <div class="bg-[#DDDDDD] md:w-[350px] w-full h-[80px] py-2 flex flex-col justify-center items-center">
+          <h3>0</h3>
+          <h2>ঋণ ফেরত</h2>
+      </div>
+    </div>
+  </div>
+    <!-- Employee Details end  -->
  
   <div id="print1" class="content-div" style="display: none;">
    Print 1
@@ -3711,8 +4640,8 @@
 
 
 
-    <footer class="bg-[#7367f0] flex flex-row justify-center items-center py-6 mt-24 md:mt-0 overflow-hidden flex-grow">
-      <h2 class=" text-white font-semibold text-lg">Copyright © 2015-2023 <span class="uppercase">company Name</span> All rights reserved</h2>
+    <footer class="bg-[#7367f0] flex flex-row justify-center items-center py-6 mt-24 md:mt-0 overflow-hidden flex-grow text-center">
+      <h2 class=" text-white font-semibold text-lg ">Copyright © 2015-2023 <span class="uppercase">company Name</span> All rights reserved</h2>
     </footer>
 
     <!-- datepicker -->
